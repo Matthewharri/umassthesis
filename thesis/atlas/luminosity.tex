@@ -1,0 +1,37 @@
+Instantaneous luminosity, $\mathcal{L} (t)$, is the rate at which colliding particles interact per unit area at a given moment in time. To determine the total number of interactions $N(t)$, the instantaneous luminosity is integrated over time and multiplied by the proton-proton interaction cross-section $\sigma_{pp}$, which characterizes the likelihood of a particular interaction:
+
+\begin{equation}
+    \centering
+    N(t) = \sigma_{pp} \int \mathcal{L} (t) dt
+\end{equation}
+
+\noindent{}The instantaneous luminosity can be defined as:
+
+\begin{equation}
+    \centering
+    \mathcal{L} = 2 N_1 N_2 f N_b \int \!\!\! \int \!\!\! \int \!\!\! \int_{-\infty}^{\infty} \rho_{1x}(x)\rho_{1y}(y)\rho_{1s}(s{-}s_0)\rho_{2x}(x)\rho_{2y}(y)\rho_{2s}(s{+}s_0)\, dx\, dy\, ds\, ds_0
+\end{equation}\label{eq:luminosity_long}
+
+\noindent{}where $N_1$ and $N_2$ are the number of particles per bunch, $f$ is the revolution frequency, $N_b$ is the number of bunches in one beam, and $\rho$ are the beam density distribution functions. Evaluating equation~\ref{eq:luminosity_long} is not always possible since all beam distributions need to be known. In many cases, it is appropriate to model these distributions as Gaussian.
+With this assumption, equation~\ref{eq:luminosity_long} simplifies to:
+
+\begin{equation}
+    \centering
+    \mathcal{L} = \frac{N_1 N_2 f N_b}{4\pi \sigma_x \sigma_y}
+\end{equation}
+
+\noindent{}The total integrated luminosity, $L$, is defined as the integral of the instantaneous luminosity over some time, $T$:
+\begin{equation}
+    \centering
+    L = \int_{0}^{T} \mathcal{L} (t) dt
+\end{equation}
+\noindent{}Thus it is seen that the total number of events is proportional to the total integrated luminosity.
+
+At the LHC, the nominal instantaneous luminosity is $\mathcal{L} = 10^{34} \mathrm{cm}^{-2}\mathrm{s}^{-1}$. During Runs 2 and 3, the recorded instantaneous luminosity approximately doubled the nominal value, reaching a sustained luminosity of $\mathcal{L} = 2.1 \cdot 10^{34} \mathrm{cm}^{-2}\mathrm{s}^{-1}$ for proton-proton collisions, while for heavy-ion collisions the maximum sustained luminosity recorded was $\mathcal{L} = 10^{27} \mathrm{cm}^{-2}\mathrm{s}^{-1}$~\cite{ATLAS_run3_luminosity_and_detector}. Figure~\ref{fig:atlas_luminosity_recorded} presents the total integrated luminosity delivered by the LHC and recorded by ATLAS during Run 3. Through the first three years of data taking for this run, the LHC has delivered a total of 195 $\mathrm{fb}^{-1}$ of data. Of this, ATLAS only recorded 183 $\mathrm{fb}^{-1}$ of data with only 169 $\mathrm{fb}^{-1}$ of data deemed suitable for physics analysis. These luminosity discrepancies
+arise when detector components malfunction or data-taking conditions change mid run. ATLAS maintains a record of periods with nominal conditions referred to as the ``Good Runs List'' (GRL), which defines the datasets available for further analysis.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/atlas/atlas_run3_lumi.png}
+    \caption{The total integrated luminosity delivered by the LHC and recorded by ATLAS\@. As seen in the figure, the LHC delivered and ATLAS recorded differ from one another due to non-nominal circumstances. Taken from~\cite{atlas_lumi_image}}\label{fig:atlas_luminosity_recorded}
+\end{figure}
