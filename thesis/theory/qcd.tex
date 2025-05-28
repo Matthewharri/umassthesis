@@ -1,0 +1,54 @@
+Quantum chromodynamics (QCD) is the relativistic quantum field theory that describes the strong interaction between quarks and gluons. Quarks are electrically charged fermions that also carry color charge, analogous to the electric charge in QED\@. Gluons are electrically neutral particles that consist of a color and anticolor charge. There are three color charges: red, green, and blue ($r$, $g$, $b$) as well as three corresponding anticolor charges: anti-red, anti-green, and anti-blue ($\bar{r}$, $\bar{g}$, $\bar{b}$). 
+
+QCD is a non-Abelian gauge theory based on the symmetry group $\mathrm{SU}(3)$, representing phase transformations of the quark color fields. Analogous to QED, we begin with the free Dirac Lagrangian density for quarks:
+\begin{equation}
+  \mathcal{L}_{\mathrm{QCD}} = \bar{q}(i\gamma^{\mu}\partial_{\mu} - m)q
+  \label{eq:qcd_free_lagrangian}
+\end{equation}
+with mass $m$, and $q$ the quark color triplet field
+\begin{equation}
+  q = \begin{pmatrix}
+    q_{r} \\
+    q_{g} \\
+    q_{b}
+  \end{pmatrix}
+  \label{eq:qcd_quark_field}
+\end{equation}
+with each component $q_{c}$ being a Dirac spinor. The Langrangian density in Equation~\ref{eq:qcd_free_lagrangian} is invariant under global $\mathrm{SU}(3)$ transformations To promote this symmetry to a local one we consider local phase transformations of the form
+\begin{equation}
+  q(x) \to Uq(x) \equiv e^{i\chi_{a}(x)T_{a}}q(x)
+  \label{eq:qcd_local_symmetry}
+\end{equation}
+where $U(x) \in \mathrm{SU}(3)$, $\chi_{a}(x)$ are the local parameters of the transformation, and $T_{a}$ are the generators of the $\mathrm{SU}(3)$ group, the Gell-Mann matrices. These generators are a set of $8$ $3 \times 3$ hermitian matrices that satisfy the commutation relations
+\begin{equation}
+  [T_{a}, T_{b}] = i f_{abc}T_{c}
+  \label{eq:qcd_commutation_relation}
+\end{equation}
+with real structure constants $f_{abc}$. Under local $\mathrm{SU}(3)$ transformations, the derivative term in Equation~\ref{eq:qcd_free_lagrangian}, is not invariant. To restore the local gauge invariance, we introduce eight gauge fields $G_{\mu}^{a}$, one for each generator $T_{a}$, which transform as
+\begin{equation}
+  G_{\mu}^{a} \to G_{\mu}^{a} - \frac{1}{g} \partial_{\mu}\chi_{a} - f_{abc}\chi_{b}G_{\mu}^{c},
+\end{equation}
+and we define the covariant derivative as
+\begin{equation}
+  D_{\mu} = \partial_{\mu} + ig T_{a}G_{\mu}^{a}.
+  \label{eq:qcd_covariant_derivative}
+\end{equation}
+Finally, we must include the kinetic term for each of the gauge fields as we did for QED\@. The strong field strength tensor is defined as
+\begin{equation}
+  G_{\mu\nu}^{a} = \partial_{\mu}G_{\nu}^{a} - \partial_{\nu}G_{\mu}^{a} + g f_{abc}G_{\mu}^{b}G_{\nu}^{c}
+  \label{eq:qcd_field_strength_tensor}
+\end{equation}
+with the resulting Lagrangian density given by
+\begin{align}
+  \mathcal{L}_{\mathrm{QCD}} &= \bar{q}(i\gamma^{\mu}D_{\mu} - m)q - \frac{1}{4}G_{\mu\nu}^{a}G^{\mu\nu a} + \frac{1}{2}m^2G_{\mu}^{a}G^{\mu a} \nonumber \nonumber \\
+  &= \bar{q}(i\gamma^{\mu}\partial_{\mu} - m)q + g(\bar{q}T_{a}\gamma^{\mu}q)G_{\mu}^{a} - \frac{1}{4}G_{\mu\nu}^{a}G_{a}^{\mu\nu} + \frac{1}{2}mG_{\mu\nu}^{a}G_{a}^{\mu\nu}.
+  \label{eq:qcd_lagrangian}
+\end{align}
+However, the gauge field mass term breaks the gauge invariance, therefore the mass of all the gauge fields must vanish. The final Lagrangian density for QCD is given by
+\begin{equation}
+  \mathcal{L}_{\mathrm{QCD}} = \bar{q}(i\gamma^{\mu}\partial_{\mu} - m)q + g(\bar{q}T_{a}\gamma^{\mu}q)G_{\mu}^{a} - \frac{1}{4}G_{\mu\nu}^{a}G_{a}^{\mu\nu}
+  \label{eq:qcd_lagrangian_final}
+\end{equation}
+where $g$ is the coupling constant of the strong interaction, analogous to the electric charge in QED\@. The strong field strength tensor $G_{\mu\nu}^{a}$ has a remarkable difference from the electromagnetic field strength tensor in QED\@. The non-Abelian nature of the gauge group $\mathrm{SU}(3)$ leads to self-interactions between the gluons, which is absent in QED\@. This self-interacticon results interactions between three or four gluons, which is a unique feature of QCD not present in QED\@.
+
+These self-interactions are responsible for two phenomenon that appear in QCD, asymptotic freedom and confinement. Asymptotic freedom refers to the phenomenon where the effective strong coupling is weaker at high energies or short distances. In this regime, quarks and gluons interact only weakly and can be treated as nearly free particles. This property explains why many gluon-induced QCD processes become prominent at high-energy colliders. In contrast, at low energies or large distances, the strong coupling increases due to the running of the coupling constant, ultimately leading to confinement. In this regime, the force between colored particles becomes so strong that it is energetically more favorable to create a quark-antiquark pair from the vacuum than to separate two color charges. As a result, colored particles such as quarks and gluons are never observed in isolation, but are permanently confined within color-neutral bound states known as hadrons.

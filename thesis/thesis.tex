@@ -103,6 +103,8 @@
 \usepackage[hidelinks]{hyperref}
 \usepackage{thesis-defs}
 \usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{subfig}
 %% One way of formatting the epigraph/frontispiece is to use this package.
 % \usepackage{epigraph}
 
@@ -262,26 +264,36 @@
 
 \chapter{Theoretical Overview}\label{ch:theory}
 
-\section{The Standard Model}\label{sec:sm}
-\section{Mathematical Introduction: Group Theory}\label{sec:group_theory}
-\section{Quantum Electrodynamics}\label{sec:qed}
-\section{Quantum Chromodynamics}\label{sec:qcd}
-\section{Electroweak Theory}\label{sec:ew}
-\section{Higgs Mechanism}\label{sec:higgs_mechanism}
-\section{Higgs Boson Production}\label{sec:higgs_production}
-\section{Higgs Boson Decay}\label{sec:higgs_decay}
+\section{The Standard Model}\label{sec:theory_sm}
+\input{theory/intro_to_sm.tex}
+% \section{Mathematical Introduction}\label{sec:theory_mathematical_intro}
+% \input{theory/mathematical_intro.tex}
+\section{Groups of The Standard Model}\label{sec:theory_groups}
+\input{theory/groups.tex}
+\section{Quantum Electrodynamics}\label{sec:theory_qed}
+\input{theory/qed.tex}
+\section{Quantum Chromodynamics}\label{sec:theory_qcd}
+\input{theory/qcd.tex}
+\section{Electroweak Theory}\label{sec:theory_ew}
+\input{theory/ew.tex}
+\section{Higgs Mechanism}\label{sec:theory_higgs_mechanism}
+\input{theory/higgs_mechanism.tex}
+\section{Higgs Boson Couplings and Decays}\label{sec:theory_higgs_decay}
+\input{theory/higgs_decay.tex}
+\section{Higgs Boson Production}\label{sec:theory_higgs_production}
+\input{theory/higgs_production.tex}
 
 \chapter{The ATLAS Experiment}\label{ch:atlas}
 \section{The Large Hadron Collider}\label{sec:lhc}
 \input{atlas/lhc.tex}
 
-\section{Luminosity}\label{sec:luminosity}
+\section{Luminosity and Pileup}\label{sec:luminosity_pileup}
 \input{atlas/luminosity.tex}
 
-\section{Pileup}\label{sec:pileup}
-\input{atlas/pileup.tex}
+% \section{Pileup}\label{sec:pileup}
+% \input{atlas/pileup.tex}
 
-\subsection{The HL-LHC}\label{sec:hl_lhc}
+\section{The HL-LHC}\label{sec:hl_lhc}
 \input{atlas/hl-lhc.tex}
 
 \section{The ATLAS Detector}\label{sec:atlas_detector}
@@ -337,10 +349,10 @@
 \chapter{The VH Analysis}\label{ch:vh_analysis}
 WH and ZH analysis overview goes here
 
-\chapter{VH Analysis Inclusive Results}\label{ch:vh_inclusive_results}
+\chapter{Inclusive Measurement Results}\label{ch:vh_inclusive_results}
 Discuss the VH analysis inclusive measurement results here
 
-\chapter{VH Analysis STXS Results}\label{ch:vh_stxs_results}
+\chapter{Simplified Template Cross Section Measurement Results}\label{ch:vh_stxs_results}
 Discuss the VH analysis STXS measurement results here
 
 \chapter{Conclusion and outlook}\label{ch:conclusions}

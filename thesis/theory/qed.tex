@@ -1,0 +1,54 @@
+Quantum electrodyanmics (QED) is the description of electromagnetic interaction between charged particles and photons as a relativistic quantum field theory (QFT). It is an abelian gauge theory with the symmetry group $\mathrm{U}(1)$. As previously mentioned, the $\mathrm{U}(1)$ symmetry group corresponds to phase rotations in the complex plane and represent a global symmetry. The full Lagrangian density for charged Dirac fermions interacting with the EM field is given by
+\begin{equation}
+  \mathcal{L} = \bar{\psi}(i\gamma^{\mu}\partial_{\mu} - m)\psi 
+  \label{eq:qed_dirac_lagrangian}
+\end{equation}
+with fermion field $\psi$, mass $m$, and the Dirac matrices $\gamma^{\mu}$. Since global symmetries correspond to conservation laws via Noether's theorem, one might wonder whether these symmetries can be extended to local transformations as well. Consider a field $\psi$ undergoing a local transformation $\chi(x)$
+\begin{equation}
+  \psi(x) \to \psi(x)e^{i q\chi(x)} 
+  \label{eq:qed_local_symmetry}
+\end{equation}
+the Lagrangian transforms as
+\begin{equation}
+  \mathcal{L}' = \mathcal{L} + \bar{\psi} iq\gamma^{\mu}\partial_{\mu}\chi(x) \psi
+  \label{eq:qed_local_lagrangian}
+\end{equation}
+but this is not invariant under the local transformation as we are left with an extra term. To remedy this, we must introduce a gauge field $A_{\mu}$, which transforms as
+\begin{equation}
+  A_{\mu} \to A_{\mu} + \partial_{\mu}\chi(x)
+  \label{eq:qed_gauge_transformation}
+\end{equation}
+and we must replace that partial derivative in the Lagrangian with a covariant derivative defined as
+\begin{equation}
+  D_{\mu} = \partial_{\mu} + iqA_{\mu}
+  \label{eq:qed_covariant_derivative}
+\end{equation}
+ensuring that the Lagrangian is invariant under local transformations. The Lagrangian density can then be written as
+\begin{align}
+  \mathcal{L} 
+  &= \bar{\psi}(i\gamma^{\mu}D_{\mu} - m)\psi \nonumber \\
+  &= \bar{\psi}(i\gamma^{\mu}\partial_{\mu} - m)\psi + q\bar{\psi}\gamma^{\mu}A_{\mu}\psi 
+  \label{eq:qed_lagrangian_no_kinetic}
+\end{align}
+which is now fully invariant under local $\mathrm{U}(1)$ transformations. The introduction of the gauge field has naturally generated an interaction term between the fermion and gauge field, as seen in Equation~\ref{eq:qed_lagrangian_no_kinetic}. To complete QED, we must include the kinetic terms for the gauge field. Naively, one would think that this term is just ${(\partial_{\mu}A_{\nu})}^{2}$ but this breaks the gauge invariance. Instead, we introduce the electromagnetic field strength tensor $F_{\mu\nu}$, defined as
+\begin{equation}
+  F_{\mu\nu} = \partial_{\mu}A_{\nu} - \partial_{\nu}A_{\mu}
+  \label{eq:qed_field_strength_tensor}
+\end{equation}
+which is invariant under the gauge transformation. The kinetic term for the gauge field is then given by
+\begin{equation}
+  \mathcal{L}_{\mathrm{EM}} = - \frac{1}{4}F^{\mu\nu}F_{\mu\nu}
+  \label{eq:qed_em_free_lagrangian}
+\end{equation}
+The full Lagrangian density for QED becomes
+\begin{equation}
+  \mathcal{L}_{\mathrm{QED}} = \bar{\psi}(i\gamma^{\mu}D_{\mu} - m)\psi - \frac{1}{4}F^{\mu\nu}F_{\mu\nu}
+  \label{eq:qed_lagrangian}
+\end{equation}
+where the last term corresponds to the mass of the gauge field. However, this term breaks the local gauge invariance, therefore, the mass of the gauge field must vanish. 
+\begin{equation}
+  \mathcal{L}_{\mathrm{QED}} = \bar{\psi}(i\gamma^{\mu}D_{\mu} - m)\psi - \frac{1}{4}F^{\mu\nu}F_{\mu\nu}
+  \label{eq:qed_lagrangian_final}
+\end{equation}
+In this context, we interpret the gauge field $A_{\mu}$ as the massless photon field with coupling strength $q$.
+

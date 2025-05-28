@@ -1,0 +1,119 @@
+Describing the weak interaction is more complex than QED or QCD due to several unique features. The theory needs to describe several different type fermions (quarks, leptons) and treat left- and right-handed fields differently. Specifically, only left-handed fermions participate in weak interactions and must appear in doublets, while right-handed fermions are singlets. Additionally, the theory needs to produce a massless photon but also produces three massive gauge bosons associated to the weak interaction. 
+
+To accommodate the doublet structure required for the weak interaction the natural choice for a symmetry group is $\mathrm{SU}(2)$. To incorporate the electromagnetic interaction as well, an additional $\mathrm{U}(1)$ group is required, as described in Section~\ref{sec:theory_qed}. The symmetry group chosen to define the electroweak interaction is $\mathrm{SU}{(2)}_{L} \otimes \mathrm{U}{(1)}_{Y}$ where $L$ indicates that $\mathrm{SU}(2)$ only acts on left-handed fields, and $Y$ denotes the weak hypercharge associated with $\mathrm{U}(1)$. 
+
+We begin by introducing the left-handed doublets and right-handed singlets. For leptons, this is defined as
+\begin{equation}
+  \psi_{L} = \begin{pmatrix}
+    \nu_{\ell} \\
+    \ell^{-}
+  \end{pmatrix}_{L}, \quad
+  \psi_{R} = \ell_{R}, \bar{\nu}_{\ell R}
+  \label{eq:ew_lepton_fields}
+\end{equation}
+where $\ell$ is any charged lepton and $\nu_{\ell}$ the corresponding neutrino. For quarks we define
+\begin{equation}
+  \psi_{L} = \begin{pmatrix}
+    q \\
+    q'
+  \end{pmatrix}_{L}, \quad
+  \psi_{R} = q_{R}, q'_{R}
+  \label{eq:ew_quark_fields}
+\end{equation}
+where $q$ is an up-type quark and $q'$ corresponding down-type quark. 
+
+Following the prescription developed for QED and QCD, we consider the free Lagrangian
+\begin{equation}
+  \mathcal{L}_{\mathrm{EW}} = \bar{\psi}_{L}(i\gamma^{\mu}\partial_{\mu} - m)\psi_{L} + \bar{\psi}_{R}(i\gamma^{\mu}\partial_{\mu} - m)\psi_{R}
+  \label{eq:ew_free_lagrangian}
+\end{equation}
+where $m$ is the mass of the fermion. Unlike the previous sections, this Lagrangian is separated into left- and right-handed components to reflect the structure of the weak interaction. As before, this Lagrangian is invariant under global transformations but we wish to promote this invariance to a local one. The local gauge transformations are
+\begin{equation}
+  \psi_{L} \to U_{L}\psi_{L}, \quad
+  \psi_{R} \to U_{R}\psi_{R}
+  \label{eq:ew_local_symmetry}
+\end{equation}
+with
+\begin{equation}
+  U_{L} = e^{i(y_{L}\chi(x) + \frac{\sigma_{i}}{2}\alpha^{i}(x))}, \quad
+  U_{R} = e^{i(y_{R}\chi(x))}
+  \label{eq:ew_local_transformation}
+\end{equation}
+where $y_{L}$ and $y_{R}$ are the hypercharges of the left- and right-handed fields, and $\sigma_{i}$ the Pauli matrices, which serve as the $\mathrm{SU}(2)$ generators. 
+
+To maintain local gauge invariance, three gauge fields $W_{\mu}^{i}$ are introduced for the $\mathrm{SU}(2)$ group and one gauge field $B_{\mu}$ for the $\mathrm{U}(1)$ group. The corresponding covariant derivatives are defined as
+\begin{align}
+  D_{\mu}\psi_{L} &= (\partial_{\mu} - ig\frac{\sigma_{i}}{2}W^{i}_{\mu}(x) - ig'Y_{L}B_{\mu}(x))\psi_{L}, \\ \quad 
+  D_{\mu}\psi_{R} &= (\partial_{\mu} - ig'Y_{R}B_{\mu}(x))\psi_{R}
+  \label{eq:ew_covariant_derivative} 
+\end{align}
+where $g$ and $g'$ are the coupling constants of the $\mathrm{SU}(2)$ and $\mathrm{U}(1)$ groups respectively.
+
+By demanding local gauge invariance our Lagrangian from Equation~\ref{eq:ew_free_lagrangian} becomes 
+\begin{equation}
+  \mathcal{L} \to g\bar{\psi}_{L}\gamma^{\mu}\frac{\sigma_{i}}{2}W_{\mu}^{i}\psi_{L} + g'B_{\mu}y_{L}\bar{\psi}_{L}\gamma^{\mu}\psi_{L} + g'B_{\mu}y_{R}\bar{\psi}_{R}\gamma^{\mu}\psi_{R}.
+  \label{eq:ew_lagrangian}
+\end{equation}
+To write this more traditionally, we express the $\mathrm{SU}(2)$ term explicitly, where
+\begin{equation}
+  \frac{\sigma^{i}}{2}W_{\mu}^{i} = \frac{1}{\sqrt{2}}\begin{pmatrix}
+    \sqrt{2}W_{\mu}^{3} &  W_{\mu}^{+} \\
+    W_{\mu}^{-} & -\sqrt{2}W_{\mu}^{3}
+  \end{pmatrix}
+\end{equation}
+with $W_{\mu}^{\pm} = \frac{1}{\sqrt{2}}(W_{\mu}^{1} \mp iW_{\mu}^{2})$ and $W_{\mu}^{3}$ the neutral $\mathrm{SU}(2)$ gauge field. The first term becomes a charged-current interaction and takes the form
+\begin{equation}
+  \mathcal{L}_{\mathrm{CC}} = \frac{g}{2\sqrt{2}}\{W^{+}[\bar{q}\gamma^{\mu}(1-\gamma_{5})q' + \bar{\nu}_{\ell}\gamma^{\mu}(1 - \gamma_{5})\ell] + \mathrm{h.c.}\}
+  \label{eq:ew_cc_lagrangian}
+\end{equation}
+which gives rise to the charged weak interactions mediated by the $W^{\pm}$ bosons. These interactions couple the upper and lower components of the weak doublet, and are responsible for lepton flavor transitions, and quark flavor-changing interactions. 
+
+In addition to the charged-current term, there is another term involving two neutral gauge fields $W^{3}_{\mu}$ and $B_{\mu}$. Naturally, we would like to identify these as $\gamma$ and $Z$ bosons but this is not possible. The key problem is the electromagnetic interaction where the photon must couple identically to left- and right-handed fermions. In the electroweak framework, $W^{3}_{\mu}$ and $B_{\mu}$ couple differently to left- and right-handed fermions. This asymmetry is essential for the weak interaction since it is a parity violating interaction, but presents a problem for constructing a parity-conserving electromagnetic interaction. The $B_{\mu}$ field couples to fermions with a strength proportional to their hypercharge, which differs depending on chiralty. 
+
+Since $W^{3}_{\mu}$ and $B_{\mu}$ are neutral, we can try constructing a linear combination of the two fields
+\begin{equation}
+  \begin{pmatrix}
+    W^{3}_{\mu}\\
+    B_{\mu}
+  \end{pmatrix} = \begin{pmatrix}
+    \cos\theta_{W} & \sin\theta_{W} \\
+    -\sin\theta_{W} & \cos\theta_{W}
+  \end{pmatrix}
+  \begin{pmatrix}
+    Z_{\mu} \\
+    A_{\mu}
+  \end{pmatrix}
+  \label{eq:ew_mixing}
+\end{equation}
+where $\theta_{W}$ is the weak mixing angle. The neutral charged Lagrangian can then be derived and is given by
+\begin{equation}
+  \mathcal{L}_{\mathrm{NC}} = \sum_{j}\bar{\psi}_{j}\gamma^{\mu} \{A_{\mu}[g\frac{\sigma_{3}}{2}\sin{\theta_{W}} + g'\cos{\theta_{W}}] + Z_{\mu}[g\frac{\sigma_{3}}{2}\cos{\theta_{W} - g'y_{j}\sin{\theta_{W}}}] \} \psi_{j}.
+  \label{eq:ew_nc_lagrangian}
+\end{equation}
+To extract QED from the $A_{\mu}$ term, two conditions need to be imposed. First we need to set $g\sin{\theta_{W}} = g'\cos{\theta_{W}} = e$ as this relates the $\mathrm{SU}{(2)}_{L}$ and $\mathrm{U}(1)$ couplings to the electromagnetic coupling. Secondly, we require that $Y = Q - T_{3}$ which fixes fermion hypercharges in terms of their electric charge and weak isospin. Which these conditions the Lagrangian can now be written as
+\begin{equation}
+  \mathcal{L}_{NC} = \mathcal{L}_{\mathrm{QED}} + \mathcal{L}_{\mathrm{NC}}^{Z} 
+\end{equation}
+where $\mathcal{L}_{\mathrm{QED}}$ is the QED Lagrangian defined in Section~\ref{sec:theory_qed} and $\mathcal{L}_{\mathrm{NC}}^{Z}$ is the neutral current Lagrangian given by
+\begin{equation}
+  \mathcal{L}_{\mathrm{NC}}^{Z} = \frac{e}{\sin{\theta_{W}}\cos{\theta_{W}}} \left(\sum_{j}\bar{\psi}_{j}\gamma^{\mu}(T_{3} - \sin^2{\theta_{W}}Q_{j})\psi_{j}\right)Z_{\mu}
+  \label{eq:ew_nc_lagrangian_z}
+\end{equation}
+Finally, all that is left is to introduce the kinematic term for the gauge bosons. These are built in similar ways to the previous two sections using field strength tensors which are defined as
+\begin{align}
+  W_{\mu\nu}^{i} &= \partial_{\mu}W_{\nu}^{i} - \partial_{\nu}W_{\mu}^{i} + g\epsilon_{ijk}W_{\mu}^{j}W_{\nu}^{k}, \\
+  B_{\mu\nu} &= \partial_{\mu}B_{\nu} - \partial_{\nu}B_{\mu}
+\end{align}
+where $\epsilon^{ijk}$ is the Levi-Civita symbol. The kinetic term for the gauge bosons is then given by
+\begin{equation}
+  \mathcal{L}_{\mathrm{kin}} = -\frac{1}{4}W_{\mu\nu}^{i}W^{\mu\nu i} - \frac{1}{4}B_{\mu\nu}B^{\mu\nu}.
+  \label{eq:ew_kinetic_lagrangian}
+\end{equation}
+The final electroweak Lagrangian is given by
+\begin{equation}
+  \mathcal{L}_{\mathrm{EW}} = \mathcal{L}_{\mathrm{CC}} + \mathcal{L}_{\mathrm{NC}} + \mathcal{L}_{\mathrm{kin}}.
+  \label{eq:ew_lagrangian_final}
+\end{equation}
+With this derivation, nearly all of the original goals of the electroweak theory have been met. However, all four gauge bosons remain massless, in contradiction with experimental observations that the weak interaction must occur through a massive force carrier due to the short range nature. This implies that the electroweak symmetry must be broken somehow. The solution to this problem is the Higgs mechanism, which is discussed in the next section.
+
+
