@@ -1,0 +1,8 @@
+Before introducing the geometry models, it is necessary to first describe the propagation and extrapolation models as some of their components are coupled with the geometry. In ACTS, the propagation model consists of two components: the \texttt{Stepper} and \texttt{Navigator}. 
+
+The \texttt{Stepper} is responsible for solving the equations of motion, either analytically or numerically, to propagate track parameters through the detector. The \texttt{Navigator} keeps track of the current position within the detector and dynamically adjusts the step size to ensure no surface is skipped.
+
+These components work together through the \texttt{Propagator}, which is a templated object constructed from a chosen \texttt{Stepper} and \texttt{Navigator}. The \texttt{Propagator} is initialized using a \texttt{PropagatorOptions} object, which defines a set of runtime parameters such as maximum number of steps and maximum step size. Additionally, it is templated with a list of \texttt{Actors} and \texttt{Aborters}. The \texttt{Actors} are objects with custom functionality that execute at each propagation step, this could consist of collecting material interactions or sensitive surface crossing. The \texttt{Aborters} perform a similar function but are condition-based triggers that only activate if the condition is met and stops the propagation. 
+
+The outcome of propagation returns the track parameters at the endpoint, as well as anything collected from the \texttt{Actors}. The muon navigation model is detailed in Section~\ref{sec:reco_muon_nav}.
+

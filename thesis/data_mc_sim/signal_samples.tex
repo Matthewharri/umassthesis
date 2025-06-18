@@ -1,0 +1,16 @@
+The Monte Carlo (MC) signal samples for this thesis consist of $WH$ and $ZH$ where the associated bosons decays leptonically, and the Higgs boson decays into two $W$ bosons that decay leptonically. The generators used to model these are POWHEG-BOX~\cite{powheg} with MINLO~\cite{minlo} for the hard-scattering matrix element calculations at next-to-leading order (NLO) in QCD, interfaced with Pythia 8.3~\cite{pythia8.3} using the A14 tune~\cite{ATL-PHYS-PUB-2014-021} to simulate parton showering, hadronization, and the underlying event. The PDF4LHC21 parton distribution function (PDF) set~\cite{PDF4LHCWorkingGroup_pdfsetrun3} is used in the event generation to describe the proton structure. Matrix elements are matched to the parton shower using the POWHEG matching scheme. During event generation, the associated boson is forced to decay leptonically, which is taken into account in the cross section calculation. The Higgs boson mass is set to 125 GeV in all samples with the uncertainty on the mass being negligible. These are summarized in Table~\ref{tab:mc_signal_samples}.
+
+\begin{table}
+  \centering
+  \begin{tabular}{l|l|l|l|l|l}
+    \hline
+    Sample & Generator & Parton Showering & Tune & X-Sec (pb) & kFactor \\
+    \hline
+    $W^{+}H$ & POWHEG & Pythia8(v.310) & A14 & 2.9896E-01 & 2.2357E-02 \\
+    $W^{-}H$ & POWHEG & Pythia8(v.310) & A14 & 1.8806E-01 & 2.2021E-02 \\
+    $qqZH$ & POWHEG & Pythia8(v.310) & A14 & 8.4943E-02 & 2.1732E-02 \\
+    $ggZH$ & POWHEG & Pythia8(v.310) & A14 & 6.051E-02 & 5.1355E-02 \\
+    \hline
+  \end{tabular}
+  \caption{This table list the generators, showering, and tuning used per signal sample generation. The cross sections and kFactor calculated during the event generation are also listed.}\label{tab:mc_signal_samples}
+\end{table}

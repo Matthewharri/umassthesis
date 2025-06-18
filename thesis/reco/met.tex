@@ -1,0 +1,19 @@
+Since $pp$ collisions occur head-on in the longitudinal direction, momentum conservation requires the total momentum in the transverse direction to be zero. Therefore, momentum imbalances in the transverse plane imply the presence of particles not detected by the ATLAS detector, such as neutrinos. The imbalance is often referred to as missing transverse momentum, denoted as \met{}. 
+
+The \met{} is defined by combining a hard scatter term ($\pt^{\mathrm{hard}}$)~\cite{ATLAS:2018ghb} which represents reconstructed and calibrated objects such as leptons, photons, and jets, and a soft term ($\pt^{\mathrm{soft}}$)~\cite{met_soft_term} which consists of reconstructed charged-particle tracks associated to the PV but not with any reconstructed object. The \met{} calculation is given in Equation~\ref{eq:met_calculation}.
+
+\begin{equation}
+  \centering
+  \met = - (\sum_{\mathrm{Electrons}}{\pt^{e}} + \sum_{\mathrm{Photons}}{\pt^{\gamma}} + \sum_{\mathrm{Hadronic} \tau}{\pt^{\tau}} + \sum_{\mathrm{Muons}}{\pt^{\mu}} + \sum_{\mathrm{Jets}}{\pt^{j}} + \sum_{\mathrm{Soft}}{\pt})
+  \label{eq:met_calculation}
+\end{equation}
+
+To address the needs of different physics analyses, four main WPs have been developed for \met{}. The Loose WP includes all jets with $\pt > 20$ GeV, and pass JVT selection with a score of at least 0.5 if they are in the range $|\eta| < 2.4$. The Tight WP extends the Loose by requiring $20 < \pt < 30$ GeV, the Tighter WP extends the \pt{} threshold to 35 GeV, and the Tenacious keeps the same \pt{} as Tight, but changes the required JVT score based on \pt{}~\cite{ATLAS:2018ghb}
+
+While genuine \met{} exists as undetectable particles, fake \met{} also exists and is not related to physics processes and arise from effects such as particles escaping the detector acceptance, inaccurate reconstructions, or objects failing to be reconstructed.~\cite{ATLAS:2018uid} To distinguish genuine \met{} from fake \met{}, an additional variable associated to \met{} is introduced, the \met{} significance, \metsig{}. It is defined to be the ratio of the \met{} to the variance information of the \met{} and is summarized in Equation~\ref{eq:met_sig_calc}
+\begin{equation}
+  \centering
+  \metsig = \frac{\met}{\sqrt{\sigma_{\mathrm{L}}^{2}(1 - \rho_{\mathrm{LT}}^{2})}}
+  \label{eq:met_sig_calc}
+\end{equation}
+Here, $\sigma_{\mathrm{L}}$ is the total variance in the longitudinal direction to the \met{} and $\rho_{\mathrm{LT}}$ is the correlation factor of the longitudinal and transverse measurements. A large value of \metsig{} indicates that the observed \met{} cannot be explained by momentum resolution effects, but instead arises from undetectable particles.

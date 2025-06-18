@@ -105,6 +105,8 @@
 \usepackage{graphicx}
 \usepackage{amsmath}
 \usepackage{subfig}
+\usepackage{tabularx}
+\usepackage{makecell}
 %% One way of formatting the epigraph/frontispiece is to use this package.
 % \usepackage{epigraph}
 
@@ -340,14 +342,73 @@
 \subsubsection{High Level Trigger}\label{sec:atlas_hlt}
 \input{atlas/hlt.tex}
 
-\chapter{Data and Monte Carlo Simulations}\label{ch:data_mc}
-
 \chapter{Event Reconstruction}\label{ch:reco}
+\input{reco/intro.tex}\label{sec:reco_intro}
+\section{Tracking and Primary Vertex}\label{sec:reco_tracking}
+\input{reco/track_pv.tex}
+\section{Electrons}\label{sec:reco_electrons}
+\input{reco/electrons.tex}
+\subsection{Electron Identification}\label{sec:reco_electron_id}
+\input{reco/electrons_id.tex}
+\subsection{Electron Isolation}\label{sec:reco_electron_iso}
+\input{reco/electrons_iso.tex}
+\section{Muons}\label{sec:reco_muons}
+\input{reco/muons.tex}
+\subsection{Muon Identification}\label{sec:reco_muon_id}
+\input{reco/muons_id.tex}
+\subsection{Muon Isolation}\label{sec:reco_muon_iso}
+\input{reco/muons_iso.tex}
+\subsection{Upgrade Muon Software}\label{sec:reco_muon_upgrade}
+\input{reco/muon_upgrade_intro.tex}
+\subsubsection{A Common Tracking Software}\label{sec:reco_acts}
+\input{reco/acts.tex}
+\subsubsection{ACTS Navigation}\label{sec:reco_acts_navigation}
+\input{reco/acts_navigation.tex}
+\subsubsection{ACTS Geometry}\label{sec:reco_acts_geometry}
+\input{reco/acts_geometry.tex}
+\subsubsection{Muon Geometry}\label{sec:reco_muon_geometry}
+\input{reco/muon_geometry.tex}
+\subsubsection{Muon Navigation}\label{sec:reco_muon_nav}
+\input{reco/muon_navigation.tex}
 
-\chapter{Artificial Neural Networks}\label{ch:nn}
+\section{Jets}\label{sec:reco_jets}
+\input{reco/jets.tex}
+\subsection{Jet Reconstruction}\label{sec:reco_pflow}
+\input{reco/jet_reco.tex}
+\subsection{Jet Energy Calibration}\label{sec:reco_jet_calibration}
+\input{reco/jet_calibration.tex}
+\subsection{Jet Vertex Tagging}\label{sec:reco_jvt_fjvt}
+\input{reco/jet_jvt.tex}
+\subsection{$b$-Tagging}\label{sec:reco_btagging}
+\input{reco/jet_btag.tex}
+
+\section{Missing Transverse Momentum}\label{sec:reco_met}
+\input{reco/met.tex}
+\section{Overlap Removal}\label{sec:reco_overlap_removal}
+\input{reco/or.tex}
+
+% Will move VH object selection to after the VH analysis introduction
+% \section{VH Object Selection}\label{sec:reco_VH_object_selection}
+% \input{reco/VH_object_selection.tex}
+
+\chapter{Data and Monte Carlo Simulations}\label{ch:data_mc}
+\section{Data Samples}\label{sec:data_samples}
+\input{data_mc_sim/data_samples.tex}
+\section{Monte Carlo Simulations}\label{sec:mc_simulations}
+\subsection{Signal Samples}\label{sec:signal_samples}
+\input{data_mc_sim/signal_samples.tex}
+\subsection{Background Samples}\label{sec:background_samples}
+\input{data_mc_sim/background_samples.tex}
 
 \chapter{The VH Analysis}\label{ch:vh_analysis}
+% \section{}
 WH and ZH analysis overview goes here
+\section{Artificial Neural Networks}\label{sec:nn}
+
+\chapter{Statistical Analysis}\label{ch:statistical_analysis}
+Discuss the statistical analysis methods used in the VH analysis here
+
+\chapter{Systematic Uncertainties}\label{ch:systematics}
 
 \chapter{Inclusive Measurement Results}\label{ch:vh_inclusive_results}
 Discuss the VH analysis inclusive measurement results here
@@ -355,7 +416,7 @@ Discuss the VH analysis inclusive measurement results here
 \chapter{Simplified Template Cross Section Measurement Results}\label{ch:vh_stxs_results}
 Discuss the VH analysis STXS measurement results here
 
-\chapter{Conclusion and outlook}\label{ch:conclusions}
+\chapter{Conclusion and Outlook}\label{ch:conclusions}
 Discuss conclusions and outlook
 
 % Sheep are fabulous creatures.  The noises they make are truly stupendous

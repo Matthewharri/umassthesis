@@ -1,0 +1,40 @@
+The data samples used in this thesis come from $pp$ collision data collected with the ATLAS detector from 2022 through 2024 during Run-3 at the LHC\@. This data was collected with $\com{} = 13.6$ TeV with bunch spacing of 25 ns and a total integrated luminosity of 165.4 fb$^{-1}$~\cite{atlas_lumi_image} collected with a 2\% uncertainty.
+
+All events used in this thesis are required to pass some lepton trigger selection. To pass the L1 trigger, muons are required to have $\pt > 14$ GeV for all three data taking years. Electrons have varying L1 requirements by data taking year. For 2022, electrons must have $\pt > 22$ GeV and satisfy a very tight isolation requirement, whereas in 2023 and 2024, the threshold increased to $\pt > 26$ GeV with the same isolation requirement.
+
+At the HLT muons can pass the trigger in one of two ways: either by having $\pt > 24$ GeV and passing a medium identification working point, or by having $\pt > 50$ GeV without any additional identification requirement. Electrons HLT requirements are consistent across all three years and have three ways to pass the trigger: First, electron $\pt > 26$ GeV with tight identification and loose isolation, secondly electron $\pt > 60$ GeV and medium identification, and finally electron $\pt > 140$ GeV with a loose identification.
+
+Events are included in the thesis only if they were collected during periods marked as good runs in the GRL and if at least one lepton satisfies the single-lepton trigger selection. A summary of the GRLs can be seen in Table~\ref{tab:grl}, and lepton triggers in Table~\ref{tab:triggers}.
+
+\begin{table}
+  \centering
+  \begin{tabularx}{1.12\textwidth}{c|>{\centering\arraybackslash}X}
+    \hline
+    \textbf{Data year} & \textbf{Good Runs List} \\
+    \hline
+    2022 & data22\_13p6TeV.periodAllYear\_DetStatus-v134-pro28-10\_MERGED\_PHYS\_StandardGRL\_All\_Good\_25ns\_ignore\_TRIGLAR.xml \\ 
+    \hline
+    2023 & data23\_13p6TeV.periodAllYear\_DetStatus-v133-pro31-11\_MERGED\_PHYS\_StandardGRL\_All\_Good\_25ns\_ignoreTRIG\_JETCTPIN.xml \\
+    \hline
+    2024 & physics\_25ns\_data24.xml \\
+    \hline
+  \end{tabularx}
+  \caption{Summary of the Good Runs Lists (GRL) used in this thesis. The GRL defines the periods of data taking that are suitable for physics analysis.}\label{tab:grl}
+\end{table}
+
+\begin{table}
+  \centering
+  \begin{tabular}{c|c|c}
+    \hline
+    \textbf{Data Year} & \textbf{Muon Trigger} & \textbf{Electron Trigger} \\
+    \hline
+    2022 & \makecell[l]{HLT\_mu24\_ivarmedium\_L1MU14FCH \\ HLT\_mu50\_L1MU14FCH} & \makecell[l]{HLT\_e26\_lhtight\_ivarloose\_L1EM22VHI \\ HLT\_e60\_lhmedium\_L1EM22VHI \\ HLT\_e140\_lhloose\_L1EM22VHI} \\
+    \hline
+    2023 & \makecell[l]{HLT\_mu24\_ivarmedium\_L1MU14FCH \\ HLT\_mu50\_L1MU14FCH} & \makecell[l]{HLT\_e26\_lhtight\_ivarloose\_L1eEM26M \\ HLT\_e60\_lhmedium\_L1eEM26M \\ HLT\_e140\_lhloose\_L1eEM26M} \\
+    \hline
+    2024 & \makecell[l]{HLT\_mu24\_ivarmedium\_L1MU14FCH \\ HLT\_mu50\_L1MU14FCH} & \makecell[l]{HLT\_e26\_lhtight\_ivarloose\_L1eEM26M \\ HLT\_e60\_lhmedium\_L1eEM26M \\ HLT\_e140\_lhloose\_L1eEM26M} \\
+    \hline
+  \end{tabular}
+  \caption{Summary of the lepton triggers used in this thesis. The muon trigger requires either a medium identification working point or a high $\pt$ threshold, while the electron trigger has three different thresholds and identification requirements.}\label{tab:triggers}
+\end{table}
+

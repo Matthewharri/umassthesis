@@ -1,0 +1,44 @@
+The background Monte Carlo samples used in this thesis consist of diboson processes, triboson processes, top processes, and other Higgs boson processes.
+
+% The diboson MC samples used include $WZ$, $WZjj$, $ZZ$, and $ZZjj$ proccesses. Tree-level $qq \rightarrow ZZ$ samples are generated using Sherpa 2.2.14 and Sherpa 2.2.16 while the $gg \rightarrow ZZ$ process is generated using POWHEG-BOX with Pythia8.3 for the showering. The baseline $WZ \rightarrow \ell\ell\ell\nu$ and $ZZ \rightarrow \ell\ell\ell\ell$ samples are generated at NLO precision for 0 and 1 jet multiplicity, and leading order (LO) precision for 2 and 3 jet multiplicity. The electroweak samples ($WZjj$, $ZZjj$) are generated at LO precision for 0 and 1 jet multiplicity and includes triboson-like diagrams. The $gg \rightarrow ZZ$ sample is generated at NLO QCD precision and uses the NNPDF3NLO PDF set. Complementary low mass samples for the baseline $WZ$ and $ZZ$ samples are generated at NLO QCD precision for 0 jet multiplicity and at LO for 1 and 2 jets.
+
+The diboson MC samples used in this thesis include $WZ$, $WZjj$, $ZZ$, and $ZZjj$ processes. The tree-level $qq \rightarrow ZZ$ and $qq \rightarrow WZ$ contributions are generated using Sherpa 2.2.16~\cite{Sherpa:2019gpd} with the NNPDF30 PDF set~\cite{NNPDF:2014otw}, while the $gg \rightarrow ZZ$ process is generated using POWHEG-BOX with the NNPDF30 PDF set, interfaced with Pythia 8.3 for parton showering and hadronization. The baseline $WZ \rightarrow \ell\ell\ell\nu$ and $ZZ \rightarrow \ell\ell\ell\ell$ samples are generated at NLO QCD precision for zero and one jet multiplicities, and at leading order (LO) precision for events with two or three jets.
+
+The electroweak diboson processes, $WZjj$ and $ZZjj$, are generated at LO precision with Sherpa 2.2.14 for zero and one jet multiplicities and include triboson-like diagrams. The $gg \rightarrow ZZ$ sample is generated at NLO QCD precision and uses the NNPDF3NLO PDF set. To improve modeling in the low invariant mass region, additional complementary low-mass $WZ$ and $ZZ$ samples are produced at NLO for 0-jet multiplicity and LO for one or two jets.
+
+The triboson processes ($WWW$, $WWZ$, $WZZ$ and $ZZZ$) are all generated using Sherpa 2.2.16 and are generated at NLO precision for zero and one jet multiplicities, and LO precision for two and three jets.
+
+Top processes are generated with a mix of different generators. The $tWZ$ hard-scatter process is generated using MadGraph5\_aMC@NLO~\cite{Alwall:2011uj} with the NNPDF23LO PDF set~\cite{Ball:2012cx}, and Pythia8.3 with the A14 tune at NLO precision for parton showering and hadronization. EvtGen 2.1.1~\cite{Lange:2001uf} is used to simulate $b$-quark and $c$-quark decays. The $t\bar{t}Z$ processes are generated similarly using MadGraph5\_aMC@NLO with the NNPDF30LO PDF set, and Pythia8.3 with the A14 tune at NLO precision. The $t\bar{t}W$ processes is generated using Sherpa 2.2.14 at NLO precision for zero and one jet multiplicities, and at LO precision for two and three jets. The $ttH$ process is generated with POWHEG-BOX with the PDF4LHC21 PDF set, interfaced with Pythia8.3 using the A14 tune for parton showering and hadronization at NLO precision. The $t\bar{t}$ process is generated using POWHEG-BOX with the NNPDF23LO PDF set, interfaced with Pythia8.3 using the A14 tune for parton showering and hadronization at NLO precision. Bottom and charm quark decays are simulated using EvtGen 2.1.1.
+
+Other Higgs processes include ggF, VBF, and VH processes where $H \rightarrow \tau^{+}\tau^{-}$. These events are generated using POWHEG-BOX with the NNPDF30NLO PDF set, interfaced with Pythia8.3 using the A14 tune for parton showering and hadronization at NLO precision.
+
+The background processes are summarized in Table~\ref{tab:mc_background_samples}.
+
+\begin{table}
+  \centering
+  \begin{tabular}{l|l|l|l|l|l|l}
+    \hline
+    Sample & Generator & Parton Showering & Tune & X-Sec (pb) & kFactor & Filt. Eff. \\
+    \hline
+    $W(Z/\gamma^{*})$ & Sherpa 2.2.16 & --- & A14 & 4.771E+00 & 1 & 1 \\
+    $W(Z/\gamma^{*})jj$ & Sherpa 2.2.14 & --- & A14 & 5.31E-02 & 1 & 1 \\
+    $ZZ$ & Sherpa 2.2.16 & --- & A14 & 1.3312E+00 & 1 & 1 \\
+    $ZZjj$ & Sherpa 2.2.14 & --- & A14 & 7.4415E-04 & 1 & 1 \\
+    $ggZZ$ & POWHEG & Pythia8(v.310) & A14 & 2.8842E-02 & 1 & 1 \\
+    $WWW(3\ell 3\nu)$ & Sherpa 2.2.16 & --- & A14 & 7.6045E-03 & 1 & 1 \\
+    $WWZ(4\ell 2\nu)$ & Sherpa 2.2.16 & --- & A14 & 1.9108E-03 & 1 & 1 \\
+    $WZZ(5\ell 1\nu)$ & Sherpa 2.2.16 & --- & A14 & 1.9938E-04 & 1 & 1 \\
+    $WZZ(3\ell 3\nu)$ & Sherpa 2.2.16 & --- & A14 & 1.7709E-03 & 1 & 0.4458 \\
+    $ZZZ(6\ell 0\nu)$ & Sherpa 2.2.16 & --- & A14 & 1.5186E-05  & 1 & 1 \\
+    $ZZZ(4\ell 2\nu)$ & Sherpa 2.2.16 & --- & A14 & 4.0085E-04  & 1 & 0.2246 \\
+    $tWZ$ & MadGraph5 & Pythia8(v.310) & A14 & 1.6817E-02  & 1 & 1 \\
+    $t\bar{t}Z(ee)$ & MadGraph5 & Pythia8(v.310) & A14 & 4.1465E-02  & 1 & 1 \\
+    $t\bar{t}Z(\mu\mu)$ & MadGraph5 & Pythia8(v.310) & A14 & 4.1465E-02  & 1 & 1 \\
+    $t\bar{t}Z(\tau\tau)$ & MadGraph5 & Pythia8(v.310) & A14 & 4.1129E-02  & 1 & 1 \\
+    $t\bar{t}W$ & Sherpa 2.2.14 & --- & A14 & 6.4886E+00  & 1 & 0.4276 \\
+    $t\bar{t}H$ & POWHEG & Pythia8(v.310) & A14 & 5.8900E-02  & 1 & 1 \\
+    $t\bar{t}$ & POWHEG & Pythia8(v.310) & A14 & 8.550E+01  & 1.1384 & 1 \\
+    \hline
+  \end{tabular}
+  \caption{This table list the generators, showering, and tuning used per background sample generation. The cross sections, kFactors, and filter efficiencies calculated during the event generation are also listed.}\label{tab:mc_background_samples}
+\end{table}
