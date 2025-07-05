@@ -1,8 +1,8 @@
-In the derivation of the Standard Model Lagrangian, group theory plays an essential role. A group $G$ is defined as a set of elements with a binary operation $\ast$ that follow four axioms:
+In the derivation of the Standard Model Lagrangian, interactions arise by requiring the theory to be invariant under a set of local gauge symmetries. Enforcing this invariance directly leads to the introduction of gauge fields which mediate the interactions. To formalize this, we rely on group theory to provide the mathematical foundation. To start, a group $G$ is defined as a set of elements with a binary operation $\ast$ that follows four axioms:
 \begin{enumerate}
-  \item G is closed under $\ast$, meaning $\forall a, b \in G, \; a \ast b \in G$  
-  \item The operation $\ast$ is associative, meaning $\forall a, b, c \in G, \; (a \ast b) \ast c = a \ast (b \ast c)$.
-  \item Each element has an identity, meaning $\exists I \in G$ so that $\forall a \in G, \; I \ast a = a \ast I = a$.
+  \item $G$ is closed under $\ast$, meaning $\forall a, b \in G, \; a \ast b \in G$;  
+  \item The operation $\ast$ is associative, meaning $\forall a, b, c \in G, \; (a \ast b) \ast c = a \ast (b \ast c)$;
+  \item Each element has an identity, meaning $\exists I \in G$ so that $\forall a \in G, \; I \ast a = a \ast I = a$;
   \item Each element has an inverse, meaning $\forall a \in G, \; \exists b \in G$ so that $a \ast b = b \ast a = I$.
 \end{enumerate}
 Additionally, a group is said to be abelian if it's elements are commutative under $\ast$. 
@@ -11,9 +11,9 @@ In physics, symmetry groups are used to describe transformations that leave phys
 
 Another important class of Lie groups are the special unitary groups, denoted by $\mathrm{SU}(N)$. These are a non-abelian group, consisting of all $N \times N$ unitary matrices with determinant 1. Only two such groups are relevant for the Standard Model: $\mathrm{SU}(3)$ (Section~\ref{sec:theory_qcd}) and $\mathrm{SU}(2)$ (Section~\ref{sec:theory_ew}).
 
-These symmetry groups form the mathematical foundation for the structure of the Standard Model: $\mathrm{U}(1)$ for electromagnetism, $\mathrm{SU}(2)$ for the weak interaction, and $\mathrm{SU}(3)$ for the strong interaction. Together, they define the group $\mathrm{SU}(3)C \times \mathrm{SU}(2)L \times \mathrm{U}(1)Y$, which determines how elementary particles interact. The Standard Model Lagrangian is given by the following:
+These symmetry groups form the mathematical foundation for the structure of the Standard Model: $\mathrm{U}(1)$ for electromagnetism, $\mathrm{SU}(2)$ for the weak interaction, and $\mathrm{SU}(3)$ for the strong interaction. Together, they define the group $\mathrm{SU}(3)_C \times \mathrm{SU}(2)_L \times \mathrm{U}(1)_Y$, which determines how elementary particles interact. The Standard Model Lagrangian is given by the following expression:
 \begin{equation}
-  \mathcal{L}_{\mathrm{SM}} = \mathcal{L}_{\mathrm{strong}} + \mathcal{L}_{\mathrm{EW}} + \mathcal{L}_{\mathrm{Yukawa}} + \mathcal{L}_{\mathrm{Higgs}}
+  \mathcal{L}_{\mathrm{SM}} = \mathcal{L}_{\mathrm{strong}} + \mathcal{L}_{\mathrm{EW}} + \mathcal{L}_{\mathrm{Yukawa}} + \mathcal{L}_{\mathrm{Higgs}},
   \label{eq:sm_lagrangian}
 \end{equation}
 which encapsulates these symmetries and will be explored in detail in the sections that follow.
