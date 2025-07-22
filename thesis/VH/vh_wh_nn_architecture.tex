@@ -1,0 +1,26 @@
+The neural network architecture used in the \wh{} analysis is chosen following the method described in Chapter~\ref{ch:nn}. The results of the hyperparamter optimization for each SR ANN are listed below in Table~\ref{tab:vh_wh_architecture}.
+
+\begin{table}[htp]
+\centering
+  \begin{tabular}{c|c|c}
+    \hline
+    \textbf{Hyperparameter} & \zdom{} & \zdep{} \\
+    \hline
+    \hline
+    Batch Size & 4096 & 2048 \\
+    Epochs & 10000 & 10000 \\
+    k-Folds & 5 & 5 \\
+    Training Size & 0.8 & 0.8 \\
+    Validation Size & 0.1 & 0.1 \\
+    Test Size & 0.1 & 0.1 \\
+    Optimizer & Nadam & Nadam \\
+    Learning Rate & $1 \times 10^{-5}$ & $5 \times 10^{-5}$ \\
+    Loss Function & Categorical Crossentropy & Categorical Crossentropy \\
+    Number of Layers & 5 & 3 \\
+    Neurons per Layer & 126, 126, 116, 46, 81 & 155, 87, 40 \\
+    Dropout After Layer & 0.1, 0, 0.1, 0.4, 0.4, & 0.1, 0.1, 0.1 \\
+    Activation Functions & Swish & Swish \\
+    Kernel Initializer & Glorot Normal & Glorot Normal \\
+  \end{tabular}
+  \caption{Summary of the optimal hyperparameters for the each \wh{} signal region.}\label{tab:vh_wh_architecture}
+\end{table}

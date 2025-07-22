@@ -5,6 +5,6 @@
 *.log
 *.lot
 *.lyx~
-*.pdf
+# *.pdf
 *.toc
 

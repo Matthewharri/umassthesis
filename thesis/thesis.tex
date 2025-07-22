@@ -107,11 +107,20 @@
 \usepackage{subfig}
 \usepackage{tabularx}
 \usepackage{makecell}
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{cancel}
+\usepackage{subfig}
+\usepackage{caption}
+\usepackage{siunitx}
+\usepackage{todonotes}
 %% One way of formatting the epigraph/frontispiece is to use this package.
 % \usepackage{epigraph}
 
 \begin{document}
 
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}  % optional, for left-aligned column
+\newcolumntype{:}{@{:}l}
 %%
 %% You must fill in all of these appropriately
 \title{Measurement of the Higgs boson production cross section in association with a vector boson and decaying into $WW^{*}$ with the ATLAS detector at $\sqrt{s}$ = 13.6 TeV}
@@ -381,17 +390,12 @@
 \input{reco/jet_calibration.tex}
 \subsection{Jet Vertex Tagging}\label{sec:reco_jvt_fjvt}
 \input{reco/jet_jvt.tex}
-\subsection{$b$-Tagging}\label{sec:reco_btagging}
+\subsection{\texorpdfstring{$b$-Tagging}{b-Tagging}}\label{sec:reco_btagging}
 \input{reco/jet_btag.tex}
-
 \section{Missing Transverse Momentum}\label{sec:reco_met}
 \input{reco/met.tex}
 \section{Overlap Removal}\label{sec:reco_overlap_removal}
 \input{reco/or.tex}
-
-% Will move VH object selection to after the VH analysis introduction
-% \section{VH Object Selection}\label{sec:reco_VH_object_selection}
-% \input{reco/VH_object_selection.tex}
 
 \chapter{Data and Monte Carlo Simulations}\label{ch:data_mc}
 \section{Data Samples}\label{sec:data_samples}
@@ -402,15 +406,52 @@
 \subsection{Background Samples}\label{sec:background_samples}
 \input{data_mc_sim/background_samples.tex}
 
-\chapter{The VH Analysis}\label{ch:vh_analysis}
-% \section{}
-WH and ZH analysis overview goes here
-\section{Artificial Neural Networks}\label{sec:nn}
+\chapter{Artificial Neural Networks}\label{ch:nn}
+\input{nn/nn.tex}
+
+\chapter{\texorpdfstring{The $VH$ Analysis}{The VH Analysis}}\label{ch:vh_analysis}
+% \section{Introduction}\label{sec:vh_analysis_intro}
+\input{VH/vh_intro.tex}
+\section{Object Selection}\label{sec:vh_object_selection}
+\input{VH/vh_object_selection.tex}
+\section{\texorpdfstring{$WH$}{WH} Analysis}\label{sec:vh_wh_analysis}
+\input{VH/vh_wh_intro.tex}
+\subsection{Event Selection}\label{sec:vh_wh_event_selection}
+\input{VH/vh_wh_event_selection.tex}
+\subsection{Neural Network Training}\label{sec:vh_wh_nn_training}
+\subsubsection{\texorpdfstring{$\wh{}$}{WH} Neural Network Inputs}\label{sec:vh_wh_nn_inputs}
+\input{VH/vh_wh_nn_inputs.tex}
+\subsubsection{Neural Network Architecture}\label{sec:vh_wh_nn_architecture}
+\input{VH/vh_wh_nn_architecture.tex}
+\subsubsection{Neural Network Validation}\label{sec:vh_wh_nn_validation}
+\input{VH/vh_wh_nn_validation.tex}
+\subsubsection{Feature Importance}\label{sec:vh_wh_feature_importance}
+\input{VH/vh_wh_feature_importance.tex}
+\subsubsection{Neural Network Output}\label{sec:vh_wh_nn_output}
+\input{VH/vh_wh_nn_output.tex}
+% \subsection{Background Estimation}\label{sec:vh_wh_background_estimation}
+\subsection{\texorpdfstring{$WZ$}{WZ} Estimation}\label{sec:vh_wh_wz_control_regions}
+\input{VH/vh_wh_wzcr.tex}
+\subsection{Fake Lepton Estimation}\label{sec:vh_wh_fake_lepton_estimation}
+\input{VH/vh_wh_fake_lepton.tex}
+\subsubsection{Fake Muon Estimation}\label{sec:vh_wh_fake_muon_estimation}
+\input{VH/vh_wh_muon_fake.tex}
+\subsubsection{Fake Electron Estimation}\label{sec:vh_wh_fake_electron_estimation}
+\input{VH/vh_wh_electron_fake.tex}
+\subsubsection{\texorpdfstring{$WWW$}{WWW} Validation Region}\label{sec:vh_wh_www_validation_region}
+\input{VH/vh_wh_www_vr.tex}
+\subsection{Validation Regions}\label{sec:vh_wh_validation_regions}
+\input{VH/vh_wh_validation_regions.tex}
+\section{\texorpdfstring{$ZH$}{ZH} Analysis}\label{sec:vh_zh_analysis}
+
+
+
+\chapter{Systematic Uncertainties}\label{ch:systematics}
+\input{systematics/systematics.tex}
+
 
 \chapter{Statistical Analysis}\label{ch:statistical_analysis}
 Discuss the statistical analysis methods used in the VH analysis here
-
-\chapter{Systematic Uncertainties}\label{ch:systematics}
 
 \chapter{Inclusive Measurement Results}\label{ch:vh_inclusive_results}
 Discuss the VH analysis inclusive measurement results here
@@ -421,225 +462,24 @@ Discuss the VH analysis STXS measurement results here
 \chapter{Conclusion and Outlook}\label{ch:conclusions}
 Discuss conclusions and outlook
 
-% Sheep are fabulous creatures.  The noises they make are truly stupendous
-% \cite{Bah}.  We also want to refer to figure \ref{fig:circle} here.
-% Here's some verbatim text to screw us up:
-
-% {\small
-% \begin{verbatim}
-% xxx := y;
-% xy := x;
-% \end{verbatim}
-% }
-
-% \begin{figure}
-%   \begin{center}
-%     \begin{picture}(300,200)
-%       \put(150,100){\circle{150}}
-%       \put(1,1){\framebox(298,198){}}
-%     \end{picture}
-%     \caption{A circle in a square.}\label{fig:circle}
-%   \end{center}
-% \end{figure}
-
-% \subsection{All about sheep noises}
-% Lots of text here just to fill up some space so we can be sure that we
-% really are double-spacing and doing all the other things that might be
-% necessary in formatting a dissertation to U.Mass. guidelines.  We're
-% also going to have another figure here, figure \ref{fig:disc}, just
-% for fun, and to make sure that the list of figures is formatted
-% correctly.  Now it's time for table \ref{table:somenumbers}.  We
-% really are going to need a third figure, figure \ref{fig:discs}, two
-% more tables, table \ref{table:morenumbers} and table
-% \ref{table:evenmorenumbers} and a fourth figure, figure
-% \ref{fig:circleanddisc}, just to really make sure.
-
-% \begin{figure}
-%   \begin{center}
-%     \begin{picture}(300,200)
-%       \put(150,100){\circle*{150}}
-%       \put(1,1){\framebox(298,198){}}
-%     \end{picture}
-%     \caption{A disc in a square.}\label{fig:disc}
-%   \end{center}
-% \end{figure}
-
-% \begin{table}[htbp]
-%   \begin{center}
-%     \caption{Some numbers.}
-%     \label{table:somenumbers}
-%     \begin{tabular}{|r|lll|}
-%       \hline
-%       & Minimum & Average & Maximum \\
-%       Type of Animal & Observed & Observed & Observed \\ \hline
-%       Cats & 12 & 20 & 24 \\
-%       Dogs & 20 & 20 & 20 \\ \hline
-%     \end{tabular}
-%   \end{center}
-% \end{table}
-
-% \begin{figure}
-%   \begin{center}
-%     \begin{picture}(400,200)
-%       \put(100,100){\circle*{150}}
-%       \put(300,100){\circle*{150}}
-%       \put(1,1){\framebox(398,198){}}
-%     \end{picture}
-%     \caption{Two discs in a rectangle.}\label{fig:discs}
-%   \end{center}
-% \end{figure}
-
-% \begin{table}[htbp]
-%   \begin{center}
-%     \caption{More numbers.}
-%     \label{table:morenumbers}
-%     \begin{tabular}{|r|lll|}
-%       \hline
-%       Type of Animal & Arms & Legs & Ears \\ \hline
-%       Person & 2 & 2 & 2 \\
-%       Dog & 0 & 4 & 2 \\ \hline
-%     \end{tabular}
-%   \end{center}
-% \end{table}
-
-% \begin{table}[htbp]
-%   \begin{center}
-%     \caption[Even more numbers; together with a caption long enough to ensure that multi-line caption formatting works correctly.]{Even more numbers; together with a caption long enough to ensure that multi-line caption formatting works correctly.  If you want a shorter caption to appear in the Table of Figures you're going to have to put the shorter caption in the \texttt{[]} as shown in this example.}
-%     \label{table:evenmorenumbers}
-
-%     \begin{tabular}{|r|lll|}
-%       \hline
-%       x & 1 & 1 & 1 \\ \hline
-%       y & 2 & 2 & 2 \\
-%       z & 3 & 3 & 3 \\ \hline
-%     \end{tabular}
-%   \end{center}
-% \end{table}
-
-% \begin{figure}
-%   \begin{center}
-%     \begin{picture}(400,200)
-%       \put(100,100){\circle{150}}
-%       \put(300,100){\circle*{150}}
-%       \put(1,1){\framebox(398,198){}}
-%     \end{picture}
-%     \caption{A circle and a disc in a square.  We want this caption to
-%       be very long to ensure that the formatting of very long captions
-%       is handled correctly.  The case of short captions has already
-%       been dealt with.}\label{fig:circleanddisc}
-%   \end{center}
-% \end{figure}
-
-
-
-% \subsubsection{Baahs}
-% \subsection{Even more about sheep noises}
-% \subsection{And yet more about sheep noises}
-
-% \section{What about wolves?}
-% What about wolves?\footnote{To be fair, some wolves are probably nice\ldots}
-
-% \section{What about shepherds?}
-% What about shepherds?  I don't really know, but I want some text here
-% to fill things in so that I can verify that everything is OK.%
-% \footnote{Some shepherds are good, some are bad. The reader is referred
-%   to Mary and The Boy Who Cried Wolf for further insight into this
-%   much-debated issue. (This needs to be a very long footnote so we can
-%   test the spacing between lines on a footnote.)}
-% \subsection{A subsection}
-% This is a subsection of the subsection about shepherds.
-% \subsection{Another subsection}
-% This is another subsection of that section.
-% \subsubsection{A subsubsection}
-% This is a subsubsection of that subsection that will in turn havae a
-% paragraph with a pair of subparagraphs.  I am aware that I shouldn't
-% have only one subsubsection in the subsection...
-% \paragraph{A Paragraph} 
-% This is the text associated with this paragraph.  I really want enough
-% text to make it look like a paragraph.  Baah, baah, baah.  Baah, baah,
-% baah.  Baah, baah, baah.  Baah, baah, baah.  Baah, baah, baah.  Baah,
-% baah, baah.  Baah, baah, baah.  Baah, baah, baah.  Baah, baah, baah. 
-% \subparagraph{A Subparagraph} 
-% This is the text associated with this subparagraph.  Baah, baah, baah.
-% Baah, baah, baah.  Baah, baah, baah.  Baah, baah, baah.  Baah, baah,
-% baah.  Baah, baah, baah.  Baah, baah, baah.  Baah, baah, baah. 
-% \subparagraph{Another Subparagraph}
-% Better not have subparagraphs without text in them.  Baah, baah, baah.
-% Baah, baah, baah.  Baah, baah, baah.  Baah, baah, baah.  Baah, baah,
-% baah.  Baah, baah, baah.  Baah, baah, baah. 
-% \paragraph{Another Paragraph}
-% Baah, baah, baah.  Baah, baah, baah.  Baah, baah, baah.  Baah, baah,
-% baah.  Baah, baah, baah.  Baah, baah, baah.  Baah, baah, baah.  Baah,
-% baah, baah.  Baah, baah, baah.  Baah, baah, baah.  Baah, baah, baah.
-% Baah, baah, baah.  Baah, baah, baah.  Baah, baah, baah.  Baah, baah,
-% baah.  Baah, baah, baah.  Baah, baah, baah.  Baah, baah, baah.  Baah,
-% baah, baah.  Baah, baah, baah.  Baah, baah, baah.
-
-% Baah, baah, baah.  Baah, baah, baah.  Baah, baah, baah.  Baah, baah,
-% baah.  Baah, baah, baah.  Baah, baah, baah.  Baah, baah, baah.  Baah,
-% baah, baah.  Baah, baah, baah.  Baah, baah, baah.  Baah, baah, baah.
-% Baah, baah, baah.  Baah, baah, baah.  Baah, baah, baah.  Baah, baah,
-% baah.  Baah, baah, baah.  Baah, baah, baah.  Baah, baah, baah.  Baah,
-% baah, baah.  Baah, baah, baah.  Baah, baah, baah.
-% \subsubsection{Another Subsubsection}
-% With some text.  Baah, baah, baah.  Baah, baah, baah.  Baah, baah,
-% baah.  Baah, baah, baah.  Baah, baah, baah.  Baah, baah, baah.  Baah,
-% baah, baah.  Baah, baah, baah.  Baah, baah, baah.  Baah, baah, baah. 
-
-% \chapter{Sheep and Grass}
-
-% \section{Introduction}
-
-% Grass is a wonderful food...  Baah, baah, baah.  Baah, baah, baah.
-% Baah, baah, baah.  Baah, baah, baah.  Baah, baah, baah.  Baah, baah,
-% baah.  Baah, baah, baah.  Baah, baah, baah.  Baah, baah, baah.  Baah,
-% baah, baah.  Baah, baah, baah.  Baah, baah, baah.  Baah, baah, baah.
-% Baah, baah, baah.  Baah, baah, baah.  Baah, baah, baah.  Baah, baah,
-% baah.  Baah, baah, baah.  Baah, baah, baah.  Baah, baah, baah.  Baah,
-% baah, baah.  Baah, baah, baah.  Baah, baah, baah.  Baah, baah, baah.
-% Baah, baah, baah.  Baah, baah, baah.  Baah, baah, baah. 
-
-% \chapter{A Wonderfully Long Chapter Title That Is This Long In Order
-%   to Test the Chapter Heading Stuff}
-% Note that we shouldn't really have a chapter heading with no body, so
-% here is a body for this chapter.  Baah, baah, baah.  Baah, baah, baah.
-% Baah, baah, baah.  Baah, baah, baah.  Baah, baah, baah.  Baah, baah,
-% baah.  Baah, baah, baah.  Baah, baah, baah.  Baah, baah, baah.  Baah,
-% baah, baah.  Baah, baah, baah.  Baah, baah, baah.  Baah, baah, baah.
-% Baah, baah, baah.  Baah, baah, baah.  Baah, baah, baah.  Baah, baah,
-% baah.  Baah, baah, baah.  Baah, baah, baah.  Baah, baah, baah.  Baah,
-% baah, baah.  Baah, baah, baah. 
-
-% \section{The antidisestablishmentarainism supercalifragilisticexpialidocious longlonglonglonglongword}
-
-% A \texttt{quotation}:
-
-% \begin{quotation}
-% Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nibh orci, molestie
-% non vehicula ac, ultricies quis purus. Nunc euismod metus vel nulla sodales quis
-% tempus nisi varius. Sed ornare pulvinar bibendum. Ut egestas mollis nisi vel
-% cursus.
-% \end{quotation}
-
-% \dots and a \texttt{quote}:
-
-% \begin{quote}
-% Ut dolor libero, blandit tristique accumsan non, viverra a magna. Sed pretium
-% sollicitudin neque, sit amet ornare lorem convallis ac. Fusce mollis gravida
-% aliquam. Nullam vulputate turpis vitae orci porttitor auctor. Donec in auctor
-% erat.
-% \end{quote}
-
-
-
 %% End of body
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \appendix
-\chapter{THE FIRST APPENDIX TITLE}
-...
-\chapter{THE SECOND APPENDIX TITLE}
-...
+\chapter{About \texorpdfstring{$\mathrm{F}_{\alpha}$}{}}\label{app:F_alpha}
+\input{appendix/app_f_alpha.tex}
+\chapter{NN Validation Plots}\label{app:nn_validation_plots}
+\input{appendix/app_nn_validation.tex}
+\chapter{Theory Systematic Plots}\label{app:theory_systematics}
+\input{appendix/app_systematic.tex}
+\chapter{\zdom{} Kinematic Plots}\label{app:zdom_input_plots}
+\chapter{\zdep{} Kinematic Plots}\label{app:zdep_input_plots}
+\chapter{\texorpdfstring{$WZ$}{WZ} Control Region Kinematic Plots}\label{app:wzcr_input_plots}
+\chapter{\zdom{} Validation Region Kinematic Plots}\label{app:zdom_validation_plots}
+\chapter{\zdom{} Top Validation Region Kinematic Plots}\label{app:zdom_top_validation_plots}
+\chapter{\zdep{} Top Validation Region Kinematic Plots}\label{app:zdep_top_validation_plots}
+% \chapter{THE SECOND APPENDIX TITLE}
+% ...
 
 %%
 %% Beginning of back matter

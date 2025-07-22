@@ -1,0 +1,46 @@
+The ANN outputs and discriminant for the \zdom{} SR is seen in Figure~\ref{fig:vh_wh_zdom_outputs} and Figure~\ref{fig:vh_wh_zdom_discriminant} respectively, and for the \zdep{} SR in Figure~\ref{fig:vh_wh_zdep_outputs} and Figure~\ref{fig:vh_wh_zdep_discriminant} respectively. The ANN seems to be performing well as each output node identifies its background successfully by populating the low and high valued bins with the correct MC samples. The binning of the neural network discriminant is subject to optimization in the statistical analysis.
+
+\begin{figure}[hp]
+  \centering
+  \subfloat[\zdom{} $WH$ output node scores]{
+    \includegraphics[width=0.45\textwidth]{figures/vh/VH_zdom_wh_scores.pdf}\label{fig:vh_wh_zdom_wh_outputs}
+  }
+  \subfloat[\zdom{} $WZ$ output node scores]{
+    \includegraphics[width=0.45\textwidth]{figures/vh/VH_zdom_wz_scores.pdf}\label{fig:vh_wh_zdom_wz_outputs}
+  }
+  \hfill
+  \subfloat[\zdom{} $ZZ$ output node scores]{
+    \includegraphics[width=0.45\textwidth]{figures/vh/VH_zdom_zz_scores.pdf}\label{fig:vh_wh_zdom_zz_outputs}
+  }
+  \caption{ANN outputs for the \zdom{} SR\@. The $WH$, $WZ$, and $ZZ$ output nodes are shown in (a), (b), and (c) respectively.}\label{fig:vh_wh_zdom_outputs}
+\end{figure}
+
+\begin{figure}[hp]
+  \centering
+  \includegraphics[width=0.8\textwidth]{figures/vh/VH_zdom_nn_discriminant.pdf}
+  \caption{ANN discriminant for the \zdom{} SR.}\label{fig:vh_wh_zdom_discriminant}
+\end{figure}
+
+\begin{figure}[hp]
+  \centering
+  \subfloat[\zdep{} $WH$ output node scores]{
+    \includegraphics[width=0.45\textwidth]{figures/vh/VH_zdep_wh_scores.pdf}\label{fig:vh_wh_zdep_wh_outputs}
+  }
+  \subfloat[\zdep{} $WZ$ output node scores]{
+    \includegraphics[width=0.45\textwidth]{figures/vh/VH_zdep_wz_scores.pdf}\label{fig:vh_wh_zdep_wz_outputs}
+  }
+  \hfill
+  \subfloat[\zdep{} $WWW$ output node scores]{
+    \includegraphics[width=0.45\textwidth]{figures/vh/VH_zdep_www_scores.pdf}\label{fig:vh_wh_zdep_www_outputs}
+  }
+  \subfloat[\zdep{} $t\bar{t}$ output node scores]{
+    \includegraphics[width=0.45\textwidth]{figures/vh/VH_zdep_ttbar_scores.pdf}\label{fig:vh_wh_zdep_ttbar_outputs}
+  }
+  \caption{ANN outputs for the \zdep{} SR\@. The $WH$, $WZ$, $WWW$, and $t\bar{t}$ output nodes are shown in (a), (b), (c) and (d) respectively.}\label{fig:vh_wh_zdep_outputs}
+\end{figure}
+
+\begin{figure}[hp]
+  \centering
+  \includegraphics[width=0.8\textwidth]{figures/vh/VH_zdep_nn_discriminant.pdf}
+  \caption{ANN discriminant for the \zdep{} SR.}\label{fig:vh_wh_zdep_discriminant}
+\end{figure}

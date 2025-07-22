@@ -1,0 +1,53 @@
+Each SR in the \wh{} analysis uses a different set of input variables for the ANN training which are optimized per region. The \zdom{} and \zdep{} channels use 23 and 27 variables respectively (listed in Table~\ref{tab:vh_wh_input_variables}), that are selected to maximize the separation between the \wh{} signals and their corresponding backgrounds. The data and MC simulation agreement are checked in dedicated validation regions (VRs), which are defined as sidebands to each signal region, where only a small amount of signal is expected. 
+
+\begin{table}
+\centering
+  \begin{tabular}{c||c}
+  \hline
+  \multicolumn{1}{c||}{\textbf{$Z$-dominated}} & \multicolumn{1}{c}{\textbf{$Z$-depleted}} \\
+  \hline
+  \multicolumn{2}{c}{\textbf{Variable: Description}} \\
+  \hline
+  \multicolumn{2}{c}{
+    \begin{tabular}{l@{: }l}
+      $\Delta{\eta}_{\ell_{i}\ell{j}}(i \neq j)$ & Pseduorapidity separation between lepton pairs \\
+      $\Delta{\varphi_{\ell_{i}\ell{j}}(i \neq j)}$ & Azimuthal separation between lepton pairs \\
+      $\Delta{R_{\ell_{i}\ell{j}}(i \neq j)}$ & Angular distance between lepton pairs \\
+      $\Delta{m_{\ell_{i}\ell{j}}(i \neq j)}$ & invariant masses of the lepton pairs \\
+      $\pt^{\ell_{i}} (i = 0,1,2)$ & Lepton transverse momentum \\ 
+      $\Delta{\varphi_{\ell_{i}\met}}$ & Azimuthal separation between each lepton and \met{} \\
+      $\pt^{\ell\ell\ell}$ & Magnitude of the vectorial sum of lepton $\pt$ \\
+      $m_{\ell\ell\ell}$ & Invariant mass of the three leptons \\
+      $\met$ & Missing transverse energy \\
+      $\metsig$ & Significance of the missing transverse energy \\
+      $\pt^{\mathrm{Jet, Leading}}$ & $\pt$ of the leading jet \\
+    \end{tabular}
+  } \\
+  \hline
+  \textbf{Variable: Description} & \textbf{Variable: Description} \\
+  \hline
+  No extra &
+  \begin{tabular}{l@{: }l}
+    $F_{\alpha}$ & See Appendix~\ref{app:F_alpha} \\
+    $\mathrm{N}_{b\text{-Jets}}$ & Number of $b$-tagged jets \\
+    $\mathrm{N}_{Jets}$ & Number of jets \\
+    $\frac{\metsig}{\met}$ & Ratio of \metsig{} to \met{} \\
+  \end{tabular} \\
+  \hline
+  \end{tabular}
+  \caption{Input variables used for training the ANN's in the \wh{} analysis. Common variables are listed under both channels, while region specific are listed under their corresponding channel.}\label{tab:vh_wh_input_variables}
+\end{table}
+
+In the \zdom{} channel, input variables for the ANN are selected after applying the full event selection. For the \zdep{} channel, all selection criteria are applied except for the $b$-tagged jet veto. This choice is motivated by Run 2 studies, which demonstrated that including events with $b$-tagged jets can enhance sensitivity by allowing the ANN to learn discriminating features between events with and without $b$-jets.
+
+Due to the limited statistics of the MC samples used for training the \zdep{} ANN, the event selection is loosened to include events with two tight leptons and one anti-ID lepton. Furthermore, the $t\bar{t}$ and $WH$ samples used in the \zdep{} training also contain events that fall into the \zdom{} signal region, as these processes do not depend on SFOS lepton pairs.
+
+Although jets are not present in the final state of the \wh{} decay and arise only through initial state radiation (ISR), jet related variables are included in the ANN primarily for $t\bar{t}$ suppression. Jets from $t\bar{t}$ decays generally have larger \pt{} than ISR jets, making the leading jet \pt{} a useful discriminating variable. Additionally, leading jet \pt{} has discriminating power in the \zdom{} analysis by providing discriminating power against $ZZ$ events. In \wh{} events, a radiated gluon recoils against a single $W$ boson, whereas in $ZZ$ events, it recoils against the $ZZ$ system, leading to harder jets when compared to \wh{}.
+
+Spin correlations in the \hww{} decay cause the \lzero{} and \lone{} leptons to have a small angular separation and small invariant mass in \wh{}, providing further discrimination against diboson and $t\bar{t}$ processes.
+
+Variables related to \met{} offer strong discriminating power, particularly against $t\bar{t}$ events which contain two neutrinos, and the $WZ$ process which involves one or five neutrinos in the \zdom{} channel and five in the \zdep{} channel. Additionally, the $ZZ$ process has various neutrino combinations, but never the same as the \wh{} processes which contains three neutrinos. The difference between the number of neutrinos in the final state for backgrounds compared to the signal makes \met{} related variables especially strong.
+
+Finally, a set of additional kinematic variables are included in the ANN training to give a comprehensive picture of the event. This allows the network to recognize patterns across the full event topology.
+
+The input variables used in the \zdom{} channel are shown in Appendix~\ref{app:vh_wh_zdom_nn_input}, and those used in the \zdep{} channel are provided in Appendix~\ref{app:vh_wh_zdep_nn_input}. In both cases, the inputs are shown after applying the full event selection.

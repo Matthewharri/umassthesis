@@ -1,0 +1,17 @@
+The $WZ$ background in the \zdep{} SR would be highly suppressible if one could reconstruct the $Z$ mass, or the invariant mass of the two $\tau$-leptons. An often used approach is a collinear approximation where the lepton and the corresponding $\tau$ lepton are assumed to be in the same direction, due to the large mass of the $Z$ boson, and the resulting boost. Then, using the \met{} one could reconstruct the $Z \to \tau^{+}\tau^{-}$ decay. However, the $WZ$ process has an additional neutrino from the leptonic $W$ decay, diluting the direction of the \met{}. Additionally, having three charged leptons in the final state, it is unclear which ones to use in the mass reconstruction. Therefore, a different approach is used where a variable called $F_{\alpha}$ is calculated.
+
+In the $Z \to \tau^{+}\tau^{-}$ decay, where the $\tau$ leptons decay leptonically, the transverse momentum is shared between four neutrinos and two charged leptons. In the $W$ leptonic decay, there is only one charged lepton and one neutrino. Since the $W$ boson has slightly smaller mass than the $Z$ boson, and only transfers the transverse momentum in the decay to two particles, it can be assumed that in the three charged lepton final state, that the two sub-leading leptons stem from the $Z \to \tau^{+}\tau^{-}$ decay, assuming they are oppositely charged. Therefore, the $Z \to \tau^{+}\tau^{-}$ candidate charged leptons is the one with minimum \pt{} denoted \lone{}, and the one with second minimum \pt{} and opposite charge to \lone{}, called \ltwo{}. 
+
+To fully reconstruct the $WZ$ process with $Z \to \tau^{+}\tau^{-}$, each neutrinos four-momentum would need to be known. Since none of the four-vector components are known, we are left with $5 \times 4 = 20$ unknowns. By neglecting the neutrino energy ($E_{\nu} \approx |\vec{p_{\nu}}|$), the number of unknowns is reduced to 15. The assumption that the decay products of the $\tau$ decays are collinear further reduces the amount of unknowns by two resulting in 7 remaining unknowns. Additionally, the momentum vectors of the neutrinos originating from the same $\tau$ lepton decay can be summed, resulting in a total of 5 unknowns. 
+
+Using the $W$ boson mass, the $Z$ boson mass, and momentum conservation in the transverse plane, there are 4 conditions for 5 unknowns, making the system of equations unsolvable. The five unknowns correspond to two summed momentum vectors, and three momentum components of the neutrino in the $W \to \ell\nu$ decay. The two values of the vectors can be turned into an expression dependent on the energies of the $\tau$ leptons:
+\begin{equation}
+  E_{\tau}^{i} = E_{\ell}^{i} + E_{\nu}^{i} + E_{\nu_{\tau}}^{i} =: \alpha_{i} \cdot E_{\ell}^{i} \quad (i = 1,2) ,
+\end{equation}
+with
+\begin{equation}
+  \alpha_{i} = \frac{E_{\tau}^{i}}{E_{\ell}^{i}} > 1.
+\end{equation}
+Each $i$ stands for the energies in the two $\tau \to \ell\nu\nu_{\tau}$ decays. The variables $\alpha_{1}$ and $\alpha_{2}$ replaced the energies $E_{\tau}^{1}, E_{\tau}^{2}$ as unknowns, allowing these to be calculated assuming a fixed $\alpha_{1}$
+
+Not all values of $\alpha_{1}$ will yield possible solutions or physical results. Several values for $\alpha_{1}$ are tested, and the fraction of successful calculations of the four unknowns is what is known as $F_{\alpha}$
