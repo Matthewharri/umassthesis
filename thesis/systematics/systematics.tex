@@ -4,7 +4,7 @@ This analysis is affected by several sources of systematic uncertainties, which 
   \item \textbf{Theoretical syetematics:} associated with the simulation of signal and background processes.
   \item \textbf{Experimental systematics:} related to reconstruction, identification, and trigger efficiencies. These are further subdivided into:
         \begin{itemize}
-          \item \textbf{Four-momentum systematics}, where object kinematics (e.g.\ muon momentum) are varied.These shifts affect the selection and therefore the final event yields in the SR and CRs. The variations follow the standard $\pm1\sigma$ prescription, resulting in asymmetric uncertainties.
+          \item \textbf{Four-momentum systematics}, where object kinematics (e.g.\ muon momentum) are varied. These shifts affect the selection and therefore the final event yields in the SR and CRs. The variations follow the standard $\pm1\sigma$ prescription, resulting in asymmetric uncertainties.
           \item \textbf{Scale Factor systematics}, where only the event weight is varied based on corrections derived from data-MC simulation comparisons.
         \end{itemize}
 \end{enumerate}
@@ -13,12 +13,6 @@ This analysis is affected by several sources of systematic uncertainties, which 
 Experimental systematic uncertainties are estimated using recommendations from the relevant ATLAS Combined Performance groups. The impact of scale and resolution uncertainties on energy and momentum measurements is evaluated by applying $\pm1\sigma$ variations to the relevant quantities (electron and jet energy or muon momentum), propagating them through the full selection, and observing the change in yields. These variations are referred to as smearing for resolution systematics.
 
 Efficiency scale factor uncertainties are assessed by comparing the nominal yield (denoted $\Sigma{A}$), obtained with all nominal weights, with a modified yield ($\Sigma{B}$) computed using systematically varied weights. The relative uncertainty is defined as $|\Sigma{A} - \Sigma{B}|/\Sigma{A}$. A full list of experimental systematic sources considered in this analysis is provided in Table~\ref{tab:expSyst}.
-
-% The systematic uncertainty on the energy (electrons/jets) scale or momentum (muons) resolution is found by shifting the energy/momentum of an electron/jet/muon by a scale factor before selecting the events, and observing the effect this scale factor has on the total yield in the final state. The shifting procedure is performed with a nominal scaling value, and scaling values with $\pm 1$ $\sigma$. This is referred to `smearing' in regards to the resolution.
-
-% The systematic uncertainty on the efficiency scale factor is evaluated by comparing the nominal event yield with the one with the modified yield. The nominal yield, referred to as $\Sigma{A}$, is given by the SR yields after all weights are applied. The modified yield, referred to as $\Sigma{B}$, is given by the same raw events, but using the modified weights derived from data-MC simulation agreement. The relative systematic uncertainty is evalued as the relative difference of the nominal and modified yields $|\Sigma{A} - \Sigma{B}|/\Sigma{A}$. These weight based systematics give symmetric uncertainties when comparing the modified yield with the nominal yield.
-
-% The impact of the experimental systematics is calculated using the recommendations from the Combined Performance groups, and are listed in Table~\ref{tab:expSyst}.
 
 \begin{table}
 \resizebox{\textwidth}{!}{
@@ -103,25 +97,13 @@ Efficiency scale factor uncertainties are assessed by comparing the nominal yiel
 
 \section{Theoretical uncertainties}\label{sec:TheorySystematics}
 
-% In this section, sources of theory uncertainty are summarized for signal and background processes, in each analysis channel.
 The theoretical uncertainties in the \wh{} channel are evaluated in the SRs at the level of the ANN discriminant. To further constrain uncertainties associated with the $WZ/W\gamma^{*}$ background, dedicated CRs are used for events with 0, 1, and $\geq$2 jets.
 
 Uncertainties on the \wh{}, diboson and triboson processes are estimated by varying the QCD factorization and renormalization scales, as well as the choice of PDF\@. For QCD scale uncertainties, the renormalization scale ($\mu_{R}$) and factorization scale ($\mu_{F}$) are varied independently up and down by a factor of two resulting in seven combinations. The envelope of the maximum deviations from the nominal yields is taken as the QCD scale uncertainty. For the $WZ$ samples, only the shape of the distributions is considered since the normalization is determined in the final fit.
 
-For the \wh{} process, the nominal PDF set used is PDF4LHC, which provides 40 Hessian-reduced variations. An additional uncertainty associated with parton shower modeling is evaluated by comparing the nominal sample showered with Pythia8 to an alternative sample showered with Herwig7. This two-point comparison is symmetrized to define the showering uncertainty. %Figure~\ref{fig:wh_3l_signal_theortical_systematics} shows the distributions of the ANN discriminant for the nominal and varied \wh{} samples in both the \zdom{} and \zdep{} signal regions.
+For the \wh{} process, the nominal PDF set used is PDF4LHC, which provides 40 Hessian-reduced variations. An additional uncertainty associated with parton shower modeling is evaluated by comparing the nominal sample showered with Pythia8 to an alternative sample showered with Herwig7. This two-point comparison is symmetrized to define the showering uncertainty.
 
 For both diboson and triboson processes, the theoretical uncertainties associated with the QCD scale and $\alpha_s$ are evaluated following the prescription used for the \wh{} process. The nominal PDF set used is NNPDF3.0 at NLO, with $\alpha_{s} = 0.118$. This set includes 100 variations, and the standard deviation is taken as the PDF uncertainty. The uncertainty related to parton showering is estimated through a two-point variation of the resummation scale (``MUQ''), where the scale is varied up and down by a factor of two relative to the nominal. Additionally, an uncertainty due to the choice of jet merging scale (``CKKW'') is derived by comparing the nominal sample which is generated with a 20~GeV merging scale, to samples produced with 15~GeV and 30~GeV merging scales. This uncertainty is symmetrized to produce the up and down variations. No parton showering uncertainty is assigned to the triboson samples.
-
-% For the \wh{} and \zh{} signal processes, uncertainties on PDF, $\alpha_s$ and QCD scale are assigned following the recommendations of the ATLAS Physics Modeling Group (PMG)~\cite{PmgSystematicUncertaintyRecipes}. Following this prescription, we calculate the uncertainty on the PDF by taking the standard deviation of 40 interPDF uncertainties using the PDF4LHC set and use this as the uncertainty. The QCD scale uncertainty is calculated as the envelope of the up and down variation of the renormalization ($\mu_{R}$) and factorization ($\mu_{F}$) scales:
-% \begin{equation}
-%   \resizebox{1\textwidth}{!}{$
-%   \centering
-%   (\mu_{R}, \mu_{F}) = (N,M)\times(\mu_{R}^{0},\mu_{F}^{0})~\forall(N,M)\in[(1,1), (0.5, 1), (1, 0.5), (2, 1), (1, 2), (0.5, 0.5), (2, 2)],
-%   $}
-% \end{equation}
-% where $\mu_{R}^{0}$ and $\mu_{F}^{0}$ are the nominal renormalization and factorization scales. The uncertainty from the parton shower modeling is calculated using truth-level comparisons to samples showered \texttt{Pythia8} and \texttt{Herwig7}.
-
-% For the diboson backgrounds ($q\bar{q} \to ZZ$ and $q\bar{q} \to WZ$), the PDF, $\alpha_s$ and QCD scale are evaluated with the method described by PMG, similar to the signal samples, but using the PDF set used for the Sherpa samples (NNPDF3NLO), which consists of 100 different variations. The parton shower uncertainties are evaluated with uncertainties relating to the jet merging scale (CKKW which is varied from the nominal 20~GeV cut down to 15~GeV and up to 30~GeV) and the jet resummation scale (muQ which is varied up and down by a factor of 2). Triboson samples $VVV$ are treated similarly to diboson samples, excluding the parton shower uncertainties.
 
 Only the normalizations of the minor contributions from ttV and ttH processes are constrained with relative cross section uncertainties $\frac{\Delta\sigma_{ttV}}{\sigma_{ttV}}$ = 13\% and $\frac{\Delta\sigma_{ttH}}{\sigma_{ttH}}$ = 10\%.
 
