@@ -1,20 +1,20 @@
 Artificial neural networks (ANNs) play a crucial role in modern HEP analyses. The \VH{} analysis makes use of them extensively, with all signal regions employing classification ANNs, developed specifically to distinguish signal from background in their specific regions. Additionally, a regression neural network is deployed in the \wh{} analysis to estimate the \pt{} of the associated vector boson, which is needed for the STXS analysis. This chapter will provide a brief overview of neural networks.
 
 \section{ANN Overview}
-The simplest ANN structure is the feed-forward neural network (Figure~\ref{fig:ann_image}), which consist of several ``layers'' that apply linear transformations sequentially to an input vector, $\vec{x}$. Each layer applies a nonlinear ``activation'' function $\sigma(x)$ element-wise to the output of the linear transformation: 
+The simplest ANN structure is the feed-forward neural network (Figure~\ref{fig:ann_image}), which consists of several ``layers'' that apply linear transformations sequentially to an input vector, $\vec{x}$. Each layer applies a nonlinear ``activation'' function $\sigma(x)$ element-wise to the output of the linear transformation: 
 \begin{equation}
-  \sigma({[x_{1}, x_{2}, \ldots, x_{N}]}^{T}) = {[\sigma(x_{1}), \sigma(x_{2}), \ldots, \sigma(x_{N})]}^{T}
+  \sigma({[x_{1}, x_{2}, \ldots, x_{N}]}^{T}) = {[\sigma(x_{1}), \sigma(x_{2}), \ldots, \sigma(x_{N})]}^{T},
 \end{equation}
-where $N$ is the dimension of the input vector. Each layer is thus defined by a weight matrix (kernel), a bias vector, and an activation function. This can be written concisely as:
+where $N$ is the dimension of the input vector. Each layer is thus defined by a weight matrix (kernel), a bias vector, and an activation function. This can be written concisely as
 \begin{equation}
-  \vec{y} = \sigma(\textbf{W}\cdot\vec{x} + \vec{b})
+  \vec{y} = \sigma(\textbf{W}\cdot\vec{x} + \vec{b}),
 \end{equation}
 where $\textbf{W}$ is the weight matrix, $\vec{b}$ is the bias vector, and $\vec{y}$ the resulting output vector. A single layer contains $N \times M + M$ trainable parameters, where $N$ and $M$ are the dimensions of the input and output vectors, respectively.
 
 \begin{figure}[htp]
   \centering
   \includegraphics[width=0.4\textwidth]{figures/nn/nn_image.png}
-  \caption{A simple feed-forward neural network. Each network starts with an input layer, can have any number of hidden layers, and ends with an output layer. Each circular node represent a neuron, with an arrow representing a connection from the output of one neuron to the input of another~\cite{ColoredNN}.}\label{fig:ann_image}
+  \caption{A simple feed-forward neural network. Each network starts with an input layer, can have any number of hidden layers, and ends with an output layer. Each circular node represents a neuron, with an arrow representing a connection from the output of one neuron to the input of another~\cite{ColoredNN}.}\label{fig:ann_image}
 \end{figure}
 
 Several commonly used activation functions include:
@@ -36,17 +36,17 @@ Prior to training, it is standard practice to apply feature scaling to the input
 \begin{itemize}
   \item \texttt{StandardScaler}: Scales features to have a mean of zero and a variance of one.
   \item \texttt{RobustScaler}: Scales features using the median and interquartile range, making it robust to outliers.
-  \item \texttt{MinMaxScaler}: Scales features to a specified range, typically between zero and one or negative one and one
+  \item \texttt{MinMaxScaler}: Scales features to a specified range, typically between zero and one or negative one and one.
 \end{itemize}
 Training of the ANN is performed in batches, where each batch is a subset of the training data. The number of samples in each batch represents the batch size. The ANNs kernel and bias vectors are updated at the end of each batch. One cycle through the training data is known as an epoch. 
 
 For binary classifiers, the most common loss function is the binary cross-entropy, defined as:
 \begin{equation}
-  \mathcal{L} = -\frac{1}{N}\sum_{i=1}^{N} \left( y_{i}\log(\hat{y}_{i}) + (1 - y_{i})\log(1 - \hat{y}_{i}) \right)
+  \mathcal{L} = -\frac{1}{N}\sum_{i=1}^{N} \left( y_{i}\log(\hat{y}_{i}) + (1 - y_{i})\log(1 - \hat{y}_{i}), \right)
 \end{equation}
-where $y_{i}$ is the truth label, $\hat{y}_{i}$ is the predicted label, and $N$ the number of input vectors. For multi-class classification where an ANN has more than two categories, the categorical cross-entropy is used, defined as:
+where $y_{i}$ is the truth label, $\hat{y}_{i}$ is the predicted label, and $N$ the number of input vectors. For multi-class classification where an ANN has more than two output categories, the categorical cross-entropy is used, defined as:
 \begin{equation}
-  \mathcal{L} = -\frac{1}{N}\sum_{i=1}^{N} \sum_{j=1}^{M} y_{ij}\log(\hat{y}_{ij})
+  \mathcal{L} = -\frac{1}{N}\sum_{i=1}^{N} \sum_{j=1}^{M} y_{ij}\log(\hat{y}_{ij}),
 \end{equation}
 where $y_{ij}$ is the truth label for the $j$-th class of the $i$-th input vector, $\hat{y}_{ij}$ is the predicted label for the $j$-th class of the $i$-th input vector, and $M$ is the number of truth classes.
 
@@ -70,7 +70,7 @@ The optimal hyperparameters are validated using a K-fold cross-validation techni
 
 Finally, because the ANNs for each signal region are multi-classifiers, a single neural network discriminant must be constructed that combines the output nodes into one variable suitable for the statistical analysis. It was found that for both signal regions, the optimal discriminant is defined as:
 \begin{equation}
-  ANN_{\Delta} = \ln{\frac{ANN_{\wh}}{\sum_{B}ANN_{B}}}
+  ANN_{\Delta} = \ln{\frac{ANN_{\wh}}{\sum_{B}ANN_{B}}},
 \end{equation}
 where the numerator corresponds to the probability of being a \wh{} event, and the denominator corresponds to the probability of being any of the trained upon backgrounds.
 
