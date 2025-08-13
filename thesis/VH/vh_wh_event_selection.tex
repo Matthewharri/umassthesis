@@ -1,4 +1,4 @@
-The \zdom{} channel is dominated by backgrounds that contain $Z$ bosons. To suppress such contributions, a $Z$-veto is implemented, requiring that the invariant mass of all di-lepton pairs, $\mathrm{m}_{\ell\ell}$, satisfy $|\mathrm{m}_{\ell\ell} - \mathrm{m}_{Z}| > 25$ GeV. This selection targets backgrounds from $WZ/W\gamma^{*}$ and $ZZ^{*}$ processes by requiring that the di-lepton mass is far enough away from the $Z$-pole. Events with neutrinos in their final state are selected by requiring that the $\metsig > 2.4$. Backgrounds that originate from non-prompt leptons, such as $t\bar{t}$ decays, are suppressed by rejecting events that contain at least one $b$-tagged jet. Additionally, leptons originating from light-flavor decays are suppressed by requiring that the smallest invariant mass among the SFOS lepton pairs is greater than 12 GeV. Events containing four leptons, where the fourth lepton passes a looser selection requirement, are vetoed to ensure orthogonality between the \wh{} and \zh{} analyses, as well as to suppress events from $ZZ$. The \wh{} signal is further separated from the dominant background processes of $WZ/W\gamma^{*}$ and $ZZ$ through use of an ANN\@. In this channel, the ANN consists of three distinct output nodes, $o_{i}$, where each node describes the probability that an input event stems from process $i$, with $i$ being \wh{}, $WZ/W\gamma^{*}$, or $ZZ$.
+The \zdom{} channel is dominated by backgrounds that contain $Z$ bosons. To suppress such contributions, a $Z$-veto is implemented, requiring that the invariant mass of all SFOS lepton pairs, $\mathrm{m}_{\ell\ell}$, satisfy $|\mathrm{m}_{\ell\ell} - \mathrm{m}_{Z}| > 25$ GeV. This selection targets backgrounds from $WZ/W\gamma^{*}$ and $ZZ^{*}$ processes by requiring that the di-lepton mass is sufficiently far from the $Z$ pole. This effectively removes on-shell $Z$-bosons leaving only off-shell $Z$-bosons. Events with neutrinos in their final state are selected by requiring that the \met{} significance $\metsig > 2.4$. Backgrounds with non-prompt leptons, such as those from \ttbar{} decays where two prompt leptons are accompanied by a third originating from a $b$-tagged jet, are suppressed by vetoing events containing at least one $b$-tagged jet. Additionally, leptons originating from $J/\psi$ and $\upsilon$ decays are suppressed by requiring that the smallest invariant mass among the SFOS lepton pairs is greater than 12 GeV. Events containing four leptons, where the fourth lepton passes a looser selection requirement, are vetoed to ensure orthogonality between the \wh{} and \zh{} analyses, as well as to suppress background from $ZZ$ production. The \wh{} signal is further separated from the dominant background processes of $WZ/W\gamma^{*}$ and $ZZ$ through the use of an ANN\@. In this channel, the ANN consists of three distinct output nodes, $o_{i}$, where each node describes the probability that an input event stems from process $i$, with $i$ being \wh{}, $WZ/W\gamma^{*}$, or $ZZ$.
 
 The \zdep{} channel is dominated by three main backgrounds consisting of $t\bar{t}$, $WWW$, and $WZ$. It may be surprising to see that the $WZ$ process is still a major background in this signal region even with the no SFOS lepton pair requirement, however, this happens due to $Z \to \tau^{+}\tau^{-}$ decays, where the $\tau$ leptons decay leptonically, producing different flavored leptons in the final state. In this channel, there is only one additional cut used after the pre-selection, which is the $b$-tagged jet veto to reduce the non-prompt background from $t\bar{t}$ decays. Similarly to the \zdom{} channel, an ANN is used to separate the \wh{} signal from the dominant background processes of $t\bar{t}$, $WWW$, and $WZ$. In this channel, however, there are four output nodes, each one describing the probability that an event belongs to one of the previously mentioned processes. The event selection for both \wh{} signal regions are summarized in Table~\ref{tab:vh_wh_eventsel}.
 
@@ -12,16 +12,15 @@ The \zdep{} channel is dominated by three main backgrounds consisting of $t\bar{
   \hline
   \multicolumn{4}{c}{
     \begin{tabular}{@{}l@{}}
-      --- 3 isolated leptons ($e$, $\mu$) \\
-      --- $\pt > 15$ GeV \\
+      --- 3 isolated leptons ($e$, $\mu$) with $\pt > 15$ GeV \\
       --- $\sum_i q_{\ell_i} = \pm 1$ \\
-      --- One lepton trigger matched
+      --- At least one lepton trigger matched
     \end{tabular}
   } \\
   \hline
   \textbf{Selection} & \textbf{Requirement} & \textbf{Selection} & \textbf{Requirement} \\
   \hline
-  $\mathrm{N}_{SFOS}$ & 1 or 2 & $\mathrm{N}_{SFOS}$ & 0 \\
+  $\mathrm{N}_{\mathrm{SFOS}}$ & 1 or 2 & $\mathrm{N}_{\mathrm{SFOS}}$ & 0 \\
   $\mathrm{N}_{b\text{-Jets}}$ & 0 & $\mathrm{N}_{b\text{-Jets}}$ & 0 \\
   $\metsig$ & $> 2.4$ & &  \\
   $m_{\ell\ell}$ [GeV] & $> 12$ & &  \\

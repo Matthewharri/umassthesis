@@ -1,21 +1,20 @@
 A fake factor (FF) is defined as the ratio of the probability that a mis-identified lepton candidate passes the ID lepton criteria to the probability that it satisfies the anti-ID lepton criteria. These fake factors are measured using data from control regions enhanced in fake background events, and then extrapolated to the signal region via an additional control region that is identical to the signal region with the exception of requiring one anti-ID lepton.
 
-Equation~\ref{eq:fake_factor} defines the fake factors, binned in \pt{}. In each \pt{} bin, the amount of fake leptons is determined by subtracting the estimated prompt lepton contributions (obtained via MC simulations) from the data counts for both the ID and anti-ID CRs.
+Equation~\ref{eq:fake_factor} defines the fake factors, binned in \pt{}. In each \pt{} bin, the amount of fake leptons is determined by subtracting the estimated prompt lepton contributions (obtained via MC simulations) from the data counts for both the ID and anti-ID CRs. The fake factor is thus computed as
 
 \begin{equation}
-  FF(\pt{}) = \frac{N^{\mathrm{\text{ID}}, \pt{}}_{\mathrm{fake}}}{N^{\mathrm{\text{anti-ID}}, \pt{}}_{\mathrm{fake}}} = \frac{N^{\mathrm{\text{ID}}, \pt{}}_{\mathrm{\text{data}}} - N^{\mathrm{\text{ID}}, \pt{}}_{\mathrm{real}}}{N^{\mathrm{\text{anti-ID}}, \pt{}}_{\mathrm{\text{data}}} - N^{\mathrm{\text{anti-ID}}, \pt{}}_{\mathrm{real}}}\label{eq:fake_factor}
+  FF(\pt{}) = \frac{N^{\mathrm{\text{ID}}, \pt{}}_{\mathrm{fake}}}{N^{\mathrm{\text{anti-ID}}, \pt{}}_{\mathrm{fake}}} = \frac{N^{\mathrm{\text{ID}}, \pt{}}_{\mathrm{\text{data}}} - N^{\mathrm{\text{ID}}, \pt{}}_{\mathrm{real}}}{N^{\mathrm{\text{anti-ID}}, \pt{}}_{\mathrm{\text{data}}} - N^{\mathrm{\text{anti-ID}}, \pt{}}_{\mathrm{real}}}.\label{eq:fake_factor}
 \end{equation}
 
-When a jet is mis-identified as a lepton, the lepton captures part of the jet's momentum. Since ID leptons are required to pass some isolation criteria, they usually inherit a large fraction of the jet's \pt{}, whereas anti-ID leptons, are allowed to fail isolation (at least for muons in this analysis) and thus carry a smaller fraction. When both ID and anti-ID fall into the same \pt{} bin, the anti-ID lepton typically originates from a higher \pt{} jet. In a standard fake factor method, binning in lepton \pt{} can lead to significant differences in the underlying jet \pt{} spectra, which vary with kinematic selections. To account for this, the modified fake factor is introduced (Equation~\ref{eq:modified_fake_factor}) and adds the lepton isolation variable, \ptvarcone{}~\footnote{This variable is a track-based isolation variable, defined as the scalar sum of the transverse momentum of selected tracks within a cone of variable size determined by $\Delta{R} = \min{\frac{10}{\pt^{\mathrm{muon}}}, 0.3}$, centered around the muon track direction, and excluding the muon track itself.}, to the anti-ID leptons \pt{}. The ID lepton's \pt{} remains unchanged, to keep consistency with the SRs, and on the other hand, the impact of \ptvarcone{} on ID leptons is negligible due to the isolation requirement.
-
+When a jet is mis-identified as a lepton, the lepton captures part of the jet's momentum. Since ID leptons are required to pass some isolation criteria, they usually inherit a large fraction of the jet's \pt{}, whereas anti-ID leptons, are allowed to fail isolation (at least for muons in this analysis) and thus carry a smaller fraction. When both ID and anti-ID fall into the same \pt{} bin, the anti-ID lepton typically originates from a higher \pt{} jet. In a standard fake factor method, binning in lepton \pt{} can lead to significant differences in the underlying jet \pt{} spectra, which vary with kinematic selections. To account for this, a modified fake factor is introduced (Equation~\ref{eq:modified_fake_factor}) in which the lepton isolation variable, \ptvarcone{}~\footnote{This variable is a track-based isolation variable, defined as the scalar sum of the transverse momenta of selected tracks within a cone of variable size determined by $\Delta{R} = \min({\frac{10}{\pt^{\mathrm{muon}}}, 0.3})$, centered around the muon track direction, and excluding the muon track itself.}, is added to the anti-ID lepton's \pt{}. The ID lepton's \pt{} is kept unchanged, to keep consistency with the SRs. However, the impact of \ptvarcone{} on ID leptons is negligible due to the isolation requirement. The modified fake factor is calculated as
 \begin{equation}
-  FF(\pt') = \frac{N^{\mathrm{\text{ID}}, \pt{}}_{\mathrm{fake}}}{N^{\mathrm{\text{anti-ID}}, \pt'{}}_{\mathrm{fake}}} = \frac{N^{\mathrm{\text{ID}}, \pt{}}_{\mathrm{\text{data}}} - N^{\mathrm{\text{ID}}, \pt{}}_{\mathrm{real}}}{N^{\mathrm{\text{anti-ID}}, \pt'{}}_{\mathrm{\text{data}}} - N^{\mathrm{\text{anti-ID}}, \pt'{}}_{\mathrm{real}}}, \quad \pt'{} = \pt{} + \ptvarcone{}
+  FF(\pt') = \frac{N^{\mathrm{\text{ID}}, \pt{}}_{\mathrm{fake}}}{N^{\mathrm{\text{anti-ID}}, \pt'{}}_{\mathrm{fake}}} = \frac{N^{\mathrm{\text{ID}}, \pt{}}_{\mathrm{\text{data}}} - N^{\mathrm{\text{ID}}, \pt{}}_{\mathrm{real}}}{N^{\mathrm{\text{anti-ID}}, \pt'{}}_{\mathrm{\text{data}}} - N^{\mathrm{\text{anti-ID}}, \pt'{}}_{\mathrm{real}}}, \quad \pt'{} = \pt{} + \ptvarcone{}.
   \label{eq:modified_fake_factor}
 \end{equation}
 
-The muon fake factors are measured from the fake factor CRs described in Table~\ref{tab:muon_ttbar_cr}. The fake factor CR used consists of two same sign muons, one opposite sign electron, and 1 $b$-tagged jet. 
+The muon fake factors are measured from the fake factor CRs described in Table~\ref{tab:muon_ttbar_cr}. The fake factor CR used consists of two same sign muons, one opposite sign electron, and 1 $b$-tagged jet. The fake factors are measured in two \pt{} bins, 15-30~GeV and 30+~GeV, to account for different fake rates at low and high momenta.
 
-The $t\bar{t}$ process is the dominant fake muon background in these fake CRs. In the ID CR, the sub-leading muon is chosen as the fake muon since the muons mis-identified from the $b$-tagged jet are expected to have less energy than the prompt muons from $W$ boson decay, since the $W$ boson is more than 19 times larger than a $b$-quark. On the other hand, a muon from a $b$ quark decay typically carries only a small fraction of the original momentum of the $b$-quark. The anti-ID muon is selected to be the fake muon in the anti-ID CR.
+The $t\bar{t}$ process is the dominant fake muon background in these fake CRs. In the ID CR, the sub-leading muon is chosen as the fake muon since the muons mis-identified from the $b$-tagged jet are expected to have less energy than the prompt muons from the $W$ boson decay, since $W$ bosons are significantly heavier than $b$-quarks. On the other hand, a muon from a $b$-quark decay typically carries only a small fraction of the original momentum of the $b$-quark. The anti-ID muon is selected to be the fake muon in the anti-ID CR.
 
 Figures~\ref{fig:muon_ff_electron_pt},~\ref{fig:muon_ff_muon_ff_pt},~\ref{fig:muon_ff_muon_normal_pt}, and~\ref{fig:muon_ff_muon_varcone_pt} show the distributions of the electron \pt{}, the \pt{} of the fake muon with fake factor binning, the \pt{} of the fake muon with standard binning, and the fake muon \ptvarcone{}, respectively.
 
@@ -28,7 +27,7 @@ Figures~\ref{fig:muon_ff_electron_pt},~\ref{fig:muon_ff_muon_ff_pt},~\ref{fig:mu
   \subfloat[Electron \pt{} in the anti-ID CR]{
     \includegraphics[width=0.45\textwidth]{figures/VH/VH_muon_aid_electron_pt.pdf}\label{fig:muon_ff_aid_electron_pt}
   }
-  \caption{Distributions of the electorn \pt{} in the ID CR (a) and anti-ID CR (b).}\label{fig:muon_ff_electron_pt}
+  \caption{(a) Electron \pt{} distribution in the ID CR and (b) Electron \pt{} distribution in the anti-ID CR.}\label{fig:muon_ff_electron_pt}
 \end{figure}
 
 \begin{figure}[htp]
@@ -82,7 +81,7 @@ Figures~\ref{fig:muon_ff_electron_pt},~\ref{fig:muon_ff_muon_ff_pt},~\ref{fig:mu
 \end{table}
 
 \begin{equation}
-  \scalebox{0.75}{$
+  \scalebox{0.70}{$
   \mathcal{L} (\overrightarrow{FF}) = \prod_{i} \text{Poisson}(N_{i}^{\mathrm{\text{ID}, \text{data}}}; N_{i}^{\mathrm{\text{ID}, \text{estimated}}} (\overrightarrow{FF}, \vec{\theta}, \nu)) \cdot 
   \text{Poisson} (N_{i}^{\mathrm{\text{anti-ID}, \text{data}}}; \nu) \cdot 
   \prod_{k} \text{Gaussian} (\theta_{k}; \tilde{\theta_{k}}, \Delta{\theta_{k}})
@@ -93,25 +92,25 @@ Figures~\ref{fig:muon_ff_electron_pt},~\ref{fig:muon_ff_muon_ff_pt},~\ref{fig:mu
 The measurement of the fake factors involves the use of the likelihood $\mathcal{L}$, which is a function of the fake factors and a set of nuisance parameters (NPs). The likelihood function $\mathcal{L}(\overrightarrow{FF})$, seen in Equation~\ref{eq:ff_likelihood}, is the product of three probability distribution functions:
 
 \begin{itemize}
-  \item A Poisson function, $\text{Poisson}(N_{i}^{\text{ID}, \text{data}}; N_{i}^{\text{ID}, \text{estimated}}(\overrightarrow{FF}, \vec{\theta}, \nu))$, is used to model the event yield in each \pt{} bin $i$ in the ID CR to extract the fake factor $\overrightarrow{FF}$. The NP, $\nu$, is the data yield in the anti-ID CR subjecting to $\text{Poisson}$ distribution. Finally, $\vec{\theta}$ is a vector of nuisance parameters, $\theta_{k}$, which is the normalization factor for prompt lepton background $k$, constrained by a $\text{Gaussian}$ term.
-  \item A Poisson term, $\text{Poisson}(N_{i}^{\text{anti-ID}, \text{data}}; \nu)$, is used to model the data yield in the each \pt{} bin $i$.
-  \item A Gaussian term, $\text{Gaussian}(\theta_{k};\tilde{\theta_{k}}, \Delta{\theta_{k}})$, is used to constrain the normalization of prompt lepton background $k$. The mean, $\tilde{\theta_{k}}$, is set to 1, and the standard deviation, $\Delta{\theta_{k}}$, is equal to the relative uncertainty on the cross section of the process $k$, $\frac{\Delta{\sigma_{k}}}{\sigma_{k}}$. Only the two dominant prompt lepton processes, $t\bar{t}V$ and $t\bar{t}H$, are constrained with the Gaussian term, with the relative cross sections uncertainties being: $\frac{\Delta{\sigma_{t\bar{t}V}}}{\sigma_{t\bar{t}V}} = 13\%$~\cite{atlas_ttV_xsec} and $\frac{\Delta{\sigma_{t\bar{t}H}}}{\sigma_{t\bar{t}H}} = 10\%$~\cite{lhchiggsxsec_ttH} respectively. The normalization factors for all other prompt lepton processes are set constantly to 1.
+  \item A Poisson function, $\text{Poisson}(N_{i}^{\text{ID}, \text{data}}; N_{i}^{\text{ID}, \text{estimated}}(\overrightarrow{FF}, \vec{\theta}, \nu))$, is used to model the event yield in each \pt{} bin $i$ in the ID CR to extract the fake factor $\overrightarrow{FF}$. The NP, $\nu$, is the data yield in the anti-ID CR, modeled by a $\text{Poisson}$ distribution. Finally, $\vec{\theta}$ is a vector of nuisance parameters, $\theta_{k}$, which is the normalization factor for prompt lepton background $k$, constrained by a $\text{Gaussian}$ term.
+  \item A Poisson term, $\text{Poisson}(N_{i}^{\text{anti-ID}, \text{data}}; \nu)$, is used to model the data yield in each \pt{} bin $i$.
+  \item A Gaussian term, $\text{Gaussian}(\theta_{k};\tilde{\theta_{k}}, \Delta{\theta_{k}})$, is used to constrain the normalization of prompt lepton background $k$. The mean, $\tilde{\theta_{k}}$, is set to 1, and the standard deviation, $\Delta{\theta_{k}}$, is equal to the relative uncertainty in the cross section of the process $k$, $\frac{\Delta{\sigma_{k}}}{\sigma_{k}}$. Only the two dominant prompt lepton processes, $t\bar{t}V$ and $t\bar{t}H$, are constrained with the Gaussian term, with the relative cross sections uncertainties being: $\frac{\Delta{\sigma_{t\bar{t}V}}}{\sigma_{t\bar{t}V}} = 13\%$~\cite{atlas_ttV_xsec} and $\frac{\Delta{\sigma_{t\bar{t}H}}}{\sigma_{t\bar{t}H}} = 10\%$~\cite{lhchiggsxsec_ttH}, respectively. The normalization factors for all other prompt lepton processes are set to 1.
 \end{itemize}
 
-Where,
+The above variables are defined such that:
 
 \begin{itemize}
-  \item $N_{i}^{\text{ID}, \text{data}}$ is the data yield in the ID CR for \pt{} bin $i$
+  \item $N_{i}^{\text{ID}, \text{data}}$ is the data yield in the ID CR for \pt{} bin $i$.
   \item $N_{i}^{\text{ID}, \text{estimated}}(\overrightarrow{FF}, \vec{\theta}, \nu) = N_{i}^{\text{ID}, \text{prompt}}(\vec{\theta}) + FF^{i} \cdot [N_{i}^{\text{anti-ID}, \text{data}}(\nu) - N_{i}^{\text{anti-ID}, \text{prompt}}(\vec{\theta})]$, and is the sum of the prompt lepton background yield in the ID CR and the fake lepton background yield in the anti-ID CR, scaled by the fake factors in the \pt{} bin $i$.
   \item $N_{i}^{\text{ID}, \text{prompt}}(\vec{\theta}) = \sum_{k} N_{i}^{\text{ID}, \text{prompt}, k} \cdot \theta_{k}$, is the sum of the yields for each prompt process $k$ with normalization factor $\theta_{k}$, applied in the ID CR \pt{} bin $i$. The prompt processes, $k$, consist of $WZ$, $ZZ$, $VVV$, $t\bar{t}V$, $VH$, $t\bar{t}H$, and $tZ$.
-  \item $N_{i}^{\text{anti-ID}, \text{prompt}}(\vec{\theta}) = \sum_{k} N_{i}^{\text{anti-ID}, \text{prompt}, k} \cdot \theta_{k}$, is the sum of the prompt lepton background yield in the same format for the anti-ID CR \pt{} bin $i$.
+  \item $N_{i}^{\text{anti-ID}, \text{prompt}}(\vec{\theta}) = \sum_{k} N_{i}^{\text{anti-ID}, \text{prompt}, k} \cdot \theta_{k}$, is the sum of the prompt lepton background yields in the same format for the anti-ID CR \pt{} bin $i$.
   \item $N_{i}^{\text{anti-ID}, \text{data}}(\nu) = \nu$, is the data yield in the anti-ID CR for \pt{} bin $i$, constrained by the $\text{Poisson}(N_{i}^{\text{anti-ID}, \text{data}; \nu})$ term.
-  \item $i$ is the index for the two \pt{} bins that the fake factor is being calculated in.
+  \item $i$ is the index for which \pt{} bin the fake factor is being calculated in.
 \end{itemize}
 
-To extract the fake factors and their corresponding uncertainties, the negative log likelihood function, $-2 \ln(\mathcal{L}(\overrightarrow{FF}))$, is minimized using ROOT's~\cite{rene_brun_2019_3895860} Minuit2 minimizer with the asymptotic method. Two fake factors are extracted, one for the low \pt{} bin ($15 < \pt < 30$ GeV) and one for the high \pt{} bin ($\pt \geq 30$ GeV). Statistical uncertainties on the fake factors are obtained from the fit, and are applied as systematic uncertainties in the analysis. 
+To extract the fake factors and their corresponding uncertainties, the negative log likelihood function, $-2 \ln(\mathcal{L}(\overrightarrow{FF}))$, is minimized using ROOT's~\cite{rene_brun_2019_3895860} Minuit2 minimizer with the asymptotic method. Two fake factors are extracted, one for the low \pt{} bin ($15 < \pt < 30$ GeV) and one for the high \pt{} bin ($\pt \geq 30$ GeV). Statistical uncertainties in the fake factors are obtained from the fit, and are applied as systematic uncertainties in the analysis. 
 
-The MC driven, and data driven, muon fake factors are summarized in Table~\ref{tab:mc_muon_fake_factors} and Table~\ref{tab:dd_muon_fake_factors} respectively.
+The MC driven, and data driven, muon fake factors are summarized in Tables~\ref{tab:mc_muon_fake_factors} and~\ref{tab:dd_muon_fake_factors}, respectively.
 
 \begin{table}[htp]
 \centering
@@ -142,13 +141,13 @@ The MC driven, and data driven, muon fake factors are summarized in Table~\ref{t
   \caption{Data driven muon fake factors, along with the statistical and cross section uncertainties from the fit, and the non-closure uncertainties from the closure test.}\label{tab:dd_muon_fake_factors}
 \end{table}
 
-To validate the method, a closure test is performed. A CR is defined which contains events following the \zdom{} or \zdep{} SR selections, with an additional requirement of exactly one anti-ID muon. Then, by applying MC driven fake factors to events in the CR, we extrapolate to the SR\@. These events are compared to events with a non-prompt origin in the SR, obtained via MC simulations, where a per bin uncertainty is calculated via Equation~\ref{eq:non-closure_uncertainty}.
+To validate the method, a closure test is performed. A CR is defined which contains events following the \zdom{} or \zdep{} SR selections, except the event must have one anti-ID muon. Then, by applying MC driven fake factors to events in the CR, we extrapolate to the SR\@. These events are compared to events with a non-prompt origin in the SR, obtained via MC simulations, where a per bin uncertainty is calculated via
 
 \begin{equation}
-  \sigma_{\text{non-closure}} = \frac{\sqrt{{(Y_{\text{estimated}} - Y_{\text{predicted}})}^{2} + {(\sigma_{\text{predicted}^{\text{stats}}})}^{2} }}{Y_{\text{estimated}}}\label{eq:non-closure_uncertainty}
+  \sigma_{\text{non-closure}} = \frac{\sqrt{{(Y_{\text{estimated}} - Y_{\text{predicted}})}^{2} + {(\sigma_{\text{predicted}}^{\text{stats}})}^{2} }}{Y_{\text{estimated}}}.\label{eq:non-closure_uncertainty}
 \end{equation}
 
-The results are shown in Figure~\ref{fig:muon_fake_factor_non_closure}, where the non-closure uncertainty is shown as a function of the muon \pt{} in the SR\@. Good agreement is seen for both SR's and the combined result. The non-closure uncertainty is taken as a systematic uncertainty, per bin, on the fake factors in the SR.
+The results are shown in Figure~\ref{fig:muon_fake_factor_non_closure}, where event counts are displayed as a function of the muon \pt{} in the SR\@. Good agreement is seen for both SR's and the combined result. The non-closure uncertainty is taken as a systematic uncertainty, per bin, in the fake factors in the SR.
 
 \begin{figure}[htp]
   \centering
