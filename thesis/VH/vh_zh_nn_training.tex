@@ -1,0 +1,56 @@
+This section provides a brief overview of the ANN training for the \zh{} analysis and omits many of the details already discussed for the \wh{} analysis.
+
+The training procedure follows the prescription outlined in Chapter~\ref{ch:nn}. A separate training is performed for each SR using the same set of input variables listed in Table~\ref{tab:vh_zh_input_variables}, with the corresponding hyperparameters summarized in Table~\ref{tab:vh_zh_architecture}. In both cases, the ANN is trained as a binary classifier, with one output node representing the probability of a \zh{} signal event and the other the probability of a background event.
+
+\begin{table}
+\centering
+  \begin{tabular}{l@{ : }l}
+    \hline
+    \textbf{Variable} & \textbf{Description} \\
+    \hline
+    $p_{\mathrm{T}^{\ell_{i}}}(i = 0, 1, 2, 3)$ & Transverse momentum of lepton \lzero{}, \lone{}, \ltwo{}, and \lthree{} \\
+    $m_{\lzero{}, \lone{}}$ & Invariant mass of leptons \lzero{} and \lone{} ($H$ candidate) \\
+    $m_{\ltwo{}, \lthree{}}$ & Invariant mass of leptons \ltwo{} and \lthree{} ($Z$ candidate) \\
+    $\Delta{\varphi}(\lzero{}, \lone{})$ Boost & Azimuthal angle between \lzero{}, \lone{} in the Higgs Boson rest frame \\
+    $\Delta{\varphi}(\lzero{}, \met{})$ Boost & Azimuthal angle between \lzero{}, \met{} in the Higgs Boson rest frame \\
+    $\Delta{\varphi}(\lone{}, \met{})$ Boost & Azimuthal angle between \lone{}, \met{} in the Higgs Boson rest frame \\
+    \met{} & Missing transverse energy \\
+    $m_{\tau\tau}$ & Invariant mass of the $\tau\tau$ system, via the collinear approx. \\
+    $\pt^{4\ell}$ & Transverse momentum of the four-lepton system \\
+    $m_{4\ell}$ & Invariant mass of the four-lepton system \\
+    $N_{\mathrm{Jet}}$ & Number of jets with $\pt > 30$ GeV \\
+    \hline
+  \end{tabular}
+  \caption{Input variables used for training the ANN's in the \zh{} analysis. }\label{tab:vh_zh_input_variables}
+\end{table}
+\todo[inline]{citation for collinear approximation}
+
+\begin{table}[htp]
+\centering
+\setlength{\tabcolsep}{6pt}
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{c|p{5cm}|p{5cm}}
+    \hline
+    \textbf{Hyperparameter} & \textbf{One SFOS} & \textbf{Two SFOS} \\
+    \hline\hline
+    Batch Size & 1024 & 1024 \\
+    Epochs & 300 & 300 \\
+    k-Folds & 5 & 5 \\
+    Training Size & 0.9 & 0.9 \\
+    Validation Size & 0.1 & 0.1 \\
+    Optimizer & Nadam & Adam \\
+    Learning Rate & $1\times10^{-5}$ & $1\times10^{-5}$ \\
+    Loss Function & Binary Crossentropy & Binary Crossentropy \\
+    Layers & 6 & 6 \\
+    Neurons/layer & 252, 92, 255, 255, 208, 116 & 198, 251, 180, 117, 179, 48 \\
+    Dropout/layer & 0.3, 0.1, 0.2, 0.2, 0.0, 0.3 & 0.2, 0.1, 0.1, 0.3, 0.0, 0.2 \\
+    Activations & Relu, Tanh, Relu, Relu, Tanh, Swish & Swish, Relu, Tanh, Swish, Tanh, Tanh \\
+    Kernel Init. & Glorot Normal & Glorot Normal \\
+    \hline
+\end{tabular}
+\caption{Optimal hyperparameters for each \zh{} signal region.}\label{tab:vh_zh_architecture}
+\end{table}
+
+
+The relative importance of the input variables is shown in Figure~\ref{fig:vh_zh_ann_feature_importance}, while the ROC curves for each SR are displayed in Figure~\ref{fig:zh_ann_roc_curves}. The ANN output distributions in each SR are presented in Figure~\ref{fig:vh_zh_ann_outputs}. Unlike in the \wh{} analysis, no combined output is constructed here, as the classifier is strictly binary.~\todo[inline]{Add these in when callum redoes 4l training}
+

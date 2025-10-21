@@ -1,0 +1,47 @@
+The statistical computations used in this analysis rely on the profile likelihood ratio test statistic, $\tilde{q}_{\mu}$. 
+First, we define the profile likelihood ratio as
+\begin{equation}
+\tilde{\lambda}(\mu) =
+\frac{L\!\left(\mu, \hat{\hat{\vec{\theta}}}(\mu)\right)}
+{L\!\left(\hat{\mu}', \hat{\hat{\vec{\theta}}}(\hat{\mu}')\right)},
+\end{equation}
+where
+\begin{equation}
+\hat{\mu}' =
+\begin{cases}
+\hat{\mu}, & \hat{\mu} \ge 0, \\
+0, & \hat{\mu} < 0.
+\end{cases}
+\end{equation}
+Here, $\hat{\hat{\vec{\theta}}}(\mu)$ and $\hat{\hat{\vec{\theta}}}(0)$ denote the conditional maximum-likelihood (ML) estimators of $\vec{\theta}$ given a signal strength parameter of $\mu$ or $0$, respectively.
+The test statistic $\tilde{q}_{\mu}$ is then defined as
+\begin{equation}
+\tilde{q}_{\mu} =
+\begin{cases}
+- 2 \ln \dfrac{L(\mu, \hat{\hat{\vec{\theta}}}(\mu))}
+{L(\max(0,\hat{\mu}), \hat{\hat{\vec{\theta}}}(\max(0,\hat{\mu})))}, & \hat{\mu} \le \mu, \\[0.3cm]
+0, & \hat{\mu} > \mu.
+\end{cases}
+\end{equation}
+
+\noindent The modified frequentist method (\(CLs\))~\cite{A_L_Read_2002} is used to compute $95\%$ confidence intervals on the signal strength parameter $\mu$. In this approach, the test statistic is one-sided with the constraint $0 < \hat{\mu} < \mu$. The $p$-values $p_{\mu}$ and $p_{b}$ are obtained from the sampling distributions $f(\tilde{q}_{\mu}|\mu,\hat{\theta}_{\mu})$ and $f(\tilde{q}_{\mu}|0,\hat{\theta}_{0})$, respectively:
+\begin{equation}
+p_{\mu} = \int_{\tilde{q}_{\mu,\mathrm{obs}}}^{\infty} f(\tilde{q}_{\mu}|\mu,\hat{\theta}_{\mu}) \, d\tilde{q}_{\mu},
+\quad
+p_{b} = \int_{\tilde{q}_{\mu,\mathrm{obs}}}^{\infty} f(\tilde{q}_{\mu}|0,\hat{\theta}_{0}) \, d\tilde{q}_{\mu}.
+\end{equation}
+The confidence level is defined as
+\begin{equation}
+CLs = \frac{p_{\mu}}{1 - p_{b}},
+\end{equation}
+and the $95\%$ CL upper limit on $\mu$ is the solution to $CLs = 0.05$.
+
+\noindent For computing statistical significance, the background-only $p$-value $p_{0}$ is computed from the test statistic $q_{0}$ with the constraint $\hat{\mu} > 0$:
+\begin{equation}
+p_{0} = \int_{\tilde{q}_{0,\mathrm{obs}}}^{\infty} f(q_{0}|0,\hat{\theta}_{0}) \, d\tilde{q}_{0}.
+\end{equation}
+The significance $Z$ is then extracted from $p_{0}$ by converting from the Gaussian tail probability:
+\begin{equation}
+Z = \Phi^{-1}(1-p_{0}),
+\end{equation}
+where $\Phi^{-1}$ is the quantile of the standard Gaussian. Asymptotic formulae are used to approximate the sampling distributions as described in Ref.~\cite{stats_stuff}.

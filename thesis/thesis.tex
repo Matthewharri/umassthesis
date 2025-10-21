@@ -265,6 +265,8 @@
 %%
 %% If you want an introduction, which is not a numbered chapter, insert
 %% the following two lines.  This is OPTIONAL:
+\listoftodos{}
+
 \unnumberedchapter{Introduction}\label{ch:introduction}
 \input{introduction/introduction.tex}
 
@@ -443,8 +445,11 @@
 \subsection{Validation Regions}\label{sec:vh_wh_validation_regions}
 \input{VH/vh_wh_validation_regions.tex}
 \section{\texorpdfstring{$ZH$}{ZH} Analysis}\label{sec:vh_zh_analysis}
-\todo[inline]{Add this?}
-
+\input{VH/vh_zh_intro.tex}
+\subsection{Event Selection}\label{sec:vh_zh_event_selection}
+\input{VH/vh_zh_event_selection.tex}
+\subsection{Neural Network Training}\label{sec:vh_zh_nn_training}
+\input{VH/vh_zh_nn_training.tex}
 
 \chapter{Simplified Template Cross Section}\label{ch:stxs}
 \input{stxs/stxs_intro.tex}
@@ -455,24 +460,24 @@
 \input{systematics/systematics.tex}
 
 \chapter{Statistical Analysis}\label{ch:statistical_analysis}
-\section{Introduction}\label{sec:statistical_analysis_intro}
+\input{statistical/statistical_intro.tex}
 \section{Profile Likelihood Procedure}\label{sec:statistical_analysis_pl}
+\input{statistical/profile_likelihood.tex}
 \section{Test Statistic and $p$-Values}\label{sec:statistical_analysis_test_statistic}
-\section{Binning}
-\section{Inclusive Measurement Expected Results}\label{sec:statistical_analysis_expected_results}
-\subsection{\zdom{} Expected Results}\label{sec:statistical_analysis_zdom_expected_results}
-\subsection{\zdep{} Expected Results}\label{sec:statistical_analysis_zdep_expected_results}
-\subsection{\wh{} Expected Results}\label{sec:statistical_analysis_wh_expected_results}
-\subsection{$VH$ Expected Results}\label{sec:statistical_analysis_vh_expected_results}
-\subsection{Run 2 and Run 3 Combined Expected Results}\label{sec:statistical_analysis_combined_expected_results}
-\section{Inclusive Measurement Observed Results}\label{sec:statistical_analysis_observed_results}
-\subsection{\zdom{} Observed Results}\label{sec:statistical_analysis_zdom_observed_results}
-\subsection{\zdep{} Observed Results}\label{sec:statistical_analysis_zdep_observed_results}
-\subsection{\wh{} Observed Results}\label{sec:statistical_analysis_wh_observed_results}
-\subsection{$VH$ Observed Results}\label{sec:statistical_analysis_vh_observed_results}
-\subsection{Run 2 and Run 3 Combined Observed Results}\label{sec:statistical_analysis_combined_observed_results}
-\section{STXS Measurement Expected Results}\label{sec:statistical_analysis_stxs_expected_results}
-\section{STXS Measurement Observed Results}\label{sec:statistical_analysis_stxs_observed_results}
+\input{statistical/test_statistic.tex}
+\section{Binning}\label{sec:statistical_analysis_binning}
+\input{statistical/binning.tex}
+\section{Inclusive Measurement Results}\label{sec:statistical_analysis_results}
+\input{statistical/inclusive_intro.tex}
+\subsection{\wh{} Results}\label{sec:statistical_analysis_wh_results}
+\input{statistical/inclusive_wh_results.tex}
+\subsection{$ZH$ Results}\label{sec:statistical_analysis_zh_results}
+\input{statistical/inclusive_zh_results.tex}
+\subsection{$VH$ Results}\label{sec:statistical_analysis_vh_results}
+\input{statistical/inclusive_vh_results.tex}
+\subsection{Run 2 and Run 3 Combined  Results}\label{sec:statistical_analysis_combined_expected_results}
+\input{statistical/inclusive_r2_r3_results.tex}
+\section{STXS Measurement Results}\label{sec:statistical_analysis_stxs_expected_results}
 
 \chapter{Conclusion and Outlook}\label{ch:conclusions}
 Discuss conclusions and outlook
@@ -488,13 +493,26 @@ Discuss conclusions and outlook
 \chapter{Theory Systematic Plots}\label{app:theory_systematics}
 \input{appendix/app_systematic.tex}
 \chapter{\zdom{} Kinematic Plots}\label{app:zdom_input_plots}
+\input{appendix/app_zdom_input.tex}
 \chapter{\zdep{} Kinematic Plots}\label{app:zdep_input_plots}
+\input{appendix/app_zdep_input.tex}
+\chapter{$WWW$ VR Kinematic Plots}\label{app:wwwvr_input_plots}
+\input{appendix/app_wwwvr_input.tex}
 \chapter{\texorpdfstring{$WZ$}{WZ} Control Region Kinematic Plots}\label{app:wzcr_input_plots}
+\input{appendix/app_wzcr_input.tex}
 \chapter{\zdom{} Validation Region Kinematic Plots}\label{app:zdom_validation_plots}
+\input{appendix/app_zdom_vr_input.tex}
 \chapter{\zdom{} Top Validation Region Kinematic Plots}\label{app:zdom_top_validation_plots}
+\input{appendix/app_zdom_topvr_input.tex}
 \chapter{\zdep{} Top Validation Region Kinematic Plots}\label{app:zdep_top_validation_plots}
+\input{appendix/app_zdep_topvr_input.tex}
 \chapter{STXS Regressor Input Variable plots}\label{app:stxs_input_plots}
 \input{appendix/stxs_input.tex}
+\chapter{WH Results Appendix}\label{app:wh_results_appendix}
+\section{WH Inclusive Pull Plots}\label{app:wh_pull_plots}
+\section{WH Inclusive Correlation Plots}\label{app:wh_correlation_plots}
+\section{WH Inclusive Ranking Plots}\label{app:wh_ranking_plots}
+\section{WH Inclusive Post-Fit Plots}\label{app:wh_postfit_plots}
 % \chapter{THE SECOND APPENDIX TITLE}
 % ...
 

@@ -2,14 +2,14 @@ This section details the categorization of signal events and background estimati
 
 The \wh{} analysis requires exactly three isolated leptons (muons or electrons, including those from leptonic $\tau$ decays) with $\pt{} > 15$ GeV and total charge $\pm{e}$, with at least one being matched to the triggering lepton. These requirements target backgrounds that could arise from multiple misidentified leptons, originating from $W+$jets production or $b\bar{b}$ production, and makes them negligible.
 
-When the Higgs bosons decay into two $W$ bosons, the opening angle between the two resulting leptons is small compared to the angle between either of them and the lepton of the associated vector boson, due to helicity conservation and the V-A nature of the weak interaction. Due to this topology, a lepton labeling scheme is developed where the leptons are classified by identifying \lzero{} as the lepton with unique charge, \lone{} as the lepton closest in $\Delta{R}$ to \lzero{}, and \ltwo{} as the remaining lepton. The \lzero{} lepton is guaranteed to be from the Higgs boson decay due to the charge requirement of $\pm{e}$, and \lone{} is also likely from the Higgs boson decay due to the spin correlations. Previously, it has been verified with MC simulation that \lzero{} is chosen correctly 99\% of the time, and \lone{} 85\% of the time for signal events. The labeling scheme is illustrated in Figure~\ref{fig:vh_wh_feynman_diagram}.
+When the Higgs bosons decay into two $W$ bosons, the opening angle between the two resulting leptons is small compared to the angle between either of them and the lepton of the associated vector boson, due to helicity conservation and the V-A nature of the weak interaction. Due to this topology, a lepton labeling scheme is developed where the leptons are classified by identifying \lzero{} as the lepton with unique charge, \lone{} as the lepton closest in $\Delta{R}$ to \lzero{}, and \ltwo{} as the remaining lepton. The \lzero{} lepton is guaranteed to be from the Higgs boson decay due to the charge requirement of $\pm{e}$, and \lone{} is also likely from the Higgs boson decay due to the spin correlations. Previously, it has been verified with MC simulation that \lzero{} is chosen correctly 99\% of the time, and \lone{} 85\% of the time for signal events. The labeling scheme is illustrated in Figure~\ref{fig:vh_wh_feynmann_diagram}.
 
 \begin{figure}[htp]
     \centering
     \includegraphics[width=0.4\textwidth]{
-        figures/VH/VH_wh_feynmann.png
+        figures/VH/VH_wh_feynmann.pdf
     }
-    \caption{The \wh{} Feynmann diagram with corresponding lepton labeling shown.~\cite{ATLAS:2025abg}}\label{fig:vh_wh_feynman_diagram}
+    \caption{The \wh{} Feynmann diagram with corresponding lepton labeling shown.}\label{fig:vh_wh_feynmann_diagram}
 \end{figure}
 
 In order to separate regions populated with backgrounds from $Z$ bosons, such as $WZ/W\gamma^{*}$, $ZZ^{*}$, and $Z\gamma{}$, the analysis separates events with at least one SFOS lepton pair from those with none. The region with these pairs contains about 3/4 of the signal, but suffers from this irreducible background. The pair without any SFOS pair contains 1/4 of the signal, but needs stringent lepton identification to reduce backgrounds. Events containing at least one SFOS pair are classified as being in the \zdom{} category, while those without any in the \zdep{} category. The Feynmann diagrams for the two leading prompt lepton backgrounds are illustrated in Figure~\ref{fig:vh_wh_leading_prompt_bkg}
@@ -17,10 +17,10 @@ In order to separate regions populated with backgrounds from $Z$ bosons, such as
 \begin{figure}[htp]
     \centering
     \subfloat[$q\bar{q}\to ZZ$]{
-        \includegraphics[width=0.4\textwidth]{thesis/figures/VH/qq_zz.pdf}
+        \includegraphics[width=0.4\textwidth]{figures/VH/qq_zz1.pdf}
     }
     \subfloat[$q\bar{q} \to WZ$]{
-        \includegraphics[width=0.4\textwidth]{thesis/figures/VH/qq_wz.pdf}
+        \includegraphics[width=0.4\textwidth]{figures/VH/qq_wz1.pdf}
     }\caption{Feynman diagrams for the two leading prompt backgrounds, $WZ$ and $ZZ$.}\label{fig:vh_wh_leading_prompt_bkg}
 \end{figure}
 
@@ -35,13 +35,13 @@ For $Z$+jets, the final state contains a $Z$ boson and a quark (most often a $b$
 \begin{figure}[htp]
     \centering
     \subfloat[$Z+$jets]{
-        \includegraphics[width=0.32\textwidth]{thesis/figures/VH/z+jets.pdf}
+        \includegraphics[width=0.32\textwidth]{figures/VH/z+jets.pdf}
     }
     \subfloat[$Z+\gamma$]{
-        \includegraphics[width=0.32\textwidth]{thesis/figures/VH/zgamma.pdf}
+        \includegraphics[width=0.32\textwidth]{figures/VH/zgamma.pdf}
     }
     \subfloat[\ttbar{}]{
-        \includegraphics[width=0.32\textwidth]{thesis/figures/VH/ttbar.pdf}
+        \includegraphics[width=0.32\textwidth]{figures/VH/ttbar.pdf}
     }\caption{Feynman diagrams for the two leading prompt backgrounds, $WZ$ and $ZZ$.}\label{fig:vh_wh_leading_nonprompt_bkg}
 \end{figure}
 
