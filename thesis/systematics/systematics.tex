@@ -1,15 +1,16 @@
-This analysis is affected by several sources of systematic uncertainties, which fall into two categories.
+This analysis is affected by several sources of systematic uncertainty, which fall into two categories.
 
 \begin{enumerate}
-  \item \textbf{Theoretical syetematics:} associated with the simulation of signal and background processes.
-  \item \textbf{Experimental systematics:} related to reconstruction, identification, and trigger efficiencies. These are further subdivided into:
+  \item \textbf{Experimental systematic uncertainties:} related to reconstruction, identification, and trigger efficiencies. These are further subdivided into:
         \begin{itemize}
-          \item \textbf{Four-momentum systematics}, where object kinematics (e.g.\ muon momentum) are varied. These shifts affect the selection and therefore the final event yields in the SR and CRs. The variations follow the standard $\pm1\sigma$ prescription, resulting in asymmetric uncertainties.
+          \item \textbf{Four-momentum systematic uncertainties}, where object kinematics (e.g.\ muon momentum) are varied. These shifts affect the selection and therefore the final event yields in the SR and CRs. The variations follow the standard $\pm1\sigma$ prescription.
           \item \textbf{Scale Factor systematics}, where only the event weight is varied based on corrections derived from data-MC simulation comparisons.
         \end{itemize}
+  \item \textbf{Theoretical systematic uncertainties:} associated with the simulation of signal and background processes.
 \end{enumerate}
 
 \section{Experimental uncertainties}\label{sec:experimental_systematics}
+\todo[inline]{Explain experimental systematic uncertainties in some more detail.}
 Experimental systematic uncertainties are estimated using recommendations from the relevant ATLAS Combined Performance groups. The impact of scale and resolution uncertainties on energy and momentum measurements is evaluated by applying $\pm1\sigma$ variations to the relevant quantities (electron and jet energy or muon momentum), propagating them through the full selection, and observing the change in yields. These variations are referred to as smearing for resolution systematics.
 
 Efficiency scale factor uncertainties are assessed by comparing the nominal yield (denoted $\Sigma{A}$), obtained with all nominal weights, with a modified yield ($\Sigma{B}$) computed using systematically varied weights. The relative uncertainty is defined as $|\Sigma{A} - \Sigma{B}|/\Sigma{A}$. A full list of experimental systematic sources considered in this analysis is provided in Table~\ref{tab:expSyst}.
@@ -22,15 +23,15 @@ Efficiency scale factor uncertainties are assessed by comparing the nominal yiel
   \hline
   \multicolumn{2}{c}{Event} \\
   \hline
-  Luminosity         & 2\% uncertainty on total integrated luminosity \\
-  Pileup Reweighting & Uncertainty on pileup re-weighting          \\
+  Luminosity         & 1.9\% uncertainty in total integrated luminosity \\
+  Pileup Reweighting & Uncertainty in pileup re-weighting          \\
   \hline
   \multicolumn{2}{c}{Electrons} \\
   \hline
   \texttt{EL\_EFF\_Trigger\_Total\_1NPCOR\_PLUS\_UNCOR}            & Trigger efficiency uncertainty                   \\
   \texttt{EL\_EFF\_Reco\_Total\_1NPCOR\_PLUS\_UNCOR}               & Reconstruction efficiency uncertainty            \\
-  \texttt{EL\_EFF\_ID\_CorrUncertaintyNP} (0 to 15)                & ID efficiency uncertainty split in 16 components \\
-  \texttt{EL\_EFF\_ID\_SIMPLIFIED\_UncorrUncertaintyNP} (0 to 17)  & ID efficiency uncertainty split in 18 components \\
+  \texttt{EL\_EFF\_ID\_CorrUncertaintyNP} (0 to 15)                & ID efficiency for correlated uncertainties split in 16 components \\
+  \texttt{EL\_EFF\_ID\_SIMPLIFIED\_UncorrUncertaintyNP} (0 to 17)  & ID efficiency for uncorrelated uncertainties split in 18 components \\
   \texttt{EL\_EFF\_Iso\_Total\_1NPCOR\_PLUS\_UNCOR}                & Isolation efficiency uncertainty                 \\
   \texttt{EG\_SCALE\_ALL}                                          & \multirow{2}{*}{Energy scale uncertainty}        \\
   \texttt{EG\_SCALE\_AF2}                                          &                                                  \\
@@ -57,21 +58,21 @@ Efficiency scale factor uncertainties are assessed by comparing the nominal yiel
   \hline
   \multicolumn{2}{c}{Jets} \\
   \hline
-  \texttt{JET\_EffectiveNP\_Detector} (1 to 2)          & \multirow{4}{*}{Energy scale uncertainty from the in situ analyses splits into 8 components} \\
+  \texttt{JET\_EffectiveNP\_Detector} (1 to 2)          & \multirow{4}{*}{Energy scale uncertainty from the in situ analyses split into 8 components} \\
   \texttt{JET\_EffectiveNP\_Mixed} (1 to 3)             & \\
   \texttt{JET\_EffectiveNP\_Modelling} (1 to 4)         & \\
   \texttt{JET\_EffectiveNP\_Statistical} (1 to 6)       & \\
-  \texttt{JET\_EtaIntercalibration\_Modelling}           & Energy scale uncertainty on eta-intercalibration (modeling) \\
-  \texttt{JET\_EtaIntercalibration\_TotalStat}          & Energy scale uncertainty on eta-intercalibrations (statistics/method) \\
-  \texttt{JET\_EtaIntercalibration\_NonClosure\_PreRec}  & \multirow{2}{*}{Energy scale uncertainty on eta-intercalibrations (non-closure)} \\
+  \texttt{JET\_EtaIntercalibration\_Modelling}           & Energy scale uncertainty in eta-intercalibration (modeling) \\
+  \texttt{JET\_EtaIntercalibration\_TotalStat}          & Energy scale uncertainty in eta-intercalibrations (statistics/method) \\
+  \texttt{JET\_EtaIntercalibration\_NonClosure\_PreRec}  & \multirow{2}{*}{Energy scale uncertainty in eta-intercalibrations (non-closure)} \\
   \texttt{JET\_EtaIntercalibration\_NonClosure\_0p2\_PreRec} & \\
-  \texttt{JET\_Pileup\_OffsetMu}                        & Energy scale uncertainty on pile-up (mu dependent) \\
-  \texttt{JET\_Pileup\_OffsetNPV}                       & Energy scale uncertainty on pile-up (NPV dependent) \\
-  \texttt{JET\_Pileup\_PtTerm}                          & Energy scale uncertainty on pile-up ($\pt$ term) \\
-  \texttt{JET\_Pileup\_RhoTopology}                     & Energy scale uncertainty on pile-up (density $\rho$) \\
-  \texttt{JET\_Flavor\_Composition}                     & Energy scale uncertainty on flavour composition \\
-  \texttt{JET\_Flavor\_Response}                        & Energy scale uncertainty on samples' flavour response \\
-  \texttt{JET\_BJES\_Response}                          & Energy scale uncertainty on $b$-jets \\
+  \texttt{JET\_Pileup\_OffsetMu}                        & Energy scale uncertainty in pile-up (mu dependent) \\
+  \texttt{JET\_Pileup\_OffsetNPV}                       & Energy scale uncertainty in pile-up (NPV dependent) \\
+  \texttt{JET\_Pileup\_PtTerm}                          & Energy scale uncertainty in pile-up ($\pt$ term) \\
+  \texttt{JET\_Pileup\_RhoTopology}                     & Energy scale uncertainty in pile-up (density $\rho$) \\
+  \texttt{JET\_Flavor\_Composition}                     & Energy scale uncertainty in flavour composition \\
+  \texttt{JET\_Flavor\_Response}                        & Energy scale uncertainty in samples' flavour response \\
+  \texttt{JET\_BJES\_Response}                          & Energy scale uncertainty in $b$-jets \\
   \texttt{JET\_PunchThrough\_MC16}                      & Energy scale uncertainty for punch-through jets \\
   \texttt{JET\_SingleParticle\_HighPt}                  & Energy scale uncertainty from the behavior of high-\pt{} jets \\
   \texttt{JET\_JER\_DataVsMC\_MC16}                     & \multirow{3}{*}{Energy resolution uncertainty, each for both MC d pseudo-data} \\
@@ -81,7 +82,7 @@ Efficiency scale factor uncertainties are assessed by comparing the nominal yiel
   \texttt{FT\_EFF\_Eigen\_B}                            & \multirow{3}{*}{$b$-tagging efficiency uncertainties} \\
   \texttt{FT\_EFF\_Eigen\_C}                            & \\
   \texttt{FT\_EFF\_Eigen\_Light}                            & \\
-  \texttt{FT\_EFF\_extrapolation\_from\_charm}   & $b$-tagging efficiency uncertainty on tau jets \\
+  \texttt{FT\_EFF\_extrapolation\_from\_charm}   & $b$-tagging efficiency uncertainty in tau jets \\
   \hline
   \multicolumn{2}{c}{MET} \\
   \hline
@@ -98,12 +99,12 @@ Efficiency scale factor uncertainties are assessed by comparing the nominal yiel
 \section{Theoretical uncertainties}\label{sec:TheorySystematics}
 
 The theoretical uncertainties in the \wh{} channel are evaluated in the SRs at the level of the ANN discriminant. To further constrain uncertainties associated with the $WZ/W\gamma^{*}$ background, dedicated CRs are used for events with 0, 1, and $\geq$2 jets.
-
-Uncertainties on the \wh{}, diboson and triboson processes are estimated by varying the QCD factorization and renormalization scales, as well as the choice of PDF\@. For QCD scale uncertainties, the renormalization scale ($\mu_{R}$) and factorization scale ($\mu_{F}$) are varied independently up and down by a factor of two resulting in seven combinations. The envelope of the maximum deviations from the nominal yields is taken as the QCD scale uncertainty. For the $WZ$ samples, only the shape of the distributions is considered since the normalization is determined in the final fit.
+% \todo[inline]{Might be good to say a little more about pdf set and alpha s}
+Uncertainties in the \wh{}, diboson and triboson processes are estimated by varying the QCD factorization and renormalization scales, the choice of PDF set, as well as $\alpha_s$\@. For QCD scale uncertainties, the renormalization scale ($\mu_{R}$) and factorization scale ($\mu_{F}$) are varied independently up and down by a factor of two resulting in seven combinations. The envelope of the maximum deviations from the nominal yields is taken as the QCD scale uncertainty. For the $WZ$ samples, only the shape of the distributions is considered since the normalization is determined in the final fit.
 
 For the \wh{} process, the nominal PDF set used is PDF4LHC, which provides 40 Hessian-reduced variations. An additional uncertainty associated with parton shower modeling is evaluated by comparing the nominal sample showered with Pythia8 to an alternative sample showered with Herwig7. This two-point comparison is symmetrized to define the showering uncertainty.
 
-For both diboson and triboson processes, the theoretical uncertainties associated with the QCD scale and $\alpha_s$ are evaluated following the prescription used for the \wh{} process. The nominal PDF set used is NNPDF3.0 at NLO, with $\alpha_{s} = 0.118$. This set includes 100 variations, and the standard deviation is taken as the PDF uncertainty. The uncertainty related to parton showering is estimated through a two-point variation of the resummation scale (``MUQ''), where the scale is varied up and down by a factor of two relative to the nominal. Additionally, an uncertainty due to the choice of jet merging scale (``CKKW'') is derived by comparing the nominal sample which is generated with a 20~GeV merging scale, to samples produced with 15~GeV and 30~GeV merging scales. This uncertainty is symmetrized to produce the up and down variations. No parton showering uncertainty is assigned to the triboson samples.
+For both diboson and triboson processes, the theoretical uncertainties associated with the QCD scale and $\alpha_{s}$ are evaluated following the prescription used for the \wh{} process. The nominal PDF set used is NNPDF3.0 at NLO, with $\alpha_{s} (m_Z) = 0.118$. This set includes 100 variations, and the standard deviation is taken as the PDF uncertainty. The uncertainty related to parton showering is estimated through a two-point variation of the resummation scale (``MUQ''), where the scale is varied up and down by a factor of two relative to the nominal. Additionally, an uncertainty due to the choice of jet merging scale (``CKKW'') is derived by comparing the nominal sample which is generated with a 20~GeV merging scale, to samples produced with 15~GeV and 30~GeV merging scales. This uncertainty is symmetrized to produce the up and down variations. No parton showering uncertainty is assigned to the triboson samples.
 
 Only the normalizations of the minor contributions from ttV and ttH processes are constrained with relative cross section uncertainties $\frac{\Delta\sigma_{ttV}}{\sigma_{ttV}}$ = 13\% and $\frac{\Delta\sigma_{ttH}}{\sigma_{ttH}}$ = 10\%.
 
@@ -117,7 +118,7 @@ A summary of the \wh{} theoretical systematic uncertainties is given in Table~\r
     table-space-text-post=\%,
     retain-explicit-plus
   }
-  \caption{List of theory systematic uncertainties considered in the \wh{} $3\ell$ channel. All uncertainties are given as relative variations on the yields. The yields are assumed to be taken in the region where the MVA analysis is done.}\label{tab:wh_3l_theory_syst}
+  \caption{List of theory systematic uncertainties considered in the \wh{} $3\ell$ channel. All uncertainties are given as relative variations on the yields. The yields are taken in the region where the MVA analysis is performed. Values of 0.0 illustrate minimal impact by the corresponding uncertainty.}\label{tab:wh_3l_theory_syst}
   \bigskip
   \resizebox{0.7\textwidth}{!}{
     \begin{tabular}{llrl}

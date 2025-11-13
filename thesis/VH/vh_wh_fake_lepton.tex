@@ -1,4 +1,4 @@
-In the $WH$ channel, fake leptons --- leptons that are reconstructed by the detector, but do not necessarily originate from the hard-scatter interaction --- primarily arise from processes such as $V+$jets, $V\gamma$, and $t\bar{t}$. These backgrounds are estimated using data driven methods, in particular, a modified fake factor method~\cite{ATLAS:2019cbr} is applied for fake muon estimation, while a scale factor method is used for fake electron estimation. 
+In the $WH$ channel, fake leptons --- leptons that are reconstructed by the detector, but do not necessarily originate from the hard-scatter interaction --- primarily arise from processes such as $V+$jets, $V\gamma$, and $t\bar{t}$, with electrons also receiving a contribution from jets misidentified as electrons. These backgrounds are estimated using data driven methods, in particular, a modified fake factor method~\cite{ATLAS:2019cbr} is applied for fake muon estimation, while a scale factor method is used for fake electron estimation. 
 
 Requiring a minimum angular separation between leptons is found to be effective in suppressing fake lepton backgrounds. Leptons from $WH$ decays are rarely found to have $\Delta{R}_{\ell\ell} < 0.1$, whereas events with close-by leptons are more common in fake-lepton background events. Thus, as an optimization in reducing fake lepton contributions, a cut of $\Delta{R}_{\ell\ell} > 0.1$ is applied across the signal regions. Events containing two fake leptons are exceptionally rare, and are not included in this estimation.
 
@@ -21,5 +21,5 @@ A fake/scale factor is determined using pairs of CRs designed to enhance fake le
   Isolation                & {Tight\_VarRad}               & {---}          & {Tight\_VarRad}   &  {Loose\_VarRad} \\
   Veto id                  & ---                           & Yes            & ---               & Yes          \\
   \end{tabular}
-  \caption{ID and anti-ID lepton selection criteria. Important note: The $\pt$ value for muons in the anti-ID region have a correction applied to include the $\pt^{\text{varcone30}}$ value around the muon.}\label{tab:wh_id_antiid_selection}
+  \caption{ID and anti-ID lepton selection criteria. Important note: The $\pt$ value for muons in the anti-ID region is corrected to include the $\pt^{\text{varcone30}}$ value around the muon.}\label{tab:wh_id_antiid_selection}
 \end{table}

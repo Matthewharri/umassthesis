@@ -71,6 +71,7 @@ The optimal hyperparameters are validated using a K-fold cross-validation techni
 Finally, because the ANNs for each signal region are multi-classifiers, a single neural network discriminant must be constructed that combines the output nodes into one variable suitable for the statistical analysis. It was found that for both signal regions, the optimal discriminant is defined as:
 \begin{equation}
   ANN_{\Delta} = \ln{\frac{ANN_{\wh}}{\sum_{B}ANN_{B}}},
+  \label{eq:NN_discriminant}
 \end{equation}
 where the numerator corresponds to the probability of being a \wh{} event, and the denominator corresponds to the probability of being any of the trained upon backgrounds.
 

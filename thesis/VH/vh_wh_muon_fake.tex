@@ -12,7 +12,7 @@ When a jet is mis-identified as a lepton, the lepton captures part of the jet's 
   \label{eq:modified_fake_factor}
 \end{equation}
 
-The muon fake factors are measured from the fake factor CRs described in Table~\ref{tab:muon_ttbar_cr}. The fake factor CR used consists of two same sign muons, one opposite sign electron, and 1 $b$-tagged jet. The fake factors are measured in two \pt{} bins, 15-30~GeV and 30+~GeV, to account for different fake rates at low and high momenta.
+The muon fake factors are measured from the fake factor CRs described in Table~\ref{tab:muon_ttbar_cr}. The fake factor CR used consists of two same sign muons, one opposite sign electron, and 1 $b$-tagged jet to guarantee orthogonality to the SR. The fake factors are measured in two \pt{} bins, 15-30~GeV and 30+~GeV, to account for different fake rates at low and high momenta.
 
 The $t\bar{t}$ process is the dominant fake muon background in these fake CRs. In the ID CR, the sub-leading muon is chosen as the fake muon since the muons mis-identified from the $b$-tagged jet are expected to have less energy than the prompt muons from the $W$ boson decay, since $W$ bosons are significantly heavier than $b$-quarks. On the other hand, a muon from a $b$-quark decay typically carries only a small fraction of the original momentum of the $b$-quark. The anti-ID muon is selected to be the fake muon in the anti-ID CR.
 
@@ -27,7 +27,7 @@ Figures~\ref{fig:muon_ff_electron_pt},~\ref{fig:muon_ff_muon_ff_pt},~\ref{fig:mu
   \subfloat[Electron \pt{} in the anti-ID CR]{
     \includegraphics[width=0.45\textwidth]{figures/VH/VH_muon_aid_electron_pt.pdf}\label{fig:muon_ff_aid_electron_pt}
   }
-  \caption{(a) Electron \pt{} distribution in the ID CR and (b) Electron \pt{} distribution in the anti-ID CR.}\label{fig:muon_ff_electron_pt}
+  \caption{Electron \pt{} distributions in (a) the ID CR and (b) the anti-ID CR.}\label{fig:muon_ff_electron_pt}
 \end{figure}
 
 \begin{figure}[htp]
@@ -39,7 +39,7 @@ Figures~\ref{fig:muon_ff_electron_pt},~\ref{fig:muon_ff_muon_ff_pt},~\ref{fig:mu
   \subfloat[Anti-ID muon \pt{} in the anti-ID CR]{
     \includegraphics[width=0.45\textwidth]{figures/VH/VH_muon_aid_ff_pt_binning.pdf}\label{fig:muon_ff_muon_ff_aid_pt}
   }
-  \caption{Distributions of the muon \pt{} in the ID CR (a) and anti-ID CR (b).}\label{fig:muon_ff_muon_ff_pt}
+  \caption{Muon \pt{} distributions in (a) the ID CR and (b) the anti-ID CR.}\label{fig:muon_ff_muon_ff_pt}
 \end{figure}
 
 \begin{figure}[htp]
@@ -51,7 +51,7 @@ Figures~\ref{fig:muon_ff_electron_pt},~\ref{fig:muon_ff_muon_ff_pt},~\ref{fig:mu
   \subfloat[Anti-ID muon \pt{} in the anti-ID CR]{
     \includegraphics[width=0.45\textwidth]{figures/VH/VH_muon_aid_pt_binning.pdf}\label{fig:muon_ff_muon_normal_aid_pt}
   }
-  \caption{Distributions of the muon \pt{} in the ID CR (a) and anti-ID CR (b) with standard binning.}\label{fig:muon_ff_muon_normal_pt}
+  \caption{Muon \pt{} distributions in (a) the ID CR and (b) the anti-ID CR with standard binning.}\label{fig:muon_ff_muon_normal_pt}
 \end{figure}
 
 \begin{figure}[htp]
@@ -63,7 +63,7 @@ Figures~\ref{fig:muon_ff_electron_pt},~\ref{fig:muon_ff_muon_ff_pt},~\ref{fig:mu
   \subfloat[Anti-ID muon \ptvarcone{} in the anti-ID CR]{
     \includegraphics[width=0.45\textwidth]{figures/VH/VH_muon_aid_ptvarcone.pdf}\label{fig:muon_ff_muon_varcone_aid_pt}
   }
-  \caption{Distributions of the muon \ptvarcone{} in the ID CR (a) and anti-ID CR (b).}\label{fig:muon_ff_muon_varcone_pt}
+  \caption{Muon \ptvarcone{} distributions in (a) the ID CR and (b) the anti-ID CR.}\label{fig:muon_ff_muon_varcone_pt}
 \end{figure}
 
 \begin{table}[htp]
@@ -80,6 +80,8 @@ Figures~\ref{fig:muon_ff_electron_pt},~\ref{fig:muon_ff_muon_ff_pt},~\ref{fig:mu
   \caption{Selections for the muon fake factor CRs. The \pt{} cut for the anti-ID muons is performed with the corrected \pt{}. The requirement of one $b$-tagged jet is to ensure orthogonality to other kinematic regions in this analysis.}\label{tab:muon_ttbar_cr}
 \end{table}
 
+The measurement of the fake factors involves the use of the likelihood $\mathcal{L}$, which is a function of the fake factors and a set of nuisance parameters (NPs). The likelihood function $\mathcal{L}(\overrightarrow{FF})$, seen in Equation~\ref{eq:ff_likelihood}, is the product of three probability distribution functions:
+
 \begin{equation}
   \scalebox{0.70}{$
   \mathcal{L} (\overrightarrow{FF}) = \prod_{i} \text{Poisson}(N_{i}^{\mathrm{\text{ID}, \text{data}}}; N_{i}^{\mathrm{\text{ID}, \text{estimated}}} (\overrightarrow{FF}, \vec{\theta}, \nu)) \cdot 
@@ -89,10 +91,8 @@ Figures~\ref{fig:muon_ff_electron_pt},~\ref{fig:muon_ff_muon_ff_pt},~\ref{fig:mu
   \label{eq:ff_likelihood}
 \end{equation}
 
-The measurement of the fake factors involves the use of the likelihood $\mathcal{L}$, which is a function of the fake factors and a set of nuisance parameters (NPs). The likelihood function $\mathcal{L}(\overrightarrow{FF})$, seen in Equation~\ref{eq:ff_likelihood}, is the product of three probability distribution functions:
-
 \begin{itemize}
-  \item A Poisson function, $\text{Poisson}(N_{i}^{\text{ID}, \text{data}}; N_{i}^{\text{ID}, \text{estimated}}(\overrightarrow{FF}, \vec{\theta}, \nu))$, is used to model the event yield in each \pt{} bin $i$ in the ID CR to extract the fake factor $\overrightarrow{FF}$. The NP, $\nu$, is the data yield in the anti-ID CR, modeled by a $\text{Poisson}$ distribution. Finally, $\vec{\theta}$ is a vector of nuisance parameters, $\theta_{k}$, which is the normalization factor for prompt lepton background $k$, constrained by a $\text{Gaussian}$ term.
+  \item A Poisson function, $\text{Poisson}(N_{i}^{\text{ID}, \text{data}}; N_{i}^{\text{ID}, \text{estimated}}(\overrightarrow{FF}, \vec{\theta}, \nu))$, is used to model the event yield in each \pt{} bin $i$ in the ID CR. The NP, $\nu$, is the data yield in the anti-ID CR, modeled by a $\text{Poisson}$ distribution. Finally, $\vec{\theta}$ is a vector of nuisance parameters, $\theta_{k}$, which is the normalization factor for prompt lepton background $k$, constrained by a $\text{Gaussian}$ term.
   \item A Poisson term, $\text{Poisson}(N_{i}^{\text{anti-ID}, \text{data}}; \nu)$, is used to model the data yield in each \pt{} bin $i$.
   \item A Gaussian term, $\text{Gaussian}(\theta_{k};\tilde{\theta_{k}}, \Delta{\theta_{k}})$, is used to constrain the normalization of prompt lepton background $k$. The mean, $\tilde{\theta_{k}}$, is set to 1, and the standard deviation, $\Delta{\theta_{k}}$, is equal to the relative uncertainty in the cross section of the process $k$, $\frac{\Delta{\sigma_{k}}}{\sigma_{k}}$. Only the two dominant prompt lepton processes, $t\bar{t}V$ and $t\bar{t}H$, are constrained with the Gaussian term, with the relative cross sections uncertainties being: $\frac{\Delta{\sigma_{t\bar{t}V}}}{\sigma_{t\bar{t}V}} = 13\%$~\cite{atlas_ttV_xsec} and $\frac{\Delta{\sigma_{t\bar{t}H}}}{\sigma_{t\bar{t}H}} = 10\%$~\cite{lhchiggsxsec_ttH}, respectively. The normalization factors for all other prompt lepton processes are set to 1.
 \end{itemize}
@@ -147,8 +147,7 @@ To validate the method, a closure test is performed. A CR is defined which conta
   \sigma_{\text{non-closure}} = \frac{\sqrt{{(Y_{\text{estimated}} - Y_{\text{predicted}})}^{2} + {(\sigma_{\text{predicted}}^{\text{stats}})}^{2} }}{Y_{\text{estimated}}}.\label{eq:non-closure_uncertainty}
 \end{equation}
 
-The results are shown in Figure~\ref{fig:muon_fake_factor_non_closure}, where event counts are displayed as a function of the muon \pt{} in the SR\@. Good agreement is seen for both SR's and the combined result. The non-closure uncertainty is taken as a systematic uncertainty, per bin, in the fake factors in the SR.
-
+The results are shown in Figure~\ref{fig:muon_fake_factor_non_closure}, where event yields are displayed as a function of the muon \pt{} in the SR\@. A discrepancy is observed for both SR's and the combined result, this disagreement is therefore treated as a bin-by-bin systematic uncertainty in the statistical analysis.
 \begin{figure}[htp]
   \centering
   \subfloat[Non-closure in \zdom{} SR]{

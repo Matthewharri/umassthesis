@@ -2,18 +2,18 @@ At least one primary vertex is required to be reconstructed with at least two as
 
 Leptons in this analysis are required to originate from the primary vertex. To ensure this, the absolute value of the longitudinal impact parameter $z_0$ projected onto the beam line with $\sin{\theta}$ ($|\Delta{z_0}\sin{\theta}|$) must be less than 0.5 mm. Additionally, the significance of the transverse impact parameter calculated with respect to the beam line ($\frac{|d_0|}{\sigma_{d_{0}}}$) must be less than three for muons and five for electrons.
 
-Electrons in the 3$\ell$ channel use the ``TightLH'' identification and ``Tight\_VarRad'' isolation WP's while electrons in the 4$\ell$ use the ``MediumLH'' identification and ``Loose\_VarRad'' WP's\@. Both channels require electrons to have $\pt{} > 15$~GeV. Different from previous analyses, electrons that are reconstructed as ambiguous (e.g.\ cannot be distinguished from a photon) are kept in the analysis, as well as electrons in the transition region ($1.37 < |\eta| < 1.52$), extending electron coverage to the full $|\eta| < 2.47$.
+Electrons in the 3$\ell$ channel use the ``TightLH'' identification and ``Tight\_VarRad'' isolation WP's while electrons in the 4$\ell$ channel use the ``MediumLH'' identification and ``Loose\_VarRad'' WP's\@. Both channels require electrons to have $\pt{} > 15$~GeV. Different from previous analyses, electrons that are reconstructed as ambiguous (e.g.\ cannot be distinguished from a photon) are kept in the analysis, as well as electrons in the transition region ($1.37 < |\eta| < 1.52$) where the barrel calorimeter joins the endcap calorimeter, extending electron coverage to the full $|\eta| < 2.47$.
 
-Muons in the 3$\ell$ and 4$\ell$ channels are required to pass the `Medium' quality criteria, while the 3$\ell$ requires the `Tight\_VarRad' isolation WP and the 4$\ell$ requires the `Loose\_VarRad' WP\@. Additionally, muon candidates are required to have $\pt > 10$ GeV and fall in the range $|\eta| < 2.5$. 
+Muons in the 3$\ell$ and 4$\ell$ channels are required to pass the `Medium' quality criteria, while the 3$\ell$ requires the `Tight\_VarRad' isolation WP and the 4$\ell$ requires the `Loose\_VarRad' isolation WP\@. Additionally, muon candidates are required to have $\pt > 10$ GeV and fall in the range $|\eta| < 2.5$. 
 
-Jets in this analysis are required to have $\pt > 30$ GeV and $|\eta| < 4.5$, however, subthreshold jets with $20 < \pt < 30$ GeV are included for the purpose of $b$-tagged jet counting. For jets with \pt{} between 20 and 60 GeV and within $|\eta| < 2.5$, they are required to pass NNJvt with the `FixedEffPt' WP, while jets in the same \pt{} range but within $2.5 < |\eta| < 4.5$ must pass the fJvt tagger with the `Tighter' WP\@. Jets originating from $b$-quarks with $\pt > 20$ GeV and $|\eta| < 2.5$ are identified using the GN2 $b$-tagging algorithm with the `Continuous' WP with a score of at least two, corresponding to an 85\% $b$-tagging efficiency. 
+Jets in this analysis are required to have $\pt > 30$ GeV and $|\eta| < 4.5$, however, subthreshold jets with $20 < \pt < 30$ GeV are included for the purpose of $b$-tagged jet counting. For jets with \pt{} between 20 and 60 GeV and within $|\eta| < 2.5$, they are required to pass a neural-network-based Jet Vertex Tagger (NNJvt) with the `FixedEffPt' WP, while jets in the same \pt{} range but within $2.5 < |\eta| < 4.5$ must pass the fJVT tagger with the `Tighter' WP\@. Jets originating from $b$-quarks with $\pt > 20$ GeV and $|\eta| < 2.5$ are identified using the GN2 $b$-tagging algorithm with the `Continuous' WP with a score of at least two, corresponding to an 85\% $b$-tagging efficiency. 
 
-In this analysis, the $W$ bosons are required to decay leptonically, producing a momentum imbalance in the transverse plane due to neutrinos exiting the detector without depositing energy. The \met{} is calculated using the `Tight' WP\@. However, a separate set of leptons is used in this calculation than defined above. Specifically, the input muons must pass the `Loose' quality WP with no isolation requirement and $\frac{|d_0|}{\sigma_{d_{0}}} < 15$, while electrons are required to pass the `LooseLH' identification WP and `Loose\_VarRad' isolation WP\@. Additionally, all jets with $\pt > 20$ GeV are used as input for the \met{} calculation.
+In this analysis, the $W$ bosons are required to decay leptonically, producing a momentum imbalance in the transverse plane due to neutrinos exiting the detector without depositing energy. The \met{} value is calculated using the `Tight' WP\@. However, a separate set of leptons is used in this calculation than defined above. Specifically, the input muons must pass the `Loose' quality WP with no isolation requirement and $\frac{|d_0|}{\sigma_{d_{0}}} < 15$, while electrons are required to pass the `LooseLH' identification WP and `Loose\_VarRad' isolation WP\@. Additionally, all jets with $\pt > 20$ GeV are used as input to the \met{} calculation.
 
-To ensure no objects overlap with one another, the following overlap removal criteria is applied:
+To ensure no particles reuse the same energy deposits during reconstruction, the following overlap removal criteria are applied:
 \begin{itemize}
-  \item Electron-Electron: If there is an overlapping cluster in the LAr calorimeter or a shared track, the lower \pt{} electron is removed.
-  \item Electron-Muon: If a combined muon shares an ID track with an electron, the electron is removed. If a calorimeter tagged muon shares an ID track with an electron, the muon is removed.
+  \item Electron-Electron: If there is a cluster shared between two electrons in the LAr calorimeter or a shared track, the lower \pt{} electron is removed.
+  \item Electron-Muon: If a combined muon shares an ID track with an electron, the electron is removed. If a calorimeter-tagged muon shares an ID track with an electron, the muon is removed.
   \item Electron-Jet: If $\Delta{R}(\mathrm{Jet}, e) < 0.2$, the jet is removed. For all other jets, if $\Delta{R}(\mathrm{Jet}, e) < \min(0.4, 0.04 + 10\:\mathrm{GeV}/\pt^{e})$, the electron is removed.
   \item Muon-Jet: If $\Delta{R}(\mathrm{Jet}, \mu) < 0.2$, the jet is removed if it has fewer than three tracks with $\pt > 500$~MeV. If $\pt^{\mu}/\pt^{\mathrm{Jet}} > 0.5$ and $\pt^{\mu}/\sum\limits_{\mathrm{Tracks}}\pt^{\mathrm{Jet}} > 0.7$, the jet is also removed. For any leftover jets, if $\Delta{R}(\mathrm{Jet}, \mu) < \min(0.4, 0.04 + 10\mathrm{GeV}/\pt^{\mu})$, the muon is removed.
 \end{itemize}
@@ -44,7 +44,7 @@ The overlap removal process is $b$-tagged jet aware, meaning that if a jet is $b
   \hline
   \pt{} & $> 20$ GeV \\
   $\eta$ & $|\eta| < 4.5$ \\
-  JVT, FJVT & \texttt{FixedEffPt}, \texttt{Tighter} \\
+  JVT, fJVT & \texttt{FixedEffPt}, \texttt{Tighter} \\
   $b$-jet & \texttt{GN2} with 85\% WP \\
   \hline
 \end{tabular}

@@ -13,18 +13,18 @@ where
 0, & \hat{\mu} < 0.
 \end{cases}
 \end{equation}
-Here, $\hat{\hat{\vec{\theta}}}(\mu)$ and $\hat{\hat{\vec{\theta}}}(0)$ denote the conditional maximum-likelihood (ML) estimators of $\vec{\theta}$ given a signal strength parameter of $\mu$ or $0$, respectively.
+Here, $\hat{\mu}$ represents the unconditional maximum-likelihood estimate of the signal strength parameter $\mu$, and $\hat{\hat{\vec{\theta}}}(\mu)$ and $\hat{\hat{\vec{\theta}}}(0)$ denote the conditional maximum-likelihood (ML) estimators of $\vec{\theta}$ given a signal strength parameter of $\mu$ or $0$, respectively. 
 The test statistic $\tilde{q}_{\mu}$ is then defined as
 \begin{equation}
 \tilde{q}_{\mu} =
 \begin{cases}
 - 2 \ln \dfrac{L(\mu, \hat{\hat{\vec{\theta}}}(\mu))}
-{L(\max(0,\hat{\mu}), \hat{\hat{\vec{\theta}}}(\max(0,\hat{\mu})))}, & \hat{\mu} \le \mu, \\[0.3cm]
+{L(\hat{\mu}'), \hat{\hat{\vec{\theta}}}(\hat{\mu}'))}, & \hat{\mu} \le \mu, \\[0.3cm]
 0, & \hat{\mu} > \mu.
 \end{cases}
 \end{equation}
 
-\noindent The modified frequentist method (\(CLs\))~\cite{A_L_Read_2002} is used to compute $95\%$ confidence intervals on the signal strength parameter $\mu$. In this approach, the test statistic is one-sided with the constraint $0 < \hat{\mu} < \mu$. The $p$-values $p_{\mu}$ and $p_{b}$ are obtained from the sampling distributions $f(\tilde{q}_{\mu}|\mu,\hat{\theta}_{\mu})$ and $f(\tilde{q}_{\mu}|0,\hat{\theta}_{0})$, respectively:
+\noindent The modified frequentist method (\(CLs\))~\cite{A_L_Read_2002} is used to compute $95\%$ confidence intervals on the signal strength parameter $\mu$. In this approach, the test statistic is one-sided with the constraint $0 < \hat{\mu} < \mu$. The $p$-values $p_{\mu}$ and $p_{b}$ are obtained by integrating the probability density functions of $\tilde{q}$ under the signal-plus-background hypothesis, $f(\tilde{q}_{\mu}|\mu,\hat{\theta}_{\mu})$, and under the background only hypothesis, $f(\tilde{q}_{\mu}|0,\hat{\theta}_{0})$, respectively:
 \begin{equation}
 p_{\mu} = \int_{\tilde{q}_{\mu,\mathrm{obs}}}^{\infty} f(\tilde{q}_{\mu}|\mu,\hat{\theta}_{\mu}) \, d\tilde{q}_{\mu},
 \quad

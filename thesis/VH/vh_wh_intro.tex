@@ -1,36 +1,37 @@
-This section details the categorization of signal events and background estimation for the \wh{} analysis.
+This section details the categorization of signal events and the background estimation for the \wh{} analysis.
 
 The \wh{} analysis requires exactly three isolated leptons (muons or electrons, including those from leptonic $\tau$ decays) with $\pt{} > 15$ GeV and total charge $\pm{e}$, with at least one being matched to the triggering lepton. These requirements target backgrounds that could arise from multiple misidentified leptons, originating from $W+$jets production or $b\bar{b}$ production, and makes them negligible.
 
-When the Higgs bosons decay into two $W$ bosons, the opening angle between the two resulting leptons is small compared to the angle between either of them and the lepton of the associated vector boson, due to helicity conservation and the V-A nature of the weak interaction. Due to this topology, a lepton labeling scheme is developed where the leptons are classified by identifying \lzero{} as the lepton with unique charge, \lone{} as the lepton closest in $\Delta{R}$ to \lzero{}, and \ltwo{} as the remaining lepton. The \lzero{} lepton is guaranteed to be from the Higgs boson decay due to the charge requirement of $\pm{e}$, and \lone{} is also likely from the Higgs boson decay due to the spin correlations. Previously, it has been verified with MC simulation that \lzero{} is chosen correctly 99\% of the time, and \lone{} 85\% of the time for signal events. The labeling scheme is illustrated in Figure~\ref{fig:vh_wh_feynmann_diagram}.
+When the Higgs bosons decay into two $W$ bosons, the opening angle between the two resulting leptons is small compared to the angle between either of them and the lepton originating from the decay of the associated vector boson, due to helicity conservation and the V-A nature of the weak interaction. Due to this topology, a lepton labeling scheme is developed where the leptons are classified by identifying \lzero{} as the lepton with unique charge, \lone{} as the lepton closest in $\Delta{R}$ to \lzero{}, and \ltwo{} as the remaining lepton. The \lzero{} lepton is guaranteed to be from the Higgs boson decay due to the charge requirement of $\pm{e}$, and \lone{} is also likely from the Higgs boson decay due to spin correlations. Previously, it has been verified with MC simulation that \lzero{} is chosen correctly 99\% of the time, and \lone{} 85\% of the time for signal events. The labeling scheme is illustrated in Figure~\ref{fig:vh_wh_feynmann_diagram}.
 
 \begin{figure}[htp]
     \centering
-    \includegraphics[width=0.4\textwidth]{
+    \includegraphics[width=0.5\textwidth]{
         figures/VH/VH_wh_feynmann.pdf
     }
-    \caption{The \wh{} Feynmann diagram with corresponding lepton labeling shown.}\label{fig:vh_wh_feynmann_diagram}
+    \caption{\wh{} Feynman diagram with corresponding lepton labeling shown.}\label{fig:vh_wh_feynmann_diagram}
 \end{figure}
 
-In order to separate regions populated with backgrounds from $Z$ bosons, such as $WZ/W\gamma^{*}$, $ZZ^{*}$, and $Z\gamma{}$, the analysis separates events with at least one SFOS lepton pair from those with none. The region with these pairs contains about 3/4 of the signal, but suffers from this irreducible background. The pair without any SFOS pair contains 1/4 of the signal, but needs stringent lepton identification to reduce backgrounds. Events containing at least one SFOS pair are classified as being in the \zdom{} category, while those without any in the \zdep{} category. The Feynmann diagrams for the two leading prompt lepton backgrounds are illustrated in Figure~\ref{fig:vh_wh_leading_prompt_bkg}
+In order to separate regions populated with backgrounds from $Z$ bosons, such as $WZ/W\gamma^{*}$, $ZZ^{*}$, and $Z\gamma{}$, the analysis separates events with at least one SFOS lepton pair from those with none. The region with these pairs contains about 3/4 of the signal, but suffers from this irreducible background. The pair without any SFOS pair contains 1/4 of the signal, but needs stringent lepton identification to reduce backgrounds. Events containing at least one SFOS pair are classified as being in the \zdom{} category, while those without any in the \zdep{} category. The Feynman diagrams for the two leading prompt lepton backgrounds are presented in Figure~\ref{fig:vh_wh_leading_prompt_bkg}.
 
 \begin{figure}[htp]
     \centering
+    \subfloat[$q\bar{q} \to WZ$]{
+        \includegraphics[width=0.4\textwidth]{figures/VH/qq_wz1.pdf}
+    }
     \subfloat[$q\bar{q}\to ZZ$]{
         \includegraphics[width=0.4\textwidth]{figures/VH/qq_zz1.pdf}
     }
-    \subfloat[$q\bar{q} \to WZ$]{
-        \includegraphics[width=0.4\textwidth]{figures/VH/qq_wz1.pdf}
-    }\caption{Feynman diagrams for the two leading prompt backgrounds, $WZ$ and $ZZ$.}\label{fig:vh_wh_leading_prompt_bkg}
+    \caption{Feynman diagrams for the two leading prompt backgrounds, $WZ$ and $ZZ$.}\label{fig:vh_wh_leading_prompt_bkg}
 \end{figure}
 
-Backgrounds in this analysis are estimated using several different methods. The first category includes prompt processes such as $ZZ$, $VVV$, $ttV$, and $tZ$, where all selected leptons originate from vector boson decays, and are estimated directly from MC simulation.
+Backgrounds in this analysis are estimated using several different methods. The first background category includes prompt processes such as $ZZ$, $VVV$, $ttV$, and $tZ$, where all selected leptons originate from vector boson decays, and are estimated directly from MC simulation.
 
-The second category is a hybrid method used to estimate the main background process of the analysis, $WZ/W\gamma^{*}$. In this method, the $WZ/W\gamma^{*}$ background is estimated using MC simulation, but corrected with normalization factors (NFs) derived using a data-driven approach using a dedicated control region (CR) targeting this background. This will be presented in more detail in Section~\ref{sec:vh_wh_wz_control_regions}.
+The second, and main, background category consists of $WZ/W\gamma^{*}$ production. This background is estimated with a hybrid method using MC simulation, corrected with normalization factors (NFs) derived using a data-driven approach with a dedicated control region (CR) targeting this background. The method is presented in Section~\ref{sec:vh_wh_wz_control_regions}.
 
-The final background category consists of events with non-prompt leptons originating from processes such as $Z+$jets, $Z+\gamma$, and $t\bar{t}$. These processes are poorly modeled in both rate and shape by MC simulation and are therefore estimated using the data-driven techniques described in Section~\ref{sec:vh_wh_fake_lepton_estimation}. The leading non-prompt backgrounds are illustrated in Figure~\ref{fig:vh_wh_leading_nonprompt_bkg}. None of these processes produce three prompt leptons in the final state, instead, they enter the signal region through other mechanisms.
+The final background category consists of events with one non-prompt lepton originating from processes such as $Z+$jets, $Z+\gamma$, and $t\bar{t}$. The production of events with a non-prompt lepton is poorly modeled in both rate and shape by MC simulation and is therefore estimated using the data-driven techniques described in Section~\ref{sec:vh_wh_fake_lepton_estimation}. The leading non-prompt backgrounds are illustrated in Figure~\ref{fig:vh_wh_leading_nonprompt_bkg}. None of these processes produce three prompt leptons in the final state, instead, they enter the signal region through other mechanisms.
 
-For $Z$+jets, the final state contains a $Z$ boson and a quark (most often a $b$-quark). The $b$-quark hadronizes, and a lepton from the resulting decay chain is reconstructed. In the $Z+\gamma$ case, the photon is not from genuine $Z+\gamma$ production, but rather from final-state radiation (FSR) when a lepton from the $Z\to\ell^+\ell^-$ decay emits a photon. For the \ttbar{} process, both top quarks decay to a $W$ boson and a $b$-quark, where both $W$ bosons decay leptonically, and an additional lepton from a $b$-quark decay is reconstructed in the event.
+For $Z$+jets events, the final state contains a $Z$ boson and a quark (most often a $b$-quark). The $b$-quark hadronizes, and a lepton from the resulting decay chain is reconstructed. In the $Z+\gamma$ case, the photon is not from genuine $Z+\gamma$ production, but rather from final-state radiation (FSR) when a lepton from the $Z\to\ell^+\ell^-$ decay emits a photon. For the \ttbar{} process, both top quarks decay into a $W$ boson and a $b$-quark, where both $W$ bosons decay leptonically, and an additional lepton from a $b$-quark decay is reconstructed in the event.
 
 \begin{figure}[htp]
     \centering
@@ -42,7 +43,7 @@ For $Z$+jets, the final state contains a $Z$ boson and a quark (most often a $b$
     }
     \subfloat[\ttbar{}]{
         \includegraphics[width=0.32\textwidth]{figures/VH/ttbar.pdf}
-    }\caption{Feynman diagrams for the two leading prompt backgrounds, $WZ$ and $ZZ$.}\label{fig:vh_wh_leading_nonprompt_bkg}
+    }\caption{Feynman diagrams for the three processes with non-prompt lepton contributions in the SR, $Z+$jets, $Z+\gamma$, and \ttbar{}}\label{fig:vh_wh_leading_nonprompt_bkg}
 \end{figure}
 
 Dedicated artificial neural networks are used in this analysis to enhance sensitivity with respect to a purely cut-based analysis. The \zdom{} and \zdep{} channels have different neural networks and their trainings are explained in detail in Section~\ref{sec:vh_wh_nn_training}. 

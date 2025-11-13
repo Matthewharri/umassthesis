@@ -1,5 +1,4 @@
-The \wh{} channel has three additional VR's used solely to assess the agreement between data and MC simulation. The first, the \zdom{} VR, lies in a region of phase space with negligible signal contamination and serves as a sideband to the SR\@. It follows the same selection as the \zdom{} SR, except that at least one SFOS lepton pair must have an invariant mass below 12~GeV. The other two VRs are designed to check the modeling of top backgrounds: the \zdom{}-top and \zdep{}-top VRs. Each uses the same selection as its corresponding SR, except for requiring at least one $b$-tagged jet in the event. These are summarized in Table~\ref{tab:vh_wh_validation_regions}.
-
+The \wh{} channel has three additional VR's used solely to assess the agreement between data and MC simulation. The first, the \zdom{} VR, lies in a region of phase space with negligible signal contamination and serves as a sideband to the SR, providing a convenient region of phase space to check MC and data agreement.\@. It follows the same selection as the \zdom{} SR, except that at least one SFOS lepton pair must have an invariant mass below 12~GeV. The other two VRs are designed to check the modeling of top backgrounds: the \zdom{}-top and \zdep{}-top VRs. Each uses the same selection as its corresponding SR, except for requiring at least one $b$-tagged jet in the event. These are summarized in Table~\ref{tab:vh_wh_validation_regions}.
 \begin{table}[htp]
     \centering
     \resizebox{1\textwidth}{!}{
@@ -8,13 +7,15 @@ The \wh{} channel has three additional VR's used solely to assess the agreement 
         \hline
         \textbf{Name} & \textbf{Reference SR} & \textbf{Target Background} & \textbf{Changes w.r.t.\ reference SR} \\ 
         \hline
-        WZ CR & $Z$-dominated & WZ/W$\gamma^*$ & $|\text{m}_{\ell\ell} - \text{m}_{Z}| < 25 GeV$ \\
+        $WZ$ CR & $Z$-dominated & $WZ/W\gamma^*$ & $|\text{m}_{\ell\ell} - \text{m}_{Z}| < 25$ GeV \\
         $Z$-dominated top VR & $Z$-dominated & top & at least one b-tagged jet \\
         $Z$-depleted top VR & $Z$-depleted & top & at least one b-tagged jet \\
+        $WWW$ VR & $Z$-depleted & $WWW$ & $WWW$ score $> 0.4$ \\
+        $Z$-dominated VR & $Z$-dominated & -- & $\text{m}_{\ell\ell} < 12$~GeV\\
         \hline
     \end{tabular}
     }
-    \caption{Summary of all of the control and validation regions defined in this analysis.\label{tab:3l_crvr_summary}}
+    \caption{Summary of all of the control and validation regions defined in this analysis.\label{tab:vh_wh_validation_regions}}
 \end{table}
 
-Input variables for the \zdom{} VR are shown in Appendix~\ref{app:zdom_validation_plots}, for the \zdom{}-top VR in Appendix~\ref{app:zdom_top_validation_plots}, and \zdep{}-top in Appendix~\ref{app:zdep_top_validation_plots}. Good agreement between data and MC simulation is observed in all VRs.
+Input variables for the \zdom{} VR are shown in Appendix~\ref{app:zdom_validation_plots}, for the \zdom{}-top VR in Appendix~\ref{app:zdom_top_validation_plots}, and for the \zdep{}-top VR in Appendix~\ref{app:zdep_top_validation_plots}. Good agreement between data and MC simulation is observed in all VRs.

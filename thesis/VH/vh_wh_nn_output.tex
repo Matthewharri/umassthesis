@@ -1,4 +1,4 @@
-The ANN outputs and discriminant for the \zdom{} SR are seen in Figures~\ref{fig:vh_wh_zdom_outputs} and~\ref{fig:vh_wh_zdom_discriminant}, respectively, and for the \zdep{} SR in Figures~\ref{fig:vh_wh_zdep_outputs} and~\ref{fig:vh_wh_zdep_discriminant}, respectively. The ANN seems to be performing well as each output node identifies its background successfully by populating the low and high valued bins with the correct MC samples. The binning of the neural network discriminant is subject to optimization in the statistical analysis.
+The ANN outputs and discriminant (defined in Eq.~\ref{eq:NN_discriminant} for the \zdom{} SR are seen in Figures~\ref{fig:vh_wh_zdom_outputs} and~\ref{fig:vh_wh_zdom_discriminant}, respectively, and for the \zdep{} SR in Figures~\ref{fig:vh_wh_zdep_outputs} and~\ref{fig:vh_wh_zdep_discriminant}, respectively. The ANN seems to be performing well as each output node identifies its background successfully by populating the low and high valued bins with the correct MC samples. The binning of the neural network discriminant is subject to optimization in the statistical analysis.
 
 \begin{figure}[hp]
   \centering
@@ -12,7 +12,7 @@ The ANN outputs and discriminant for the \zdom{} SR are seen in Figures~\ref{fig
   \subfloat[\zdom{} $ZZ$ output node score]{
     \includegraphics[width=0.45\textwidth]{figures/VH/VH_zdom_zz_scores.pdf}\label{fig:vh_wh_zdom_zz_outputs}
   }
-  \caption{ANN outputs for the \zdom{} SR\@. The $WH$, $WZ$, and $ZZ$ output node scores are shown in (a), (b), and (c), respectively.}\label{fig:vh_wh_zdom_outputs}
+  \caption{ANN outputs for the \zdom{} SR\@. The $WH$, $WZ$, and $ZZ$ output node scores are shown in (a), (b), and (c), respectively. The \wh{} Bins~1--3 correspond to the STXS bins of the \wh{} process, with Bin~1 defined as $\ptv{} < 75$~GeV, Bin~2 as $75 \leq \ptv{} < 150$~GeV, and Bin~3 as $\ptv{} \geq 150$~GeV.}\label{fig:vh_wh_zdom_outputs}
 \end{figure}
 
 \begin{figure}[hp]
