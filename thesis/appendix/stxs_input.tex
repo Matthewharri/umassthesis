@@ -1,19 +1,5 @@
 \begin{figure}[htpb]
   \centering
-  \subfloat[$\Delta\eta(\lzero{},\lone{})$]{
-    \includegraphics[width=0.31\linewidth]{figures/appendix/stxs/dEtal0l1_NOSYS.pdf}}
-  \subfloat[$\Delta\eta(\lzero{},\ltwo{})$]{
-    \includegraphics[width=0.31\linewidth]{figures/appendix/stxs/dEtal0l2_NOSYS.pdf}}
-  \subfloat[$\Delta\eta(\lone{},\ltwo{})$]{
-    \includegraphics[width=0.31\linewidth]{figures/appendix/stxs/dEtal1l2_NOSYS.pdf}}
-  \hfill
-  \subfloat[$\Delta\varphi(\lzero{},\lone{})$]{
-    \includegraphics[width=0.31\linewidth]{figures/appendix/stxs/dPhil0l1_NOSYS.pdf}}
-  \subfloat[$\Delta\varphi(\lzero{},\ltwo{})$]{
-    \includegraphics[width=0.31\linewidth]{figures/appendix/stxs/dPhil0l2_NOSYS.pdf}}
-  \subfloat[$\Delta\varphi(\lone{},\ltwo{})$]{
-    \includegraphics[width=0.31\linewidth]{figures/appendix/stxs/dPhil1l2_NOSYS.pdf}}
-  \hfill
   \subfloat[$\Delta R(\lzero{},\lone{})$]{
     \includegraphics[width=0.31\linewidth]{figures/appendix/stxs/dRl0l1_NOSYS.pdf}}
   \subfloat[$\Delta R(\lzero{},\ltwo{})$]{
@@ -27,6 +13,16 @@
     \includegraphics[width=0.31\linewidth]{figures/appendix/stxs/ml0l2_NOSYS.pdf}}
   \subfloat[$\Delta m(\lone{},\ltwo{})$]{
     \includegraphics[width=0.31\linewidth]{figures/appendix/stxs/ml1l2_NOSYS.pdf}}
+  \hfill
+  \subfloat[$m_{\text{T}}(\lzero{},\lone{})$]{
+    \includegraphics[width=0.31\linewidth]{figures/appendix/stxs/mTl0l1_NOSYS.pdf}}
+  \subfloat[$m_{\text{T}}(\lzero{},\ltwo{})$]{
+    \includegraphics[width=0.31\linewidth]{figures/appendix/stxs/mTl0l2_NOSYS.pdf}}
+  \subfloat[$m_{\text{T}}(\lone{},\ltwo{})$]{
+    \includegraphics[width=0.31\linewidth]{figures/appendix/stxs/mTl1l2_NOSYS.pdf}}
+  \hfill
+  \subfloat[$N_\text{Jets}$]{
+    \includegraphics[width=0.31\linewidth]{figures/appendix/stxs/numJets_NOSYS.pdf}}
   \caption{Input variable distributions for the WH process, used in the regression NN training}\label{fig:stxs_input_plots_1}
 \end{figure}
 
@@ -61,3 +57,64 @@
     \includegraphics[width=0.31\linewidth]{figures/appendix/stxs/regressed_WPt_NOSYS.pdf}}
   \caption{Input variable distributions for the WH process, used in the regression NN training. Bottom three plots are the NN discriminants for \zdom{} and \zdep{} channels as well as the regression distribution.}\label{fig:stxs_input_plots_2}
 \end{figure}
+
+
+% \begin{figure}[htpb]
+%   \centering
+%   \subfloat[$\Delta R(\lptz{},\lpto{})$]{
+%     \includegraphics[width=0.31\linewidth]{figures/appendix/stxs/dRl0l1_NOSYS.pdf}}
+%   \subfloat[$\Delta R(\lptz{},\lptt{})$]{
+%     \includegraphics[width=0.31\linewidth]{figures/appendix/stxs/dRl0l2_NOSYS.pdf}}
+%   \subfloat[$\Delta R(\lpto{},\lptt{})$]{
+%     \includegraphics[width=0.31\linewidth]{figures/appendix/stxs/dRl1l2_NOSYS.pdf}}
+%   \hfill
+%   \subfloat[$m(\lptz{},\lpto{})$]{
+%     \includegraphics[width=0.31\linewidth]{figures/appendix/stxs/ml0l1_NOSYS.pdf}}
+%   \subfloat[$m(\lptz{},\lptt{})$]{
+%     \includegraphics[width=0.31\linewidth]{figures/appendix/stxs/ml0l2_NOSYS.pdf}}
+%   \subfloat[$m(\lpto{},\lptt{})$]{
+%     \includegraphics[width=0.31\linewidth]{figures/appendix/stxs/ml1l2_NOSYS.pdf}}
+%   \hfill
+%   \subfloat[$m_{\text{T}}(\lptz{},\lpto{})$]{
+%     \includegraphics[width=0.31\linewidth]{figures/appendix/stxs/mTl0l1_NOSYS.pdf}}
+%   \subfloat[$m_{\text{T}}(\lptz{},\lptt{})$]{
+%     \includegraphics[width=0.31\linewidth]{figures/appendix/stxs/mTl0l2_NOSYS.pdf}}
+%   \subfloat[$m_{\text{T}}(\lpto{},\lptt{})$]{
+%     \includegraphics[width=0.31\linewidth]{figures/appendix/stxs/mTl1l2_NOSYS.pdf}}
+%   \hfill
+%   \subfloat[$N_\text{Jets}$]{
+%     \includegraphics[width=0.31\linewidth]{figures/appendix/stxs/numJets_NOSYS.pdf}}
+%   \caption{Input variable distributions for the WH process, used in the regression NN training}\label{fig:stxs_input_plots_1}
+% \end{figure}
+
+% \begin{figure}
+%   \centering
+%   \subfloat[$\Delta\varphi(\lptz{},\met)$]{
+%     \includegraphics[width=0.31\linewidth]{figures/appendix/stxs/dPhil0met_NOSYS.pdf}}
+%   \subfloat[$\Delta\varphi(\lpto{},\met)$]{
+%     \includegraphics[width=0.31\linewidth]{figures/appendix/stxs/dPhil1met_NOSYS.pdf}}
+%   \subfloat[$\Delta\varphi(\lptt{},\met)$]{
+%     \includegraphics[width=0.31\linewidth]{figures/appendix/stxs/dPhil2met_NOSYS.pdf}}
+%   \hfill
+%   \subfloat[$\met{}$]{
+%     \includegraphics[width=0.31\linewidth]{figures/appendix/stxs/met_met_NOSYS.pdf}}
+%   \subfloat[$\mathcal{S}$]{
+%     \includegraphics[width=0.31\linewidth]{figures/appendix/stxs/met_significance_NOSYS.pdf}}
+%   \subfloat[$p_{\mathrm{T}}^{\ell_{0}\ell_{1}\ell_{2}}$]{
+%     \includegraphics[width=0.31\linewidth]{figures/appendix/stxs/ptMag_NOSYS.pdf}}
+%   \hfill
+%   \subfloat[$\lptz{}$]{
+%     \includegraphics[width=0.31\linewidth]{figures/appendix/stxs/ptl0_NOSYS.pdf}}
+%   \subfloat[$\lpto{}$]{
+%     \includegraphics[width=0.31\linewidth]{figures/appendix/stxs/ptl1_NOSYS.pdf}}
+%   \subfloat[$\lptt{}$]{
+%     \includegraphics[width=0.31\linewidth]{figures/appendix/stxs/ptl2_NOSYS.pdf}}
+%   \hfill
+%   \subfloat[$Z$-dominated Neural Network Discriminant]{
+%     \includegraphics[width=0.31\linewidth]{figures/appendix/stxs/NNDiscriminant2_NOSYS.pdf}}
+%   \subfloat[$Z$-depleted Neural Network Discriminant]{
+%     \includegraphics[width=0.31\linewidth]{figures/appendix/stxs/NNDiscriminant_zdep_NOSYS.pdf}}
+%   \subfloat[\ptr{}]{
+%     \includegraphics[width=0.31\linewidth]{figures/appendix/stxs/regressed_WPt_NOSYS.pdf}}
+%   \caption{Input variable distributions for the WH process, used in the regression NN training. Bottom three plots are the NN discriminants for $Z$-dominated and $Z$-depleted channels as well as the regression distribution.}\label{fig:stxs_input_plots_2}
+% \end{figure}
