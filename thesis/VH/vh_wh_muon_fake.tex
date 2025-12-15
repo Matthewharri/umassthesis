@@ -92,7 +92,7 @@ The measurement of the fake factors involves the use of the likelihood $\mathcal
 \end{equation}
 
 \begin{itemize}
-  \item A Poisson function, $\text{Poisson}(N_{i}^{\text{ID}, \text{data}}; N_{i}^{\text{ID}, \text{estimated}}(\overrightarrow{FF}, \vec{\theta}, \nu))$, is used to model the event yield in each \pt{} bin $i$ in the ID CR. The NP, $\nu$, is the data yield in the anti-ID CR, modeled by a $\text{Poisson}$ distribution. Finally, $\vec{\theta}$ is a vector of nuisance parameters, $\theta_{k}$, which is the normalization factor for prompt lepton background $k$, constrained by a $\text{Gaussian}$ term.
+  \item A Poisson function, $\text{Poisson}(N_{i}^{\text{ID}, \text{data}}; N_{i}^{\text{ID}, \text{estimated}}(\overrightarrow{FF}, \vec{\theta}, \nu))$, is used to model the event yield in each \pt{} bin $i$ in the ID CR. The variable, $\nu$, is the data yield in the anti-ID CR, modeled by a $\text{Poisson}$ distribution. Finally, $\vec{\theta}$ is a vector of nuisance parameters, $\theta_{k}$, which is the normalization factor for prompt lepton background $k$, constrained by a $\text{Gaussian}$ term.
   \item A Poisson term, $\text{Poisson}(N_{i}^{\text{anti-ID}, \text{data}}; \nu)$, is used to model the data yield in each \pt{} bin $i$.
   \item A Gaussian term, $\text{Gaussian}(\theta_{k};\tilde{\theta_{k}}, \Delta{\theta_{k}})$, is used to constrain the normalization of prompt lepton background $k$. The mean, $\tilde{\theta_{k}}$, is set to 1, and the standard deviation, $\Delta{\theta_{k}}$, is equal to the relative uncertainty in the cross section of the process $k$, $\frac{\Delta{\sigma_{k}}}{\sigma_{k}}$. Only the two dominant prompt lepton processes, $t\bar{t}V$ and $t\bar{t}H$, are constrained with the Gaussian term, with the relative cross sections uncertainties being: $\frac{\Delta{\sigma_{t\bar{t}V}}}{\sigma_{t\bar{t}V}} = 13\%$~\cite{atlas_ttV_xsec} and $\frac{\Delta{\sigma_{t\bar{t}H}}}{\sigma_{t\bar{t}H}} = 10\%$~\cite{lhchiggsxsec_ttH}, respectively. The normalization factors for all other prompt lepton processes are set to 1.
 \end{itemize}
@@ -147,7 +147,7 @@ To validate the method, a closure test is performed. A CR is defined which conta
   \sigma_{\text{non-closure}} = \frac{\sqrt{{(Y_{\text{estimated}} - Y_{\text{predicted}})}^{2} + {(\sigma_{\text{predicted}}^{\text{stats}})}^{2} }}{Y_{\text{estimated}}}.\label{eq:non-closure_uncertainty}
 \end{equation}
 
-The results are shown in Figure~\ref{fig:muon_fake_factor_non_closure}, where event yields are displayed as a function of the muon \pt{} in the SR\@. A discrepancy is observed for both SR's and the combined result, this disagreement is therefore treated as a bin-by-bin systematic uncertainty in the statistical analysis.
+The results are shown in Figure~\ref{fig:muon_fake_factor_non_closure}, where event yields are displayed as a function of the muon \pt{} in the SR\@. A discrepancy is observed in both SR's, therefore this disagreement is treated as a bin-by-bin systematic uncertainty in the statistical analysis. The assigned uncertainty corresponds to the largest non-closure observed among the individual SRs.
 \begin{figure}[htp]
   \centering
   \subfloat[Non-closure in \zdom{} SR]{

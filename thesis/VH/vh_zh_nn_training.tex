@@ -1,7 +1,6 @@
 This section provides a brief overview of the ANN training for the \zh{} analysis and omits many of the details already discussed for the \wh{} analysis.
 
-The training procedure follows the prescription outlined in Chapter~\ref{ch:nn}. A separate training is performed for each SR using the same set of input variables listed in Table~\ref{tab:vh_zh_input_variables}, with the corresponding hyperparameters summarized in Table~\ref{tab:vh_zh_architecture}. In both cases, the ANN is trained as a binary classifier, with one output node representing the probability of a \zh{} signal event and the other the probability of a background event.
-\todo[inline]{Explain Higgs boson rest frame}
+The training procedure follows the prescription outlined in Chapter~\ref{ch:nn}. A separate training is performed for each SR using the same set of input variables listed in Table~\ref{tab:vh_zh_input_variables}, with the corresponding hyperparameters summarized in Table~\ref{tab:vh_zh_architecture}. Some input variables are defined in the Higgs boson rest frame, which may initially seem counterintuitive given the presence of two undetected neutrinos in the final state. To construct this rest frame, the boost of the associated $Z$ boson is first determined from its two charged leptons, with all jets assigned to the $Z$ boson system. The Higgs boson rest frame is then approximated by boosting along the direction opposite to the reconstructed $Z$ boson boost. In both SR's, the ANN is trained as a binary classifier, with one output node representing the probability of a \zh{} signal event and the other the probability of a background event.
 \begin{table}
 \centering
   \begin{tabular}{l@{ : }l}
@@ -15,7 +14,7 @@ The training procedure follows the prescription outlined in Chapter~\ref{ch:nn}.
     $\Delta{\varphi}(\lzero{}, \met{})$ Boost & Azimuthal angle between \lzero{}, \met{} in the Higgs Boson rest frame \\
     $\Delta{\varphi}(\lone{}, \met{})$ Boost & Azimuthal angle between \lone{}, \met{} in the Higgs Boson rest frame \\
     \met{} & Missing transverse energy \\
-    $m_{\tau\tau}$ & Invariant mass of the $\tau\tau$ system, via the collinear approx. \\
+    $m_{\tau\tau}$ & Invariant mass of the $\tau\tau$ system, via the collinear approx.~\cite{Plehn:1999xi} \\
     $\pt^{4\ell}$ & Transverse momentum of the four-lepton system \\
     $m_{4\ell}$ & Invariant mass of the four-lepton system \\
     $N_{\mathrm{Jet}}$ & Number of jets with $\pt > 30$ GeV \\
@@ -23,7 +22,6 @@ The training procedure follows the prescription outlined in Chapter~\ref{ch:nn}.
   \end{tabular}
   \caption{Input variables used for training the ANN's in the \zh{} analysis. }\label{tab:vh_zh_input_variables}
 \end{table}
-\todo[inline]{citation for collinear approximation}
 
 \begin{table}[htp]
 \centering
@@ -51,6 +49,36 @@ The training procedure follows the prescription outlined in Chapter~\ref{ch:nn}.
 \caption{Optimal hyperparameters for each \zh{} signal region.}\label{tab:vh_zh_architecture}
 \end{table}
 
+The relative importance of the input variables for each SR are shown in Figure~\ref{fig:vh_zh_ann_feature_importance}, while the ROC curves for each SR are displayed in Figure~\ref{fig:zh_ann_roc_curves}. The ANN output distributions in each SR are presented in Figure~\ref{fig:vh_zh_ann_outputs}. Unlike in the \wh{} analysis, no combined output is constructed here, as the classifier is strictly binary.
+\begin{figure}[htp]
+  \centering
+  \subfloat[One SFOS SR feature importance]{
+    \includegraphics[width=0.45\linewidth]{figures/VH/VH_feature_importance_1sfos.pdf}
+  }
+  \subfloat[Two SFOS SR feature importance]{
+    \includegraphics[width=0.45\linewidth]{figures/VH/VH_feature_importance_2sfos.pdf}
+  }
+  \caption{Feature importance of the input variables used in the \zh{} ANN for (a) one SFOS and (b) two SFOS signal regions.}\label{fig:vh_zh_ann_feature_importance}
+\end{figure}
 
-The relative importance of the input variables is shown in Figure~\ref{fig:vh_zh_ann_feature_importance}, while the ROC curves for each SR are displayed in Figure~\ref{fig:zh_ann_roc_curves}. The ANN output distributions in each SR are presented in Figure~\ref{fig:vh_zh_ann_outputs}. Unlike in the \wh{} analysis, no combined output is constructed here, as the classifier is strictly binary.~\todo[inline]{Add these in when callum redoes 4l training}
+\begin{figure}[htp]
+  \centering
+  \subfloat[One SFOS SR ROC curve]{
+    \includegraphics[width=0.45\linewidth]{figures/VH/VH_kfold_roc_ova_1sfos.pdf}
+  }
+  \subfloat[Two SFOS SR ROC curve]{
+    \includegraphics[width=0.45\linewidth]{figures/VH/VH_kfold_roc_ova_2sfos.pdf}
+  }
+  \caption{ROC curves for the \zh{} ANN in (a) one SFOS and (b) two SFOS signal regions.}\label{fig:zh_ann_roc_curves}
+\end{figure}
 
+\begin{figure}[htp]
+  \centering
+  \subfloat[One SFOS SR ZH output score]{
+    \includegraphics[width=0.45\linewidth]{figures/VH/VH_1sfos_zh_score.pdf}
+  }
+  \subfloat[Two SFOS SR ZH output score]{
+    \includegraphics[width=0.45\linewidth]{figures/VH/VH_2sfos_zh_score.pdf}
+  }
+  \caption{ANN output distributions for the \zh{} analysis in (a) one SFOS and (b) two SFOS signal regions. The signals are scaled by 10 in the one SFOS category, and by 100 in the two SFOS category. The background score distribution is simply $1 - \zh{}$ score since the model is a binary classifier, thus it is omitted.}\label{fig:vh_zh_ann_outputs}
+\end{figure}

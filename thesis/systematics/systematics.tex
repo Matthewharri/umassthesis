@@ -14,11 +14,11 @@ Experimental systematic uncertainties are estimated using recommendations from t
 
 Electrons have uncertainties associated with reconstruction, identification, isolation and trigger efficiencies which are determined from differences between data and simulation using tag-and-probe measurements in $Z\to e\bar{e}$ events. Additional uncertainties related to the energy scale and resolution are derived by varying the electron identification criteria from Medium to Tight, removing the isolation requirement, and applying a cut on the momentum fraction lost to bremmstrahlung within the ID. These uncertainties are described in more detail in Refs.~\cite{ATLAS:2023mnw, ATLAS:2023dxj}.
 
-Muons have analogous uncertainties for reconstruction, identification, isolation, and trigger efficiencies, also derived from tag-and-probe measurements in $Z \to \mu\bar{\mu}$ events. Additional contributions arise from the efficiency of track-to-vertex association, as well as from reconstruction in the low-$p_T$ (SFs derived from $J/\psi$ decays) and high-$p_T$ (SFs derived from $Z$ decays) regimes. Further uncertainties are associated with the sagitta of the muon trajectory, which quantifies the deviation of the track from a straight line due to the magnetic field. These include charge-dependent variations in the momentum scale, statistical uncertainties on the charge-dependent corrections, transverse-momentum-dependent variations capturing non-sagitta effects in the end-caps, and any residual global charge-dependent momentum bias remaining after calibration. These uncertainties are described in more detail in Ref.~\cite{ATLAS:2020auj}.
+Muons have analogous uncertainties for reconstruction, identification, isolation, and trigger efficiencies, also derived from tag-and-probe measurements in $Z \to \mu^{+}\mu^{-}$ events. Additional contributions arise from the efficiency of track-to-vertex association, as well as from reconstruction in the low-$p_T$ (SFs derived from $J/\psi$ decays) and high-$p_T$ (SFs derived from $Z$ decays) regimes. Further uncertainties are associated with the sagitta of the muon trajectory, which quantifies the deviation of the track from a straight line due to the magnetic field. These include charge-dependent variations in the momentum scale, statistical uncertainties on the charge-dependent corrections, transverse-momentum-dependent variations capturing non-sagitta effects in the end-caps, and any residual global charge-dependent momentum bias remaining after calibration. These uncertainties are described in more detail in Ref.~\cite{ATLAS:2020auj}.
 
-Jet systematic uncertainties are primarily associated with JES and JER\@. The JES uncertainties are derived from in situ calibrations using $Z/\gamma+$ jet and multijet balance (MJB) events, which account for assumptions in topology, MC modeling, MC sample statistics, as well as propagated uncertainties from electron, muon, and photon energy scales. Additional JES contributions come from pile-up (NPV, $\mu$, $\rho$), flavor composition (light quark / heavy quark / gluon-initiated jets), and the energy scale in $b$-tagged jets. Further uncertainties arise from JVT, fJVT, and $b$-tag efficiency differences between data and MC simulation, derived from $Z\to \mu\bar{\mu}$+ jet events. These uncertainties are detailed in Ref.~\cite{ATLAS:2017bje}.
+Jet systematic uncertainties are primarily associated with JES and JER\@. The JES uncertainties are derived from in situ calibrations using $Z/\gamma+$ jet and multijet balance (MJB) events, which account for assumptions in topology, MC modeling, MC sample statistics, as well as propagated uncertainties from electron, muon, and photon energy scales. Additional JES contributions come from pile-up (NPV, $\mu$, $\rho$), flavor composition (light quark / heavy quark / gluon-initiated jets), and the energy scale in $b$-tagged jets. Further uncertainties arise from JVT, fJVT, and $b$-tag efficiency differences between data and MC simulation, derived from $Z\to \mu^{+}\mu^{-}$+ jet events. These uncertainties are detailed in Ref.~\cite{ATLAS:2017bje}.
 
-Systematic uncertainties in \met{} are more complex, as they depend on all objects contributing to \met{} reconstruction, affecting both the hard and soft terms. Hard term uncertainties are obtained by propagating the uncertainties of each contributing object through the \met{} reconstruction. Uncertainties among objects of the same type are considered correlated, while those between different object types are treated as uncorrelated due to independent reconstruction and calibration. The soft-term uncertainty is evaluated in events with negligible true \met{}, such as $Z\to e\bar{e}$, and validated in $Z\to \mu\bar{\mu}$ events. It is quantified by projecting the soft term onto the hard term, allowing separation into scale and resolution uncertainties. Since contamination from other events dominate above 100~GeV, the soft term uncertainty at 100~GeV is applied to all higher \pt{} events. More details are available in Ref.~\cite{ATLAS:2024cmj}.
+Systematic uncertainties in \met{} are more complex, as they depend on all objects contributing to \met{} reconstruction, affecting both the hard and soft terms. Hard term uncertainties are obtained by propagating the uncertainties of each contributing object through the \met{} reconstruction. Uncertainties among objects of the same type are considered correlated, while those between different object types are treated as uncorrelated due to independent reconstruction and calibration. The soft-term uncertainty is evaluated in events with negligible true \met{}, such as $Z\to e\bar{e}$, and validated in $Z\to \mu^{+}\mu^{-}$ events. It is quantified by projecting the soft term onto the hard term, allowing separation into scale and resolution uncertainties. Since contamination from other events dominate above 100~GeV, the soft term uncertainty at 100~GeV is applied to all higher \pt{} events. More details are available in Ref.~\cite{ATLAS:2024cmj}.
 
 A full list of experimental systematic sources considered in this analysis is provided in Table~\ref{tab:expSyst}.
 
@@ -118,7 +118,7 @@ For both diboson and triboson processes, the theoretical uncertainties associate
 
 Only the normalizations of the minor contributions from ttV and ttH processes are constrained with relative cross section uncertainties $\frac{\Delta\sigma_{ttV}}{\sigma_{ttV}}$ = 13\% and $\frac{\Delta\sigma_{ttH}}{\sigma_{ttH}}$ = 10\%.
 
-A summary of the \wh{} theoretical systematic uncertainties is given in Table~\ref{tab:wh_3l_theory_syst}, with distributions comparing the nominal and it's variations in Appendix~\ref{app:theory_systematics}.
+% A summary of the \wh{} theoretical systematic uncertainties is given in Table~\ref{tab:wh_3l_theory_syst}, with distributions comparing the nominal and it's variations in Appendix~\ref{app:theory_systematics}.
 
 \begin{table}[ht!]
   \centering
@@ -128,28 +128,28 @@ A summary of the \wh{} theoretical systematic uncertainties is given in Table~\r
     table-space-text-post=\%,
     retain-explicit-plus
   }
-  \caption{List of theory systematic uncertainties considered in the \wh{} $3\ell$ channel. All uncertainties are given as relative variations on the yields. The yields are taken in the region where the MVA analysis is performed. Values of 0.0 illustrate minimal impact by the corresponding uncertainty.}\label{tab:wh_3l_theory_syst}
+  \caption{List of theory systematic uncertainties considered in the \wh{} $3\ell$ channel.}\label{tab:wh_3l_theory_syst}
   \bigskip
-  \resizebox{0.7\textwidth}{!}{
+  \resizebox{0.5\textwidth}{!}{
     \begin{tabular}{llrl}
     \hline
-    Systematic uncertainty & Region & {Value [\%]} & Remarks \\
+    Systematic uncertainty & Region \\
     \hline\hline
     {\em Signal Processes} & & & \\
     \hline
     \wh{} & & & \\
     \cline{2-3}
-    ~~~~PDF Uncertainty                                                                                & $Z$-dominated  & {$\pm0.1$} & \multirow{2}{*}{Appendix~\ref{sec:wh_3l_systematics}} \\
-                                                                                                       & $Z$-depleted   & {$\pm0.1$} &  \\
+    ~~~~PDF Uncertainty                                                                                & $Z$-dominated  \\
+                                                                                                       & $Z$-depleted   \\
     \cline{2-3}                                                                                               
-    ~~~~$\alpha_{s}$ Uncertainty                                                                       & $Z$-dominated  & {$\pm0.2$} & \multirow{2}{*}{Appendix~\ref{sec:wh_3l_systematics}} \\
-                                                                                                       & $Z$-depleted   & {$\pm0.2$} & \\
+    ~~~~$\alpha_{s}$ Uncertainty                                                                       & $Z$-dominated  \\
+                                                                                                       & $Z$-depleted   \\
     \cline{2-3}                                                                                               
-    ~~~~QCD Uncertainty                                                                                & $Z$-dominated  & {$\pm1.6$} & \multirow{2}{*}{Appendix~\ref{sec:wh_3l_systematics}} \\
-                                                                                                       & $Z$-depleted   & {$\pm1.5$} & \\
+    ~~~~QCD Uncertainty                                                                                & $Z$-dominated   \\
+                                                                                                       & $Z$-depleted    \\
     \cline{2-3}
-    ~~~~Parton shower modelling                                                                        & $Z$-dominated  & {$\pm1.5$}  & \multirow{2}{*}{Appendix~\ref{sec:wh_3l_systematics}} \\
-                                                                                                       & $Z$-depleted   & {$\pm2.5$}  & \\
+    ~~~~Parton shower modelling                                                                        & $Z$-dominated   \\
+                                                                                                       & $Z$-depleted    \\
     \hline\hline
 
 
@@ -160,176 +160,102 @@ A summary of the \wh{} theoretical systematic uncertainties is given in Table~\r
     $WZ/W\gamma^{*}+0$ jet & & & \\
     \cline{2-3}
     \cline{2-3}
-    ~~~~PDF Uncertainty                                                                                & $Z$-dominated  & {$\pm0.1$} & \multirow{3}{*}{Appendix~\ref{sec:wh_3l_systematics}} \\
-                                                                                                       & $Z$-depleted   & {$\pm0.1$} & \\
-                                                                                                       & $WZ/W\gamma^{*}+0$ jet CR & {$\pm0.0$} & \\
+    ~~~~PDF Uncertainty                                                                                & $Z$-dominated   \\
+                                                                                                       & $Z$-depleted    \\
+                                                                                                       & $WZ/W\gamma^{*}+0$ jet CR  \\
     \cline{2-3}                                                                                               
-    ~~~~$\alpha_{s}$ Uncertainty                                                                       & $Z$-dominated  & {$\pm0.4$} & \multirow{3}{*}{Appendix~\ref{sec:wh_3l_systematics}} \\
-                                                                                                       & $Z$-depleted   & {$\pm0.5$} & \\
-                                                                                                       & $WZ/W\gamma^{*}+0$ jet CR & {$\pm0.4$} & \\
+    ~~~~$\alpha_{s}$ Uncertainty                                                                       & $Z$-dominated   \\
+                                                                                                       & $Z$-depleted   \\
+                                                                                                       & $WZ/W\gamma^{*}+0$ jet CR  \\
     \cline{2-3}                                                                                               
-    ~~~~QCD Uncertainty                                                                                & $Z$-dominated  & {$\pm1.4$} & \multirow{3}{*}{Appendix~\ref{sec:wh_3l_systematics}} \\
-                                                                                                       & $Z$-depleted   & {$\pm5.6$} & \\
-                                                                                                       & $WZ/W\gamma^{*}+0$ jet CR & {$\pm0.7$} & \\
+    ~~~~QCD Uncertainty                                                                                & $Z$-dominated  \\
+                                                                                                       & $Z$-depleted   \\
+                                                                                                       & $WZ/W\gamma^{*}+0$ jet CR  \\
     \cline{2-3}
-    ~~~~Resummation scale                                                                              & $Z$-dominated  & {$\pm2.6$} & \multirow{3}{*}{Appendix~\ref{sec:wh_3l_systematics}} \\
-                                                                                                       & $Z$-depleted   & {$\pm0.1$} & \\
-                                                                                                       & $WZ/W\gamma^{*}+0$ jet CR & {$\pm4.8$} & \\
+    ~~~~Resummation scale                                                                              & $Z$-dominated   \\
+                                                                                                       & $Z$-depleted   \\
+                                                                                                       & $WZ/W\gamma^{*}+0$ jet CR  \\
     \cline{2-3}
-    ~~~~Jet merging                                                                                    & $Z$-dominated  & {$\pm1.1$} & \multirow{3}{*}{Appendix~\ref{sec:wh_3l_systematics}} \\
-                                                                                                       & $Z$-depleted   & {$\pm13.2$} & \\
-                                                                                                       & $WZ/W\gamma^{*}+0$ jet CR & {$\pm1.0$}  & \\
+    ~~~~Jet merging                                                                                    & $Z$-dominated  \\
+                                                                                                       & $Z$-depleted   \\
+                                                                                                       & $WZ/W\gamma^{*}+0$ jet CR \\
                                                                                                        
     \hline                                                                                             
     $WZ/W\gamma^{*}+1$ jet & & & \\
     \cline{2-3}
-    ~~~~PDF Uncertainty                                                                                & $Z$-dominated  & {$\pm0.0$} & \multirow{3}{*}{Appendix~\ref{sec:wh_3l_systematics}} \\
-                                                                                                       & $Z$-depleted   & {$\pm0.0$} & \\
-                                                                                                       & $WZ/W\gamma^{*}+1$ jet CR & {$\pm0.0$}  & \\
+    ~~~~PDF Uncertainty                                                                                & $Z$-dominated   \\
+                                                                                                       & $Z$-depleted    \\
+                                                                                                       & $WZ/W\gamma^{*}+1$ jet CR\\
     \cline{2-3}                                                                                               
-    ~~~~$\alpha_{s}$ Uncertainty                                                                       & $Z$-dominated  & {$\pm0.2$} & \multirow{3}{*}{Appendix~\ref{sec:wh_3l_systematics}} \\
-                                                                                                       & $Z$-depleted   & {$\pm0.2$} & \\
-                                                                                                       & $WZ/W\gamma^{*}+1$ jet{} CR & {$\pm0.4$}  & \\
+    ~~~~$\alpha_{s}$ Uncertainty                                                                       & $Z$-dominated   \\
+                                                                                                       & $Z$-depleted   \\
+                                                                                                       & $WZ/W\gamma^{*}+1$ jet{} CR  \\
     \cline{2-3}                                                                                               
-    ~~~~QCD Uncertainty                                                                                & $Z$-dominated  & {$\pm1.3$} & \multirow{3}{*}{Appendix~\ref{sec:wh_3l_systematics}} \\
-                                                                                                       & $Z$-depleted   & {$\pm3.4$} & \\
-                                                                                                       & $WZ/W\gamma^{*}+1$ jet CR & {$\pm0.7$}  & \\
+    ~~~~QCD Uncertainty                                                                                & $Z$-dominated   \\
+                                                                                                       & $Z$-depleted   \\
+                                                                                                       & $WZ/W\gamma^{*}+1$ jet CR  \\
     \cline{2-3}
-    ~~~~Resummation scale                                                                              & $Z$-dominated  & {$\pm3.1$} & \multirow{3}{*}{Appendix~\ref{sec:wh_3l_systematics}} \\
-                                                                                                       & $Z$-depleted   & {$\pm0.9$} & \\
-                                                                                                       & $WZ/W\gamma^{*}+1$ jet CR & {$\pm7.5$}  & \\
+    ~~~~Resummation scale                                                                              & $Z$-dominated   \\
+                                                                                                       & $Z$-depleted    \\
+                                                                                                       & $WZ/W\gamma^{*}+1$ jet CR  \\
     \cline{2-3}
-    ~~~~Jet merging                                                                                    & $Z$-dominated  & {$\pm0.8$} & \multirow{3}{*}{Appendix~\ref{sec:wh_3l_systematics}} \\
-                                                                                                       & $Z$-depleted   & {$\pm12.2$} & \\
-                                                                                                       & $WZ/W\gamma^{*}+1$ jet CR & {$\pm0.2$}  & \\
+    ~~~~Jet merging                                                                                    & $Z$-dominated   \\
+                                                                                                       & $Z$-depleted    \\
+                                                                                                       & $WZ/W\gamma^{*}+1$ jet CR  \\
 
     \hline                                                                                             
     $WZ/W\gamma^{*}+2+$ jets & & & \\
     \cline{2-3}
-    ~~~~PDF Uncertainty                                                                                & $Z$-dominated  & {$\pm0.0$} & \multirow{3}{*}{Appendix~\ref{sec:wh_3l_systematics}} \\
-                                                                                                       & $Z$-depleted   & {$\pm0.0$} & \\
-                                                                                                       & $WZ/W\gamma^{*}+2+$ jets CR & {$\pm0.0$}  & \\
+    ~~~~PDF Uncertainty                                                                                & $Z$-dominated   \\
+                                                                                                       & $Z$-depleted    \\
+                                                                                                       & $WZ/W\gamma^{*}+2+$ jets CR\\
     \cline{2-3}                                                                                               
-    ~~~~$\alpha_{s}$ Uncertainty                                                                       & $Z$-dominated  & {$\pm0.9$} & \multirow{3}{*}{Appendix~\ref{sec:wh_3l_systematics}} \\
-                                                                                                       & $Z$-depleted   & {$\pm0.9$} & \\
-                                                                                                       & $WZ/W\gamma^{*}+2+$ jets CR & {$\pm1.0$}  & \\
+    ~~~~$\alpha_{s}$ Uncertainty                                                                       & $Z$-dominated   \\
+                                                                                                       & $Z$-depleted    \\
+                                                                                                       & $WZ/W\gamma^{*}+2+$ jets CR \\
     \cline{2-3}                                                                                               
-    ~~~~QCD Uncertainty                                                                                & $Z$-dominated  & {$\pm1.6$} & \multirow{3}{*}{Appendix~\ref{sec:wh_3l_systematics}} \\
-                                                                                                       & $Z$-depleted   & {$\pm3.4$} & \\
-                                                                                                       & $WZ/W\gamma^{*}+2+$ jets CR & {$\pm0.3$}  & \\
+    ~~~~QCD Uncertainty                                                                                & $Z$-dominated   \\
+                                                                                                       & $Z$-depleted    \\
+                                                                                                       & $WZ/W\gamma^{*}+2+$ jets CR  \\
     \cline{2-3}
-    ~~~~Resummation scale                                                                              & $Z$-dominated  & {$\pm8.9$} & \multirow{3}{*}{Appendix~\ref{sec:wh_3l_systematics}} \\
-                                                                                                       & $Z$-depleted   & {$\pm7.3$} & \\
-                                                                                                       & $WZ/W\gamma^{*}+2+$ jets CR & {$\pm9.3$}  & \\
+    ~~~~Resummation scale                                                                              & $Z$-dominated   \\
+                                                                                                       & $Z$-depleted    \\
+                                                                                                       & $WZ/W\gamma^{*}+2+$ jets CR \\
     \cline{2-3}
-    ~~~~Jet merging                                                                                    & $Z$-dominated  & {$\pm3.6$} & \multirow{3}{*}{Appendix~\ref{sec:wh_3l_systematics}} \\
-                                                                                                       & $Z$-depleted   & {+8.3/-8.1} & \\
-                                                                                                       & $WZ/W\gamma^{*}+2+$ jets CR & {$\pm3.4$}  & \\                                                                                                 
+    ~~~~Jet merging                                                                                    & $Z$-dominated   \\
+                                                                                                       & $Z$-depleted   \\
+                                                                                                       & $WZ/W\gamma^{*}+2+$ jets CR  \\                                                                                                 
     \hline
     $q\bar{q} \to ZZ$ & & & \\
     \cline{2-3}
-    ~~~~PDF Uncertainty                                                                                & $Z$-dominated  & {$\pm0.0$} & \multirow{2}{*}{Appendix~\ref{sec:wh_3l_systematics}} \\
-                                                                                                       & $Z$-depleted   & {$\pm0.0$} & \\
+    ~~~~PDF Uncertainty                                                                                & $Z$-dominated   \\
+                                                                                                       & $Z$-depleted    \\
     \cline{2-3}                                                                                               
-    ~~~~$\alpha_{s}$ Uncertainty                                                                       & $Z$-dominated  & {$\pm0.3$} & \multirow{2}{*}{Appendix~\ref{sec:wh_3l_systematics}} \\
-                                                                                                       & $Z$-depleted   & {$\pm0.2$} & \\
+    ~~~~$\alpha_{s}$ Uncertainty                                                                       & $Z$-dominated   \\
+                                                                                                       & $Z$-depleted   \\
     \cline{2-3}                                                                                               
-    ~~~~QCD Uncertainty                                                                                & $Z$-dominated  & {$\pm10.5$} & \multirow{2}{*}{Appendix~\ref{sec:wh_3l_systematics}} \\
-                                                                                                       & $Z$-depleted   & {$\pm10.3$} & \\
+    ~~~~QCD Uncertainty                                                                                & $Z$-dominated   \\
+                                                                                                       & $Z$-depleted    \\
     \cline{2-3}
-    ~~~~Resummation scale                                                                              & $Z$-dominated  & {$\pm24.2$} & \multirow{2}{*}{Appendix~\ref{sec:wh_3l_systematics}} \\
-                                                                                                       & $Z$-depleted   & {$\pm15.5$} & \\
+    ~~~~Resummation scale                                                                              & $Z$-dominated \\
+                                                                                                       & $Z$-depleted    \\
     \cline{2-3}
-    ~~~~Jet merging                                                                                    & $Z$-dominated  & {$\pm2.4$} & \multirow{2}{*}{Appendix~\ref{sec:wh_3l_systematics}} \\
-                                                                                                       & $Z$-depleted   & {$\pm4.7$} & \\
+    ~~~~Jet merging                                                                                    & $Z$-dominated   \\
+                                                                                                       & $Z$-depleted    \\
     \hline
     $WWW$ & & & \\
     \cline{2-3}
-    ~~~~PDF Uncertainty                                                                                & $Z$-dominated  & {$\pm0.0$} & \multirow{3}{*}{Appendix~\ref{sec:wh_3l_systematics}} \\
-                                                                                                       & $Z$-depleted   & {$\pm0.0$} & \\
-                                                                                                       & $WWW$ VR       & {$\pm0.0$} & \\
+    ~~~~PDF Uncertainty                                                                                & $Z$-dominated   \\
+                                                                                                       & $Z$-depleted    \\
+                                                                                                       & $WWW$ VR        \\
     \cline{2-3}                                                                                               
-    ~~~~$\alpha_{s}$ Uncertainty                                                                       & $Z$-dominated  & {$\pm0.1$} & \multirow{3}{*}{Appendix~\ref{sec:wh_3l_systematics}} \\
-                                                                                                       & $Z$-depleted   & {$\pm0.1$} & \\
-                                                                                                       & $WWW$ VR       & {$\pm0.1$} & \\
+    ~~~~$\alpha_{s}$ Uncertainty                                                                       & $Z$-dominated  \\
+                                                                                                       & $Z$-depleted    \\
+                                                                                                       & $WWW$ VR        \\
     \cline{2-3}                                                                                               
-    ~~~~QCD Uncertainty                                                                                & $Z$-dominated  & {$\pm1.8$} & \multirow{3}{*}{Appendix~\ref{sec:wh_3l_systematics}} \\
-                                                                                                       & $Z$-depleted   & {$\pm1.4$} & \\
-                                                                                                       & $WWW$ VR       & {$\pm0.8$} & \\
+    ~~~~QCD Uncertainty                                                                                & $Z$-dominated   \\
+                                                                                                       & $Z$-depleted    \\
+                                                                                                       & $WWW$ VR        \\
     \end{tabular}
   }
 \end{table}
-
-
-% \begin{table}[h!]
-% \centering
-% \sisetup{
-%   table-format=2.1,
-%     table-space-text-post=\%,
-%   retain-explicit-plus
-% }
-% \caption{\label{tab:zh_theory_syst}
-% List of theory systematic uncertainties considered in the \zh{} channel. All uncertainties are given as relative variations on the yields. The yields are assumed to be taken from the signal region unless specified otherwise. Uncertainties from multiple sources are added in quadrature. N.B.: $q\bar{q}\rightarrow ZH$ and $gg\rightarrow ZH$ are combined simply as \zh{}.
-% }
-% \bigskip
-% \resizebox{\textwidth}{!}{
-%   \begin{tabular}{llrl}
-%   \hline
-%   Systematic uncertainty & & {Value [\%]} & Remarks \\
-%   \hline\hline
-%   {\em Signal Model} & & \\
-%   \hline
-%   \zh & & & \\
-%   % https://twiki.cern.ch/twiki/bin/view/LHCPhysics/LHCHWG?redirectedfrom=LHCPhysics.LHCHXSWG#Higgs_cross_sections_and_decay_b
-%   ~~~~Higgs Branching Ratio (only in the $\mu$ measurement) & & {$\pm1.5$} & \multirow{3}{*}{Yellow Report estimate} \\
-%   % https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageAt13TeV#ppZH_Total_Cross_Section_with_ap
-%   % +QCD Scale % 	-QCD Scale % 	(PDF+?s) % 	&PDF % 	&?s %
-%   % +3.8 	-3.0 &	1.6 &	1.3 &	0.9 
-%   ~~~~$q\bar{q}\rightarrow ZH$ cross section (PDF+$\alpha_{S}$, QCD scales: only in the $\mu$ measurement) & & {+4.1/-3.4} & \\
-%   % https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageAt13TeV#ggZH_Cross_Section
-%   % +QCD Scale % 	-QCD Scale % 	& (PDF+?s) % 	& PDF % 	& ?s %
-%   % +25.1% 	-18.9% 	& 2.4% 	& 1.8% 	& 1.6%
-%   ~~~~$gg\rightarrow ZH$ cross section (PDF+$\alpha_{S}$, QCD scales: only in the $\mu$ measurement) & & {+25.2/-19.1} & \\
-%   \cline{2-3}
-%   ~~~~Acceptance (PDF+$\alpha_{S}$, QCD scales) & 1-SFOS SR & {+7.9/-6.5} & \multirow{2}{*}{Appendix~\ref{app:ZH_ThSyst_PDF_QCD}} \\
-%                                                 & 2-SFOS SR & {+7.8/-6.0} & \\
-%   \cline{2-3}
-%   ~~~~Parton shower modelling & 1-SFOS SR & 2.6 & \multirow{2}{*}{Appendix~\ref{app:ZH_ThSyst_Shower}} \\
-%                               & 2-SFOS SR & 1.0 & \\
-%   \hline\hline
-%   {\em Background Process} & & & \\
-%   \hline
-%   $q\bar{q} \to ZZ$ & & & \\
-%   \cline{2-3}
-%   % ~~~~Cross section (PDF, QCD scales) & & 6\% & PMG recommendation\\ 
-%   ~~~~Acceptance (PDF+$\alpha_{S}$, QCD scales, & 1-SFOS SR & {+6.8/-6.5} & \multirow{3}{*}{Appendix~\ref{app:ZZ_Aceptance}} \\
-%   ~~~~~~~~merging scale, parton recoil scheme)  & 2-SFOS SR & {+8.6/-7.7} & \\
-%                                                 & $ZZ$ CR    & {+7.4/-7.1} & \\
-
-%  $gg \to ZZ$ & & & \\
-%  \cline{2-3}
-%   & SRs and $ZZ$ CR & {$\pm15$} &  \\
-   
-% %  ~~~~MC modelling & 1-SFOS SR & {$\pm11.0$} & \multirow{3}{*}{Appendix~\ref{app:ZZ_Modelling}} \\
-% %                   & 2-SFOS SR & {$\pm14.1$} & \\
-% %                   & $ZZ$ CR   & {$\pm8.3$}  & \\
-%   $VVV$ & & & \\
-%   \cline{2-3}
-%   ~~~~MC modelling & 1-SFOS SR &  {$\pm2.1$} & \multirow{2}{*}{Appendix~\ref{app:VVV_Modelling}} \\
-%                    & 2-SFOS SR &  {$\pm1.6$} & \\
-
-%   $t\bar{t}Z$ & & \\
-%   \cline{2-3}
-%   ~~~~{QCD scale and PDF$+\alpha_s$} & 1/2-SFOS SRs & {+10.4/-12.0} & PMG recommendation \\
-%   % \hline
-%   % https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageAt13TeV#ttH_Process
-%   % +QCD Scale % 	-QCD Scale % 	&(PDF+?s) % 	&PDF % 	&?s %
-%   % +5.8 	-9.2 	&3.6 	&3.0 	&2.0
-%   %$ttH$ & & \\
-%   %\cline{2-3}
-%   %~~~~{QCD scale and PDF$+\alpha_s$} & & {+6.8/-9.9} & Yellow Report estimate \\
-%   \end{tabular}
-% }
-% \end{table}
-
-

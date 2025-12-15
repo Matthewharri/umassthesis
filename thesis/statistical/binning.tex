@@ -27,5 +27,21 @@ The algorithm proceeds as follows:
 \item Repeat the procedure beginning with the bin immediately to the left of $k_{0}$, continuing until the first bin is included.
 \end{enumerate}
 
-This re-binning strategy is applied to both $WH$ channels in the inclusive measurement as well as the STXS analysis. The final choices of $z_{s}$ and $z_{b}$ for each channel are given in Table~\ref{tab:wh_zs_zb_parameters}.
-\todo[inline]{add table}
+This re-binning strategy is applied to both $WH$ channels in the inclusive measurement as well as the STXS analysis. The final choices of $z_{s}$ and $z_{b}$ for each category are provided in Table~\ref{tab:wh_zs_zb_parameters}.
+
+\begin{table}[htp]
+  \centering
+  \begin{tabular}{c|c|c}
+    \hline
+    \textbf{Category} & \boldmath$z_{s}$ & \boldmath$z_{b}$ \\
+    \hline\hline
+    \zdom{} $0 < \ptv{} < 75$~GeV & 8 & 1 \\
+    \zdom{} $75 \leq \ptv{} < 150$~GeV & 7 & 1 \\
+    \zdom{} $\ptv \geq 150$~GeV & 3 & 1 \\
+    \zdep{} $0 < \ptv{} < 75$~GeV & 8 & 1 \\
+    \zdep{} $75 \leq \ptv{} < 150$~GeV & 7 & 1 \\
+    \zdep{} $\ptv \geq 150$~GeV & 3 & 1 \\
+    \hline
+  \end{tabular}
+  \caption{Values of the $z_{s}$ and $z_{b}$ parameters used in the binning algorithm for each \wh{} STXS category.}\label{tab:wh_zs_zb_parameters}
+\end{table}

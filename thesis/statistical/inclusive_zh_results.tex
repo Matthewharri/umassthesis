@@ -1,10 +1,27 @@
-The inclusive \zh{} fit follows the STXS binning strategy described in Section~\ref{sec:statistical_analysis_wh_results}. From this fit, the expected signal strength in the \zh{} channel is $\mu = 1.00^{+0.73}_{-0.73}$, with the observed significance being $\mu = $ ??. The normalization factor for the ZZ control region is $\mathrm{NF}_{ZZ} = 1.00^{+0.10}_{-0.10}$. A profile likelihood scan of the observed signal strength is shown in Figure~\ref{fig:zh_likelihood_scan}.
+The inclusive \zh{} fit follows the STXS binning strategy described in Section~\ref{sec:statistical_analysis_wh_results}. From this fit, the expected signal strength in the \zh{} channel is $\mu = 1.00^{+0.40}_{-0.39}$. The normalization factor for the ZZ control region is $\mathrm{NF}_{ZZ} = 0.94^{+0.03}_{-0.03}$. A profile likelihood scan of the observed signal strength is shown in Figure~\ref{fig:zh_inclusive_likelihood_scan}.
 
-\todo[inline]{Add these plots once the internal note is updated.}
+\begin{figure}[htp]
+  \centering
+  \subfloat[Expected likelihood scan.]{
+    \includegraphics[width=0.6\linewidth]{figures/statistical/nll_plots_zh_expected.pdf}
+  }
+  \caption{Expected likelihood scans for the one SFOS, and two SFOS categories, as well as the combined result.}\label{fig:zh_inclusive_likelihood_scan}
+\end{figure}
 
-The impact of statistical and systematic uncertainties on the \zh{} measurement is assessed through the pulls (Appendix~\ref{app:zh_pulls}), the correlations between uncertainties (Appendix~\ref{app:zh_correlations}), and the nuisance parameter ranking plots (Appendix~\ref{app:zh_nuisance_ranking}). The most relevant post-fit distributions for the \zh{} SR are shown in Figure~\ref{fig:zh_postfit_distribution}.
+The impact of statistical and systematic uncertainties on the \zh{} measurement is assessed through the pulls (Appendix~\ref{app:zh_pull_plots}), the correlations between uncertainties (Appendix~\ref{app:zh_correlation_plots}), and the nuisance parameter ranking plots (Appendix~\ref{app:zh_ranking_plots}). The most relevant post-fit distributions for the \zh{} SR are shown in Figure~\ref{fig:zh_postfit_plots}.
 
-All results from the \zh{} channel are summarized in Table~\ref{tab:zh_results_summary}. As expected, the \zh{} channel is dominated by statistical uncertainties.
+\begin{figure}
+  \centering
+  \subfloat[One SFOS SR.]{
+    \includegraphics[width=0.45\linewidth]{figures/statistical/NNDiscriminant_1sfos_postFit.pdf}
+  }
+  \subfloat[Two SFOS SR.]{
+    \includegraphics[width=0.45\linewidth]{figures/statistical/NNDiscriminant_2sfos_postFit.pdf}
+  }
+  \caption{Post-fit NN discriminant distributions in the \zh{} signal regions: (a) one SFOS and (b) two SFOS.}\label{fig:zh_postfit_plots}
+\end{figure}
+
+All results from the \zh{} channel are summarized in Table~\ref{tab:zh_inclusive_results_summary}. As expected, the \zh{} channel is dominated by statistical uncertainties.
 
 \begin{table}[htp]
   \centering
@@ -13,17 +30,15 @@ All results from the \zh{} channel are summarized in Table~\ref{tab:zh_results_s
     \centering
     \begin{tabular}{l|c}
       \hline
-      \multicolumn{2}{c}{\zh{} SR's, $ZZ$ CR} \\
+      \multicolumn{2}{c}{\textbf{Results Summary}} \\
       \hline
-      $\mu_{ZH}$ (Expected) & $1.00^{+0.73}_{-0.73}$ \\
-      $\mu_{ZH}$ (Observed) & $??$ \\
-      $\mathrm{NF}_{ZZ}$ & $...$ \\
+      $\mu_{ZH}$ (Expected) & $1.00^{+0.39}_{-0.39}$ \\
+      $\mathrm{NF}_{ZZ}$ & $0.94^{+0.03}_{-0.03}$ \\
       \hline
-      Significance (Expected) & $1.71\sigma$ \\
-      Significance (Observed) & $...\sigma$ \\
+      Significance (Expected) & $3.43\sigma$ \\
       \hline
     \end{tabular}
   \end{minipage}
   \hfill
-  \caption{Summary of the expected and observed signal strengths, NFs, and significances for the \zh{} inclusive fit.}\label{tab:wh_inclusive_results_summary}
+  \caption{Summary of the expected and observed signal strengths, NFs, and significances for the \zh{} inclusive fit.}\label{tab:zh_inclusive_results_summary}
 \end{table}

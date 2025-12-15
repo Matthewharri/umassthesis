@@ -1,6 +1,6 @@
 The profile likelihood approach begins by introducing a parameterization based on strength parameters:
 \begin{equation}\label{eq:likelihood_parameterization}
-\mathcal{L}(\mu_{s}, \mu_{b}) = P(N| \mu_{s}s + \mu_{b} \cdot b^{\mathrm{exp}}_{\mathrm{SR}}) \times P(M|\mu_{b} \cdot b_{\mathrm{CR}}^{\mathrm{exp}}),
+\mathcal{L}(\mu_{s}, \mu_{b}) = P(N| \mu_{s} \cdot s + \mu_{b} \cdot b^{\mathrm{exp}}_{\mathrm{SR}}) \times P(M|\mu_{b} \cdot b_{\mathrm{CR}}^{\mathrm{exp}}),
 \end{equation}
 where $s$ denotes the expected signal yield in the signal region and $b^{\mathrm{exp}}_{\mathrm{SR}}$ and $b^{\mathrm{exp}}_{\mathrm{CR}}$ denote the expected background yields in the signal and control regions, respectively, as determined from MC simulation. The parameter $\mu_{s}$ represents the signal strength, while $\mu_{b}$ represents the background strength.
 
@@ -21,4 +21,4 @@ Our signal and background expectations are defined as functions of the NPs $\the
 
 Each $\theta$ corresponds to a distinct source of systematic uncertainty and may affect multiple signal and background yields in a correlated way, though not all backgrounds are impacted by every $\theta$. For example, the QCD scale uncertainty in $q\bar{q} \to WZ$ does not affect the top background.
 
-For shape systematics, only statistically significant variations are included. Variations arising from limited MC statistics can lead to convergence issues during minimization, as the shape extrapolation outside the $\pm 1\sigma$ range of the NP can become unstable.
+For shape systematics, only statistically significant variations are included. Variations arising from limited MC statistics can lead to convergence issues during minimization, as the shape extrapolation outside the $\pm~1\sigma$ range of the NP can become unstable.

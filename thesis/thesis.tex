@@ -114,6 +114,7 @@
 \usepackage{caption}
 \usepackage{siunitx}
 \usepackage{todonotes}
+\usepackage{adjustbox}
 %% One way of formatting the epigraph/frontispiece is to use this package.
 % \usepackage{epigraph}
 
@@ -123,9 +124,9 @@
 \newcolumntype{:}{@{:}l}
 %%
 %% You must fill in all of these appropriately
-\title{Measurement of the Higgs boson production cross section in association with a vector boson and decaying into $WW^{*}$ with the ATLAS detector at $\sqrt{s}$ = 13.6 TeV}
+\title{Measurement of the Higgs boson production cross section in association with a vector boson and decaying into $WW^{*}$ with the ATLAS detector}
 \author{Matthew L. Harris}
-\date{February 2026} % The date you'll actually graduate -- must be
+\date{May 2026} % The date you'll actually graduate -- must be
                      % February, May, or September
 \copyrightyear{2025}
 \bachelors{B.Sc.}{University of Massachusetts, Amherst}
@@ -140,7 +141,7 @@
 % \fourthreader{Robert Kusner}   % Optional
 %\fifthreader{}            % Optional
 %\sixthreader{}            % Optional
-\departmentchair[Department Chair]{Name of Dept Head} % Default uses "Department Chair" as the title. To
+\departmentchair[Department Chair]{Andrea Pocar} % Default uses "Department Chair" as the title. To
 % use an alternate title, such as "Chair", use \departmentchair[Chair]{Pete Shearer}
 % CICS uses "Chair of the Faculty" as of 2019.
 \departmentname{Physics}
@@ -233,12 +234,12 @@
 %%
 %% Acknowledgements are optional...yeah, right.
 \chapter{Acknowledgments}             % Acknowledgements page
-  Fill in later
+  \input{acknowledgements/acknowledgements.tex}
 
 %%
 %% Abstract is MANDATORY. -- Except for MS theses
 \begin{abstract}                % Abstract
-    Abstract will be filled in later
+    \input{abstract.tex}
 \end{abstract}
 
 %%
@@ -432,16 +433,18 @@
 \subsubsection{Neural Network Output}\label{sec:vh_wh_nn_output}
 \input{VH/vh_wh_nn_output.tex}
 % \subsection{Background Estimation}\label{sec:vh_wh_background_estimation}
-\subsection{\texorpdfstring{$WZ$}{WZ} Estimation}\label{sec:vh_wh_wz_control_regions}
-\input{VH/vh_wh_wzcr.tex}
+% \subsection{\texorpdfstring{$WZ$}{WZ} Estimation}\label{sec:vh_wh_wz_control_regions}
+% \input{VH/vh_wh_wzcr.tex}
+\subsection{\texorpdfstring{$WZ/W\gamma^{*}$ and $WWW$}{WZ/Wgamma and WWW} Estimation}\label{sec:vh_wh_wz_www_control_regions}
+\input{VH/vh_wh_wz_www_cr.tex}
 \subsection{Fake Lepton Estimation}\label{sec:vh_wh_fake_lepton_estimation}
 \input{VH/vh_wh_fake_lepton.tex}
 \subsubsection{Fake Muon Estimation}\label{sec:vh_wh_fake_muon_estimation}
 \input{VH/vh_wh_muon_fake.tex}
 \subsubsection{Fake Electron Estimation}\label{sec:vh_wh_fake_electron_estimation}
 \input{VH/vh_wh_electron_fake.tex}
-\subsection{\texorpdfstring{$WWW$}{WWW} Validation Region}\label{sec:vh_wh_www_validation_region}
-\input{VH/vh_wh_www_vr.tex}
+% \subsection{\texorpdfstring{$WWW$}{WWW} Control Region}\label{sec:vh_wh_www_control_region}
+% \input{VH/vh_wh_www_cr.tex}
 \subsection{Validation Regions}\label{sec:vh_wh_validation_regions}
 \input{VH/vh_wh_validation_regions.tex}
 \section{\texorpdfstring{$ZH$}{ZH} Analysis}\label{sec:vh_zh_analysis}
@@ -478,15 +481,21 @@
 \subsection{Run 2 and Run 3 Combined  Results}\label{sec:statistical_analysis_combined_expected_results}
 \input{statistical/inclusive_r2_r3_results.tex}
 \section{STXS Measurement Results}\label{sec:statistical_analysis_stxs_expected_results}
-
+\input{statistical/stxs_intro.tex}
+\subsection{\wh{} Results}\label{sec:statistical_analysis_stxs_wh_results}
+\input{statistical/stxs_wh_results.tex}
+\subsection{$ZH$ Results}\label{sec:statistical_analysis_stxs_zh_results}
+\input{statistical/stxs_zh_results.tex}
+\section{Results Discussion}\label{sec:statistical_analysis_results_discussion}
+\input{statistical/results_discussion.tex}
 \chapter{Conclusion and Outlook}\label{ch:conclusions}
-Discuss conclusions and outlook
+\input{conclusion/conclusion.tex}
 
 %% End of body
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \appendix
-\chapter{Consistency with the $WZ$ process:  \texorpdfstring{$\mathrm{F}_{\alpha}$}{}}\label{app:F_alpha}
+\chapter{Consistency with the $WZ$ process: \texorpdfstring{$\mathrm{F}_{\alpha}$}{}}\label{app:F_alpha}
 \input{appendix/app_f_alpha.tex}
 \chapter{NN Validation Plots}\label{app:nn_validation_plots}
 \input{appendix/app_nn_validation.tex}
@@ -495,8 +504,8 @@ Discuss conclusions and outlook
 \input{appendix/app_zdom_input.tex}
 \chapter{\zdep{} Kinematic Plots}\label{app:zdep_input_plots}
 \input{appendix/app_zdep_input.tex}
-\chapter{$WWW$ VR Kinematic Plots}\label{app:wwwvr_input_plots}
-\input{appendix/app_wwwvr_input.tex}
+\chapter{$WWW$ CR Kinematic Plots}\label{app:wwwcr_input_plots}
+\input{appendix/app_wwwcr_input.tex}
 \chapter{\texorpdfstring{$WZ$}{WZ} Control Region Kinematic Plots}\label{app:wzcr_input_plots}
 \input{appendix/app_wzcr_input.tex}
 \chapter{\zdom{} Validation Region Kinematic Plots}\label{app:zdom_validation_plots}
@@ -505,15 +514,66 @@ Discuss conclusions and outlook
 \input{appendix/app_zdom_topvr_input.tex}
 \chapter{\zdep{} Top Validation Region Kinematic Plots}\label{app:zdep_top_validation_plots}
 \input{appendix/app_zdep_topvr_input.tex}
-\chapter{Theory Systematic Plots}\label{app:theory_systematics}
-\input{appendix/app_systematic.tex}
+% \chapter{Theory Systematic Plots}\label{app:theory_systematics}
+% \input{appendix/app_systematic.tex}
+
 \chapter{STXS Regressor Input Variable plots}\label{app:stxs_input_plots}
 \input{appendix/stxs_input.tex}
-\chapter{WH Results Appendix}\label{app:wh_results_appendix}
-\section{WH Inclusive Pull Plots}\label{app:wh_pull_plots}
-\section{WH Inclusive Correlation Plots}\label{app:wh_correlation_plots}
-\section{WH Inclusive Ranking Plots}\label{app:wh_ranking_plots}
-\section{WH Inclusive Post-Fit Plots}\label{app:wh_postfit_plots}
+
+\chapter{WH Results}\label{app:wh_results_appendix}
+\section{Pull Plots}\label{app:wh_pull_plots}
+\input{appendix/app_wh_pulls.tex}
+\section{Correlation Plots}\label{app:wh_correlation_plots}
+\input{appendix/app_wh_correlations.tex}
+\section{Ranking Plots}\label{app:wh_ranking_plots}
+\input{appendix/app_wh_ranking.tex}
+% \section{Post-Fit Plots}\label{app:wh_postfit_plots}
+% \input{appendix/app_wh_postfit.tex}
+
+\chapter{ZH Results}\label{app:zh_results_appendix}
+\section{Pull Plots}\label{app:zh_pull_plots}
+\input{appendix/app_zh_pulls.tex}
+\section{Correlation Plots}\label{app:zh_correlation_plots}
+\input{appendix/app_zh_correlations.tex}
+\section{Ranking Plots}\label{app:zh_ranking_plots}
+\input{appendix/app_zh_ranking.tex}
+% \section{Post-Fit Plots}\label{app:zh_postfit_plots}
+% \input{appendix/app_zh_postfit.tex}
+
+\chapter{VH Results}\label{app:vh_results_appendix}
+\section{Ranking and Pull Plots}\label{app:vh_pull_plots}
+\input{appendix/app_vh_pulls.tex}
+\section{Correlation Plots}\label{app:vh_correlation_plots}
+\input{appendix/app_vh_correlations.tex}
+
+\chapter{Run 2 and Run 3 Combined Results}\label{app:r2_r3_results_appendix}
+\section{Run 2 and Run 3 Combined Pull Plots}\label{app:r2_r3_pull_plots}
+\input{appendix/app_r2_r3_pulls.tex}
+\section{Run 2 and Run 3 Combined Correlation Plots}\label{app:r2_r3_correlation_plots}
+\input{appendix/app_r2_r3_correlations.tex}
+
+\chapter{WH STXS Results}\label{app:wh_stxs_results_appendix}
+\section{WH STXS Pull Plots}\label{app:wh_stxs_pull_plots}
+\input{appendix/app_stxs_wh_pulls.tex}
+\section{WH STXS Correlation Plots}\label{app:wh_stxs_correlation_plots}
+\input{appendix/app_stxs_wh_correlations.tex}
+\section{WH STXS Ranking Plots}\label{app:wh_stxs_ranking_plots}
+\input{appendix/app_stxs_wh_rankings.tex}
+
+\chapter{ZH STXS Results}\label{app:zh_stxs_results_appendix}
+\section{ZH STXS Pull Plots}\label{app:zh_stxs_pull_plots}
+\input{appendix/app_stxs_zh_pulls.tex}
+\section{ZH STXS Correlation Plots}\label{app:zh_stxs_correlation_plots}
+\input{appendix/app_stxs_zh_correlations.tex}
+\section{ZH STXS Ranking Plots}\label{app:zh_stxs_ranking_plots}
+\input{appendix/app_stxs_zh_rankings.tex}
+
+% \chapter{VH STXS Results}\label{app:vh_stxs_results_appendix}
+% \section{VH STXS Pull Plots}\label{app:vh_stxs_pull_plots}
+% \section{VH STXS Correlation Plots}\label{app:vh_stxs_correlation_plots}
+% \section{VH STXS Ranking Plots}\label{app:vh_stxs_ranking_plots}
+
+
 % \chapter{THE SECOND APPENDIX TITLE}
 % ...
 
